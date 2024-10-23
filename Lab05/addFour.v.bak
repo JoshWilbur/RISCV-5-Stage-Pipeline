@@ -1,0 +1,7 @@
+module addFour(
+	input wire[31:0] PC_in,
+	output wire[31:0] PC_out);
+
+	PC_out = PC_in + 4;
+	
+endmodule

@@ -1,0 +1,92 @@
+Restore Archived Project report for RegFileMem
+Tue Oct 22 17:20:37 2024
+Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2024  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Tue Oct 22 17:20:37 2024 ;
+; Revision Name                   ; RegFileMem                            ;
+; Top-level Entity Name           ; top                                   ;
+; Family                          ; Cyclone V                             ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/ECE473(2)/Lab04/RegFileMem_tmp_archive.qar' into the 'C:/ECE473(2)/Lab05' directory
+Info: Generated report 'RegFileMem.restore.rpt'
+
+
++------------------------------------------+
+; Files Restored                           ;
++------------------------------------------+
+; File Name                                ;
++------------------------------------------+
+; qar_info.json                            ;
+; Lab04/RAMTWOPORT.bsf                     ;
+; Lab04/RAMTWOPORT.qip                     ;
+; Lab04/RAMTWOPORT.v                       ;
+; Lab04/RegFileMem.qpf                     ;
+; Lab04/RegFileMem.qsf                     ;
+; Lab04/RegFileMem_assignment_defaults.qdf ;
+; Lab04/VGA_BLOCK.bdf                      ;
+; Lab04/char_engine.v                      ;
+; Lab04/color_encoder.v                    ;
+; Lab04/dataMem.bsf                        ;
+; Lab04/dataMem.qip                        ;
+; Lab04/dataMem.v                          ;
+; Lab04/instrMem.bsf                       ;
+; Lab04/instrMem.qip                       ;
+; Lab04/instrMem.v                         ;
+; Lab04/register.v                         ;
+; Lab04/top.bdf                            ;
+; Lab04/vga_control.v                      ;
+; Lab04/vgaclk.v                           ;
+; Lab04/vgaclk_0002.v                      ;
+; Lab04/vram.v                             ;
+; datamem.mif                              ;
+; instrmem.mif                             ;
++------------------------------------------+
+
+
++--------------------+
+; Files Not Restored ;
++--------------------+
+; File Name          ;
++--------------------+
+
+
