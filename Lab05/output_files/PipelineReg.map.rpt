@@ -1,6 +1,6 @@
 Analysis & Synthesis report for PipelineReg
-Wed Oct 23 15:35:45 2024
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Sat Oct 26 14:05:39 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -46,7 +46,7 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2024  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -66,8 +66,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 23 15:35:45 2024          ;
-; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Sat Oct 26 14:05:38 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; PipelineReg                                    ;
 ; Top-level Entity Name           ; top                                            ;
 ; Family                          ; Cyclone V                                      ;
@@ -179,7 +179,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
+; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -197,50 +197,49 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------+---------+
-; vram.v                           ; yes             ; User Wizard-Generated File             ; C:/ECE473(2)/Lab05/vram.v                                                       ;         ;
-; vgaclk_0002.v                    ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/vgaclk_0002.v                                                ;         ;
-; vgaclk.v                         ; yes             ; User Wizard-Generated File             ; C:/ECE473(2)/Lab05/vgaclk.v                                                     ;         ;
-; vga_control.v                    ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/vga_control.v                                                ;         ;
-; VGA_BLOCK.bdf                    ; yes             ; User Block Diagram/Schematic File      ; C:/ECE473(2)/Lab05/VGA_BLOCK.bdf                                                ;         ;
-; color_encoder.v                  ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/color_encoder.v                                              ;         ;
-; char_engine.v                    ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/char_engine.v                                                ;         ;
-; register.v                       ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/register.v                                                   ;         ;
-; top.bdf                          ; yes             ; User Block Diagram/Schematic File      ; C:/ECE473(2)/Lab05/top.bdf                                                      ;         ;
-; instrMem.v                       ; yes             ; User Wizard-Generated File             ; C:/ECE473(2)/Lab05/instrMem.v                                                   ;         ;
-; dataMem.v                        ; yes             ; User Wizard-Generated File             ; C:/ECE473(2)/Lab05/dataMem.v                                                    ;         ;
-; IF_ID.v                          ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/IF_ID.v                                                      ;         ;
-; ID_EX.v                          ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/ID_EX.v                                                      ;         ;
-; EX_MEM.v                         ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/EX_MEM.v                                                     ;         ;
-; MEM_WB.v                         ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/MEM_WB.v                                                     ;         ;
-; addFour.v                        ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/addFour.v                                                    ;         ;
-; PC.v                             ; yes             ; User Verilog HDL File                  ; C:/ECE473(2)/Lab05/PC.v                                                         ;         ;
-; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v          ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/aglobal231.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_1tn2.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/altsyncram_1tn2.tdf                                       ;         ;
-; db/decode_3na.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/decode_3na.tdf                                            ;         ;
-; db/decode_s2a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/decode_s2a.tdf                                            ;         ;
-; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/mux_chb.tdf                                               ;         ;
-; db/mux_jhb.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/mux_jhb.tdf                                               ;         ;
-; db/altsyncram_4rl2.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/altsyncram_4rl2.tdf                                       ;         ;
-; instrmem.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/ECE473(2)/Lab05/instrmem.mif                                                 ;         ;
-; db/altsyncram_nhj2.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/altsyncram_nhj2.tdf                                       ;         ;
-; alu.v                            ; yes             ; Auto-Found Verilog HDL File            ; C:/ECE473(2)/Lab05/alu.v                                                        ;         ;
-; db/altsyncram_svj1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/altsyncram_svj1.tdf                                       ;         ;
-; db/altsyncram_c6j1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/ECE473(2)/Lab05/db/altsyncram_c6j1.tdf                                       ;         ;
-+----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; vram.v                           ; yes             ; User Wizard-Generated File         ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vram.v                 ;         ;
+; vgaclk_0002.v                    ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vgaclk_0002.v          ;         ;
+; vgaclk.v                         ; yes             ; User Wizard-Generated File         ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vgaclk.v               ;         ;
+; vga_control.v                    ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vga_control.v          ;         ;
+; VGA_BLOCK.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/VGA_BLOCK.bdf          ;         ;
+; color_encoder.v                  ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/color_encoder.v        ;         ;
+; char_engine.v                    ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v          ;         ;
+; register.v                       ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/register.v             ;         ;
+; top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/top.bdf                ;         ;
+; instrMem.v                       ; yes             ; User Wizard-Generated File         ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/instrMem.v             ;         ;
+; dataMem.v                        ; yes             ; User Wizard-Generated File         ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/dataMem.v              ;         ;
+; IF_ID.v                          ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/IF_ID.v                ;         ;
+; ID_EX.v                          ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/ID_EX.v                ;         ;
+; EX_MEM.v                         ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/EX_MEM.v               ;         ;
+; MEM_WB.v                         ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/MEM_WB.v               ;         ;
+; addFour.v                        ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/addFour.v              ;         ;
+; PC.v                             ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/PC.v                   ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altera_pll.v                           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf                         ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/stratix_ram_block.inc                  ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_mux.inc                            ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_decode.inc                         ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/aglobal231.inc                         ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/a_rdenreg.inc                          ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altrom.inc                             ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altram.inc                             ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altdpram.inc                           ;         ;
+; db/altsyncram_1tn2.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_1tn2.tdf ;         ;
+; db/decode_3na.tdf                ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/decode_3na.tdf      ;         ;
+; db/decode_s2a.tdf                ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/decode_s2a.tdf      ;         ;
+; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/mux_chb.tdf         ;         ;
+; db/mux_jhb.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/mux_jhb.tdf         ;         ;
+; db/altsyncram_4rl2.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_4rl2.tdf ;         ;
+; db/altsyncram_nhj2.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_nhj2.tdf ;         ;
+; ALU.v                            ; yes             ; Auto-Found Verilog HDL File        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/ALU.v                  ;         ;
+; db/altsyncram_svj1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_svj1.tdf ;         ;
+; db/altsyncram_c6j1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_c6j1.tdf ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -248,14 +247,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1611         ;
+; Estimate of Logic utilization (ALMs needed) ; 1623         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 2121         ;
-;     -- 7 input functions                    ; 13           ;
-;     -- 6 input functions                    ; 935          ;
-;     -- 5 input functions                    ; 228          ;
-;     -- 4 input functions                    ; 199          ;
-;     -- <=3 input functions                  ; 746          ;
+; Combinational ALUT usage for logic          ; 2115         ;
+;     -- 7 input functions                    ; 14           ;
+;     -- 6 input functions                    ; 953          ;
+;     -- 5 input functions                    ; 215          ;
+;     -- 4 input functions                    ; 203          ;
+;     -- <=3 input functions                  ; 730          ;
 ;                                             ;              ;
 ; Dedicated logic registers                   ; 1954         ;
 ;                                             ;              ;
@@ -270,8 +269,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 1535         ;
-; Total fan-out                               ; 18386        ;
-; Average fan-out                             ; 4.31         ;
+; Total fan-out                               ; 18422        ;
+; Average fan-out                             ; 4.32         ;
 +---------------------------------------------+--------------+
 
 
@@ -280,15 +279,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                         ; 2121 (1)            ; 1954 (0)                  ; 313024            ; 1          ; 17   ; 0            ; |top                                                                                                                     ; top             ; work         ;
+; |top                                         ; 2115 (1)            ; 1954 (0)                  ; 313024            ; 1          ; 17   ; 0            ; |top                                                                                                                     ; top             ; work         ;
 ;    |ALU:inst12|                              ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU:inst12                                                                                                          ; ALU             ; work         ;
 ;    |EX_MEM:inst6|                            ; 0 (0)               ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |top|EX_MEM:inst6                                                                                                        ; EX_MEM          ; work         ;
 ;    |ID_EX:inst3|                             ; 0 (0)               ; 69 (69)                   ; 0                 ; 0          ; 0    ; 0            ; |top|ID_EX:inst3                                                                                                         ; ID_EX           ; work         ;
 ;    |IF_ID:inst2|                             ; 0 (0)               ; 15 (15)                   ; 0                 ; 0          ; 0    ; 0            ; |top|IF_ID:inst2                                                                                                         ; IF_ID           ; work         ;
 ;    |MEM_WB:inst7|                            ; 0 (0)               ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |top|MEM_WB:inst7                                                                                                        ; MEM_WB          ; work         ;
 ;    |PC:inst8|                                ; 1 (1)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|PC:inst8                                                                                                            ; PC              ; work         ;
-;    |VGA_BLOCK:inst15|                        ; 1481 (0)            ; 692 (0)                   ; 307200            ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15                                                                                                    ; VGA_BLOCK       ; work         ;
-;       |char_engine:inst|                     ; 1220 (1220)         ; 601 (601)                 ; 0                 ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|char_engine:inst                                                                                   ; char_engine     ; work         ;
+;    |VGA_BLOCK:inst15|                        ; 1475 (0)            ; 692 (0)                   ; 307200            ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15                                                                                                    ; VGA_BLOCK       ; work         ;
+;       |char_engine:inst|                     ; 1214 (1214)         ; 601 (601)                 ; 0                 ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|char_engine:inst                                                                                   ; char_engine     ; work         ;
 ;       |vga_control:inst2|                    ; 173 (173)           ; 85 (85)                   ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vga_control:inst2                                                                                  ; vga_control     ; work         ;
 ;       |vgaclk:inst4|                         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vgaclk:inst4                                                                                       ; vgaclk          ; work         ;
 ;          |vgaclk_0002:vgaclk_inst|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst                                                               ; vgaclk_0002     ; work         ;
@@ -315,17 +314,17 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                    ;
-+-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------+
-; Name                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF          ;
-+-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------+
-; VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port   ; 307200       ; 1            ; 38400        ; 8            ; 307200 ; None         ;
-; dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated|ALTSYNCRAM              ; AUTO ; True Dual Port   ; 64           ; 32           ; 64           ; 32           ; 2048   ; None         ;
-; instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated|ALTSYNCRAM             ; AUTO ; True Dual Port   ; 64           ; 32           ; 64           ; 32           ; 2048   ; instrMem.mif ;
-; register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 27           ; 32           ; 27           ; 864    ; None         ;
-; register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 27           ; 32           ; 27           ; 864    ; None         ;
-+-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                            ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; Name                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
+; VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port   ; 307200       ; 1            ; 38400        ; 8            ; 307200 ; None ;
+; dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated|ALTSYNCRAM              ; AUTO ; True Dual Port   ; 64           ; 32           ; 64           ; 32           ; 2048   ; None ;
+; instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated|ALTSYNCRAM             ; AUTO ; True Dual Port   ; 64           ; 32           ; 64           ; 32           ; 2048   ; None ;
+; register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 27           ; 32           ; 27           ; 864    ; None ;
+; register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 27           ; 32           ; 27           ; 864    ; None ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
 
 
 +-----------------------------------------------+
@@ -694,38 +693,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_BLOCK:inst15|char_engine:inst|y[2]           ; 10      ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[1]           ; 18      ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[0]           ; 22      ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[4]  ; 14      ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[1]  ; 12      ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[0]  ; 5       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[5]  ; 12      ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[3]  ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[2]  ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[31] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[26] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[27] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[26] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[17] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[16] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[20] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[25] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[9]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[8]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[7]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[6]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[15] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[14] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[29] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[28] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[19] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[18] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[24] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[21] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[11] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[10] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[25] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[24] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[15] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[14] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[30] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[20] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[7]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[6]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[9]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[8]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[29] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[28] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[19] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[18] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[22] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[30] ; 5       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[23] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[27] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[22] ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[13] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[12] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[17] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[16] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[1]  ; 6       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[5]  ; 22      ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[4]  ; 11      ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[0]  ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[9]           ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[7]           ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[10]          ; 2       ;
@@ -799,23 +798,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|x[3]              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|x[24]             ;
 ; 16:1               ; 4 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[5]        ;
-; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_debug[2]                   ;
-; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_2[1]                       ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; Yes        ; |top|register:inst11|data_out_1[27]                      ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_debug[1]                   ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_2[0]                       ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; Yes        ; |top|register:inst11|data_out_1[25]                      ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[4]        ;
-; 14:1               ; 12 bits   ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|row[15]           ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 26 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[12][4] ;
-; 23:1               ; 3 bits    ; 45 LEs        ; 42 LEs               ; 3 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[2][6]  ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 30 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[8][2]  ;
-; 25:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[6][1]  ;
+; 14:1               ; 12 bits   ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|row[17]           ;
+; 21:1               ; 2 bits    ; 28 LEs        ; 26 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[12][0] ;
+; 23:1               ; 3 bits    ; 45 LEs        ; 42 LEs               ; 3 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[3][6]  ;
+; 24:1               ; 2 bits    ; 32 LEs        ; 30 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[8][1]  ;
+; 25:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[6][0]  ;
 ; 25:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[7][1]  ;
 ; 25:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[2][5]  ;
-; 26:1               ; 16 bits   ; 272 LEs       ; 256 LEs              ; 16 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[30]          ;
-; 33:1               ; 5 bits    ; 110 LEs       ; 105 LEs              ; 5 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[2]           ;
-; 36:1               ; 11 bits   ; 264 LEs       ; 242 LEs              ; 22 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[8]           ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|y[30]             ;
+; 26:1               ; 16 bits   ; 272 LEs       ; 256 LEs              ; 16 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[31]          ;
+; 33:1               ; 5 bits    ; 110 LEs       ; 105 LEs              ; 5 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[1]           ;
+; 36:1               ; 11 bits   ; 264 LEs       ; 242 LEs              ; 22 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[13]          ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|y[14]             ;
 ; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount           ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
@@ -1555,23 +1554,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 39                          ;
 ;     SCLR              ; 227                         ;
 ;     plain             ; 114                         ;
-; arriav_lcell_comb     ; 2121                        ;
+; arriav_lcell_comb     ; 2115                        ;
 ;     arith             ; 384                         ;
 ;         1 data inputs ; 283                         ;
 ;         2 data inputs ; 48                          ;
 ;         3 data inputs ; 30                          ;
 ;         4 data inputs ; 14                          ;
 ;         5 data inputs ; 9                           ;
-;     extend            ; 13                          ;
-;         7 data inputs ; 13                          ;
-;     normal            ; 1695                        ;
+;     extend            ; 14                          ;
+;         7 data inputs ; 14                          ;
+;     normal            ; 1688                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 82                          ;
-;         2 data inputs ; 97                          ;
-;         3 data inputs ; 176                         ;
-;         4 data inputs ; 185                         ;
-;         5 data inputs ; 219                         ;
-;         6 data inputs ; 935                         ;
+;         2 data inputs ; 79                          ;
+;         3 data inputs ; 178                         ;
+;         4 data inputs ; 189                         ;
+;         5 data inputs ; 206                         ;
+;         6 data inputs ; 953                         ;
 ;     shared            ; 29                          ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 12                          ;
@@ -1581,8 +1580,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 156                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.70                       ;
-; Average LUT depth     ; 4.63                        ;
+; Max LUT depth         ; 12.60                       ;
+; Average LUT depth     ; 4.61                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1591,7 +1590,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:06     ;
 +----------------+--------------+
 
 
@@ -1600,56 +1599,56 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Wed Oct 23 15:35:32 2024
+    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+    Info: Processing started: Sat Oct 26 14:05:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RegFileMem -c PipelineReg
 Info (20032): Parallel compilation is enabled and will use up to 8 processors
 Info (12021): Found 1 design units, including 1 entities, in source file vram.v
-    Info (12023): Found entity 1: vram File: C:/ECE473(2)/Lab05/vram.v Line: 40
+    Info (12023): Found entity 1: vram File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vram.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file vgaclk_0002.v
-    Info (12023): Found entity 1: vgaclk_0002 File: C:/ECE473(2)/Lab05/vgaclk_0002.v Line: 2
+    Info (12023): Found entity 1: vgaclk_0002 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vgaclk_0002.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file vgaclk.v
-    Info (12023): Found entity 1: vgaclk File: C:/ECE473(2)/Lab05/vgaclk.v Line: 8
+    Info (12023): Found entity 1: vgaclk File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vgaclk.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file vga_control.v
-    Info (12023): Found entity 1: vga_control File: C:/ECE473(2)/Lab05/vga_control.v Line: 11
-Info (12021): Found 1 design units, including 1 entities, in source file vga_block.bdf
+    Info (12023): Found entity 1: vga_control File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vga_control.v Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file VGA_BLOCK.bdf
     Info (12023): Found entity 1: VGA_BLOCK
 Info (12021): Found 1 design units, including 1 entities, in source file color_encoder.v
-    Info (12023): Found entity 1: color_encoder File: C:/ECE473(2)/Lab05/color_encoder.v Line: 5
+    Info (12023): Found entity 1: color_encoder File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/color_encoder.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file char_engine.v
-    Info (12023): Found entity 1: char_engine File: C:/ECE473(2)/Lab05/char_engine.v Line: 10
+    Info (12023): Found entity 1: char_engine File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 10
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
-    Info (12023): Found entity 1: register File: C:/ECE473(2)/Lab05/register.v Line: 1
+    Info (12023): Found entity 1: register File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/register.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file top.bdf
     Info (12023): Found entity 1: top
-Info (12021): Found 1 design units, including 1 entities, in source file ramtwoport.v
-    Info (12023): Found entity 1: RAMTWOPORT File: C:/ECE473(2)/Lab05/RAMTWOPORT.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file instrmem.v
-    Info (12023): Found entity 1: instrMem File: C:/ECE473(2)/Lab05/instrMem.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file datamem.v
-    Info (12023): Found entity 1: dataMem File: C:/ECE473(2)/Lab05/dataMem.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file if_id.v
-    Info (12023): Found entity 1: IF_ID File: C:/ECE473(2)/Lab05/IF_ID.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file id_ex.v
-    Info (12023): Found entity 1: ID_EX File: C:/ECE473(2)/Lab05/ID_EX.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ex_mem.v
-    Info (12023): Found entity 1: EX_MEM File: C:/ECE473(2)/Lab05/EX_MEM.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file mem_wb.v
-    Info (12023): Found entity 1: MEM_WB File: C:/ECE473(2)/Lab05/MEM_WB.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file addfour.v
-    Info (12023): Found entity 1: addFour File: C:/ECE473(2)/Lab05/addFour.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file pc.v
-    Info (12023): Found entity 1: PC File: C:/ECE473(2)/Lab05/PC.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file RAMTWOPORT.v
+    Info (12023): Found entity 1: RAMTWOPORT File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/RAMTWOPORT.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file instrMem.v
+    Info (12023): Found entity 1: instrMem File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/instrMem.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file dataMem.v
+    Info (12023): Found entity 1: dataMem File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/dataMem.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file IF_ID.v
+    Info (12023): Found entity 1: IF_ID File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/IF_ID.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ID_EX.v
+    Info (12023): Found entity 1: ID_EX File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/ID_EX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file EX_MEM.v
+    Info (12023): Found entity 1: EX_MEM File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/EX_MEM.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file MEM_WB.v
+    Info (12023): Found entity 1: MEM_WB File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/MEM_WB.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file addFour.v
+    Info (12023): Found entity 1: addFour File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/addFour.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file PC.v
+    Info (12023): Found entity 1: PC File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/PC.v Line: 1
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_BLOCK" for hierarchy "VGA_BLOCK:inst15"
 Info (12128): Elaborating entity "vga_control" for hierarchy "VGA_BLOCK:inst15|vga_control:inst2"
-Warning (10230): Verilog HDL assignment warning at vga_control.v(63): truncated value with size 32 to match size of target (19) File: C:/ECE473(2)/Lab05/vga_control.v Line: 63
+Warning (10230): Verilog HDL assignment warning at vga_control.v(63): truncated value with size 32 to match size of target (19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vga_control.v Line: 63
 Info (12128): Elaborating entity "vgaclk" for hierarchy "VGA_BLOCK:inst15|vgaclk:inst4"
-Info (12128): Elaborating entity "vgaclk_0002" for hierarchy "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst" File: C:/ECE473(2)/Lab05/vgaclk.v Line: 19
-Info (12128): Elaborating entity "altera_pll" for hierarchy "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i" File: C:/ECE473(2)/Lab05/vgaclk_0002.v Line: 85
+Info (12128): Elaborating entity "vgaclk_0002" for hierarchy "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vgaclk.v Line: 19
+Info (12128): Elaborating entity "altera_pll" for hierarchy "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vgaclk_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i" File: C:/ECE473(2)/Lab05/vgaclk_0002.v Line: 85
-Info (12133): Instantiated megafunction "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/ECE473(2)/Lab05/vgaclk_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vgaclk_0002.v Line: 85
+Info (12133): Instantiated megafunction "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i" with the following parameter: File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vgaclk_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -1711,50 +1710,50 @@ Info (12133): Instantiated megafunction "VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_00
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "char_engine" for hierarchy "VGA_BLOCK:inst15|char_engine:inst"
-Warning (10230): Verilog HDL assignment warning at char_engine.v(274): truncated value with size 32 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 274
-Warning (10230): Verilog HDL assignment warning at char_engine.v(275): truncated value with size 32 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 275
-Warning (10230): Verilog HDL assignment warning at char_engine.v(276): truncated value with size 32 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 276
-Warning (10230): Verilog HDL assignment warning at char_engine.v(277): truncated value with size 32 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 277
-Warning (10230): Verilog HDL assignment warning at char_engine.v(279): truncated value with size 32 to match size of target (5) File: C:/ECE473(2)/Lab05/char_engine.v Line: 279
-Warning (10230): Verilog HDL assignment warning at char_engine.v(289): truncated value with size 88 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 289
-Warning (10230): Verilog HDL assignment warning at char_engine.v(301): truncated value with size 88 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 301
-Warning (10230): Verilog HDL assignment warning at char_engine.v(313): truncated value with size 72 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 313
-Warning (10230): Verilog HDL assignment warning at char_engine.v(326): truncated value with size 80 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 326
-Warning (10230): Verilog HDL assignment warning at char_engine.v(339): truncated value with size 56 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 339
-Warning (10230): Verilog HDL assignment warning at char_engine.v(362): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 362
-Warning (10230): Verilog HDL assignment warning at char_engine.v(373): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 373
-Warning (10230): Verilog HDL assignment warning at char_engine.v(384): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 384
-Warning (10230): Verilog HDL assignment warning at char_engine.v(395): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 395
-Warning (10230): Verilog HDL assignment warning at char_engine.v(406): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 406
-Warning (10230): Verilog HDL assignment warning at char_engine.v(417): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 417
-Warning (10230): Verilog HDL assignment warning at char_engine.v(428): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 428
-Warning (10230): Verilog HDL assignment warning at char_engine.v(439): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 439
-Warning (10230): Verilog HDL assignment warning at char_engine.v(450): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 450
-Warning (10230): Verilog HDL assignment warning at char_engine.v(461): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 461
-Warning (10230): Verilog HDL assignment warning at char_engine.v(472): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 472
-Warning (10230): Verilog HDL assignment warning at char_engine.v(483): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 483
-Warning (10230): Verilog HDL assignment warning at char_engine.v(494): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 494
-Warning (10230): Verilog HDL assignment warning at char_engine.v(505): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 505
-Warning (10230): Verilog HDL assignment warning at char_engine.v(516): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 516
-Warning (10230): Verilog HDL assignment warning at char_engine.v(527): truncated value with size 113 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 527
-Warning (10230): Verilog HDL assignment warning at char_engine.v(584): truncated value with size 72 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 584
-Warning (10230): Verilog HDL assignment warning at char_engine.v(596): truncated value with size 97 to match size of target (8) File: C:/ECE473(2)/Lab05/char_engine.v Line: 596
-Warning (10230): Verilog HDL assignment warning at char_engine.v(735): truncated value with size 32 to match size of target (5) File: C:/ECE473(2)/Lab05/char_engine.v Line: 735
-Warning (10230): Verilog HDL assignment warning at char_engine.v(742): truncated value with size 32 to match size of target (5) File: C:/ECE473(2)/Lab05/char_engine.v Line: 742
-Warning (10762): Verilog HDL Case Statement warning at char_engine.v(282): can't check case statement for completeness because the case expression has too many possible states File: C:/ECE473(2)/Lab05/char_engine.v Line: 282
-Warning (10230): Verilog HDL assignment warning at char_engine.v(199): truncated value with size 32 to match size of target (16) File: C:/ECE473(2)/Lab05/char_engine.v Line: 199
-Warning (10230): Verilog HDL assignment warning at char_engine.v(231): truncated value with size 8 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 231
-Warning (10230): Verilog HDL assignment warning at char_engine.v(236): truncated value with size 8 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 236
-Warning (10230): Verilog HDL assignment warning at char_engine.v(241): truncated value with size 8 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 241
-Warning (10230): Verilog HDL assignment warning at char_engine.v(246): truncated value with size 8 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 246
-Warning (10230): Verilog HDL assignment warning at char_engine.v(255): truncated value with size 8 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 255
-Warning (10230): Verilog HDL assignment warning at char_engine.v(260): truncated value with size 8 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 260
-Warning (10230): Verilog HDL assignment warning at char_engine.v(265): truncated value with size 8 to match size of target (6) File: C:/ECE473(2)/Lab05/char_engine.v Line: 265
+Warning (10230): Verilog HDL assignment warning at char_engine.v(274): truncated value with size 32 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 274
+Warning (10230): Verilog HDL assignment warning at char_engine.v(275): truncated value with size 32 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 275
+Warning (10230): Verilog HDL assignment warning at char_engine.v(276): truncated value with size 32 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 276
+Warning (10230): Verilog HDL assignment warning at char_engine.v(277): truncated value with size 32 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 277
+Warning (10230): Verilog HDL assignment warning at char_engine.v(279): truncated value with size 32 to match size of target (5) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 279
+Warning (10230): Verilog HDL assignment warning at char_engine.v(289): truncated value with size 88 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 289
+Warning (10230): Verilog HDL assignment warning at char_engine.v(301): truncated value with size 88 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 301
+Warning (10230): Verilog HDL assignment warning at char_engine.v(313): truncated value with size 72 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 313
+Warning (10230): Verilog HDL assignment warning at char_engine.v(326): truncated value with size 80 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 326
+Warning (10230): Verilog HDL assignment warning at char_engine.v(339): truncated value with size 56 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 339
+Warning (10230): Verilog HDL assignment warning at char_engine.v(362): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 362
+Warning (10230): Verilog HDL assignment warning at char_engine.v(373): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 373
+Warning (10230): Verilog HDL assignment warning at char_engine.v(384): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 384
+Warning (10230): Verilog HDL assignment warning at char_engine.v(395): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 395
+Warning (10230): Verilog HDL assignment warning at char_engine.v(406): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 406
+Warning (10230): Verilog HDL assignment warning at char_engine.v(417): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 417
+Warning (10230): Verilog HDL assignment warning at char_engine.v(428): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 428
+Warning (10230): Verilog HDL assignment warning at char_engine.v(439): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 439
+Warning (10230): Verilog HDL assignment warning at char_engine.v(450): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 450
+Warning (10230): Verilog HDL assignment warning at char_engine.v(461): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 461
+Warning (10230): Verilog HDL assignment warning at char_engine.v(472): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 472
+Warning (10230): Verilog HDL assignment warning at char_engine.v(483): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 483
+Warning (10230): Verilog HDL assignment warning at char_engine.v(494): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 494
+Warning (10230): Verilog HDL assignment warning at char_engine.v(505): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 505
+Warning (10230): Verilog HDL assignment warning at char_engine.v(516): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 516
+Warning (10230): Verilog HDL assignment warning at char_engine.v(527): truncated value with size 113 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 527
+Warning (10230): Verilog HDL assignment warning at char_engine.v(584): truncated value with size 72 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 584
+Warning (10230): Verilog HDL assignment warning at char_engine.v(596): truncated value with size 97 to match size of target (8) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 596
+Warning (10230): Verilog HDL assignment warning at char_engine.v(735): truncated value with size 32 to match size of target (5) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 735
+Warning (10230): Verilog HDL assignment warning at char_engine.v(742): truncated value with size 32 to match size of target (5) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 742
+Warning (10762): Verilog HDL Case Statement warning at char_engine.v(282): can't check case statement for completeness because the case expression has too many possible states File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 282
+Warning (10230): Verilog HDL assignment warning at char_engine.v(199): truncated value with size 32 to match size of target (16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 199
+Warning (10230): Verilog HDL assignment warning at char_engine.v(231): truncated value with size 8 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 231
+Warning (10230): Verilog HDL assignment warning at char_engine.v(236): truncated value with size 8 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 236
+Warning (10230): Verilog HDL assignment warning at char_engine.v(241): truncated value with size 8 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 241
+Warning (10230): Verilog HDL assignment warning at char_engine.v(246): truncated value with size 8 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 246
+Warning (10230): Verilog HDL assignment warning at char_engine.v(255): truncated value with size 8 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 255
+Warning (10230): Verilog HDL assignment warning at char_engine.v(260): truncated value with size 8 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 260
+Warning (10230): Verilog HDL assignment warning at char_engine.v(265): truncated value with size 8 to match size of target (6) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/char_engine.v Line: 265
 Info (12128): Elaborating entity "color_encoder" for hierarchy "VGA_BLOCK:inst15|color_encoder:inst1"
 Info (12128): Elaborating entity "vram" for hierarchy "VGA_BLOCK:inst15|vram:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component" File: C:/ECE473(2)/Lab05/vram.v Line: 98
-Info (12130): Elaborated megafunction instantiation "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component" File: C:/ECE473(2)/Lab05/vram.v Line: 98
-Info (12133): Instantiated megafunction "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/ECE473(2)/Lab05/vram.v Line: 98
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vram.v Line: 98
+Info (12130): Elaborated megafunction instantiation "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vram.v Line: 98
+Info (12133): Instantiated megafunction "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component" with the following parameter: File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/vram.v Line: 98
     Info (12134): Parameter "address_reg_b" = "CLOCK0"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
@@ -1782,26 +1781,26 @@ Info (12133): Instantiated megafunction "VGA_BLOCK:inst15|vram:inst3|altsyncram:
     Info (12134): Parameter "width_byteena_b" = "1"
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_1tn2.tdf
-    Info (12023): Found entity 1: altsyncram_1tn2 File: C:/ECE473(2)/Lab05/db/altsyncram_1tn2.tdf Line: 36
-Info (12128): Elaborating entity "altsyncram_1tn2" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_1tn2 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_1tn2.tdf Line: 36
+Info (12128): Elaborating entity "altsyncram_1tn2" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated" File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_3na.tdf
-    Info (12023): Found entity 1: decode_3na File: C:/ECE473(2)/Lab05/db/decode_3na.tdf Line: 23
-Info (12128): Elaborating entity "decode_3na" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|decode_3na:decode2" File: C:/ECE473(2)/Lab05/db/altsyncram_1tn2.tdf Line: 51
+    Info (12023): Found entity 1: decode_3na File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/decode_3na.tdf Line: 23
+Info (12128): Elaborating entity "decode_3na" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|decode_3na:decode2" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_1tn2.tdf Line: 51
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_s2a.tdf
-    Info (12023): Found entity 1: decode_s2a File: C:/ECE473(2)/Lab05/db/decode_s2a.tdf Line: 23
-Info (12128): Elaborating entity "decode_s2a" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|decode_s2a:rden_decode_a" File: C:/ECE473(2)/Lab05/db/altsyncram_1tn2.tdf Line: 53
+    Info (12023): Found entity 1: decode_s2a File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/decode_s2a.tdf Line: 23
+Info (12128): Elaborating entity "decode_s2a" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|decode_s2a:rden_decode_a" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_1tn2.tdf Line: 53
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_chb.tdf
-    Info (12023): Found entity 1: mux_chb File: C:/ECE473(2)/Lab05/db/mux_chb.tdf Line: 23
-Info (12128): Elaborating entity "mux_chb" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|mux_chb:mux4" File: C:/ECE473(2)/Lab05/db/altsyncram_1tn2.tdf Line: 55
+    Info (12023): Found entity 1: mux_chb File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/mux_chb.tdf Line: 23
+Info (12128): Elaborating entity "mux_chb" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|mux_chb:mux4" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_1tn2.tdf Line: 55
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_jhb.tdf
-    Info (12023): Found entity 1: mux_jhb File: C:/ECE473(2)/Lab05/db/mux_jhb.tdf Line: 23
-Info (12128): Elaborating entity "mux_jhb" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|mux_jhb:mux5" File: C:/ECE473(2)/Lab05/db/altsyncram_1tn2.tdf Line: 56
+    Info (12023): Found entity 1: mux_jhb File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/mux_jhb.tdf Line: 23
+Info (12128): Elaborating entity "mux_jhb" for hierarchy "VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|mux_jhb:mux5" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_1tn2.tdf Line: 56
 Info (12128): Elaborating entity "PC" for hierarchy "PC:inst8"
 Info (12128): Elaborating entity "addFour" for hierarchy "addFour:inst9"
 Info (12128): Elaborating entity "instrMem" for hierarchy "instrMem:inst10"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "instrMem:inst10|altsyncram:altsyncram_component" File: C:/ECE473(2)/Lab05/instrMem.v Line: 100
-Info (12130): Elaborated megafunction instantiation "instrMem:inst10|altsyncram:altsyncram_component" File: C:/ECE473(2)/Lab05/instrMem.v Line: 100
-Info (12133): Instantiated megafunction "instrMem:inst10|altsyncram:altsyncram_component" with the following parameter: File: C:/ECE473(2)/Lab05/instrMem.v Line: 100
+Info (12128): Elaborating entity "altsyncram" for hierarchy "instrMem:inst10|altsyncram:altsyncram_component" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/instrMem.v Line: 100
+Info (12130): Elaborated megafunction instantiation "instrMem:inst10|altsyncram:altsyncram_component" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/instrMem.v Line: 100
+Info (12133): Instantiated megafunction "instrMem:inst10|altsyncram:altsyncram_component" with the following parameter: File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/instrMem.v Line: 100
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
@@ -1829,12 +1828,13 @@ Info (12133): Instantiated megafunction "instrMem:inst10|altsyncram:altsyncram_c
     Info (12134): Parameter "width_byteena_b" = "1"
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4rl2.tdf
-    Info (12023): Found entity 1: altsyncram_4rl2 File: C:/ECE473(2)/Lab05/db/altsyncram_4rl2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_4rl2" for hierarchy "instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_4rl2 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_4rl2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_4rl2" for hierarchy "instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated" File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/instrMem.mif -- setting all initial values to 0 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/instrMem.v Line: 100
 Info (12128): Elaborating entity "dataMem" for hierarchy "dataMem:inst13"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "dataMem:inst13|altsyncram:altsyncram_component" File: C:/ECE473(2)/Lab05/dataMem.v Line: 100
-Info (12130): Elaborated megafunction instantiation "dataMem:inst13|altsyncram:altsyncram_component" File: C:/ECE473(2)/Lab05/dataMem.v Line: 100
-Info (12133): Instantiated megafunction "dataMem:inst13|altsyncram:altsyncram_component" with the following parameter: File: C:/ECE473(2)/Lab05/dataMem.v Line: 100
+Info (12128): Elaborating entity "altsyncram" for hierarchy "dataMem:inst13|altsyncram:altsyncram_component" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/dataMem.v Line: 100
+Info (12130): Elaborated megafunction instantiation "dataMem:inst13|altsyncram:altsyncram_component" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/dataMem.v Line: 100
+Info (12133): Instantiated megafunction "dataMem:inst13|altsyncram:altsyncram_component" with the following parameter: File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/dataMem.v Line: 100
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
@@ -1861,14 +1861,47 @@ Info (12133): Instantiated megafunction "dataMem:inst13|altsyncram:altsyncram_co
     Info (12134): Parameter "width_byteena_b" = "1"
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_nhj2.tdf
-    Info (12023): Found entity 1: altsyncram_nhj2 File: C:/ECE473(2)/Lab05/db/altsyncram_nhj2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_nhj2" for hierarchy "dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_nhj2 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_nhj2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_nhj2" for hierarchy "dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated" File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "EX_MEM" for hierarchy "EX_MEM:inst6"
-Warning (12125): Using design file alu.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: ALU File: C:/ECE473(2)/Lab05/alu.v Line: 1
+Warning (12125): Using design file ALU.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/ALU.v Line: 1
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst12"
 Info (12128): Elaborating entity "ID_EX" for hierarchy "ID_EX:inst3"
 Info (12128): Elaborating entity "register" for hierarchy "register:inst11"
+Warning (276027): Inferred dual-clock RAM node "register:inst11|altsyncram:schmegisters[0][31]__1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Warning (276027): Inferred dual-clock RAM node "register:inst11|altsyncram:schmegisters[0][31]__2" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "register:inst11|altsyncram:schmegisters[0][31]__1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 27
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 27
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "register:inst11|altsyncram:schmegisters[0][31]__2" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 27
+        Info (286033): Parameter WIDTHAD_A set to 5
+        Info (286033): Parameter NUMWORDS_A set to 32
+        Info (286033): Parameter WIDTH_B set to 27
+        Info (286033): Parameter WIDTHAD_B set to 5
+        Info (286033): Parameter NUMWORDS_B set to 32
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK1
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
 Info (12128): Elaborating entity "altsyncram" for hierarchy "register:inst11|altsyncram:schmegisters[0][31]__1"
 Info (12130): Elaborated megafunction instantiation "register:inst11|altsyncram:schmegisters[0][31]__1"
 Info (12133): Instantiated megafunction "register:inst11|altsyncram:schmegisters[0][31]__1" with the following parameter:
@@ -1887,8 +1920,8 @@ Info (12133): Instantiated megafunction "register:inst11|altsyncram:schmegisters
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_svj1.tdf
-    Info (12023): Found entity 1: altsyncram_svj1 File: C:/ECE473(2)/Lab05/db/altsyncram_svj1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_svj1" for hierarchy "register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_svj1 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_svj1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_svj1" for hierarchy "register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated" File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "altsyncram" for hierarchy "register:inst11|altsyncram:schmegisters[0][31]__2"
 Info (12130): Elaborated megafunction instantiation "register:inst11|altsyncram:schmegisters[0][31]__2"
 Info (12133): Instantiated megafunction "register:inst11|altsyncram:schmegisters[0][31]__2" with the following parameter:
@@ -1907,8 +1940,8 @@ Info (12133): Instantiated megafunction "register:inst11|altsyncram:schmegisters
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_c6j1.tdf
-    Info (12023): Found entity 1: altsyncram_c6j1 File: C:/ECE473(2)/Lab05/db/altsyncram_c6j1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_c6j1" for hierarchy "register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated" File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_c6j1 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/db/altsyncram_c6j1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_c6j1" for hierarchy "register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated" File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "IF_ID" for hierarchy "IF_ID:inst2"
 Info (12128): Elaborating entity "MEM_WB" for hierarchy "MEM_WB:inst7"
 Info (286030): Timing-Driven Synthesis is running
@@ -1938,28 +1971,28 @@ Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not e
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE0_CV -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV -section_id Top was ignored
-Info (144001): Generated suppressed messages file C:/ECE473(2)/Lab05/output_files/PipelineReg.map.smsg
+Info (144001): Generated suppressed messages file /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/output_files/PipelineReg.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
+Warning: RST port on the PLL is not properly connected on instance VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Info (21057): Implemented 3679 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3673 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 3504 logic cells
+    Info (21061): Implemented 3498 logic cells
     Info (21064): Implemented 156 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 67 warnings
-    Info: Peak virtual memory: 4917 megabytes
-    Info: Processing ended: Wed Oct 23 15:35:45 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
+    Info: Peak virtual memory: 543 megabytes
+    Info: Processing ended: Sat Oct 26 14:05:39 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/ECE473(2)/Lab05/output_files/PipelineReg.map.smsg.
+The suppressed messages can be found in /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab05/output_files/PipelineReg.map.smsg.
 
 

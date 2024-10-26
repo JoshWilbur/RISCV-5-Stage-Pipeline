@@ -1,6 +1,6 @@
 Flow report for PipelineReg
-Wed Oct 23 15:36:40 2024
-Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Sat Oct 26 14:06:37 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2024  Intel Corporation. All rights reserved.
+Copyright (C) 2023  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +---------------------------------+------------------------------------------------+
-; Flow Status                     ; Successful - Wed Oct 23 15:36:33 2024          ;
-; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
+; Flow Status                     ; Successful - Sat Oct 26 14:06:29 2024          ;
+; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; PipelineReg                                    ;
 ; Top-level Entity Name           ; top                                            ;
 ; Family                          ; Cyclone V                                      ;
 ; Device                          ; 5CEBA4F23C7                                    ;
 ; Timing Models                   ; Final                                          ;
-; Logic utilization (in ALMs)     ; 1,477 / 18,480 ( 8 % )                         ;
-; Total registers                 ; 2086                                           ;
+; Logic utilization (in ALMs)     ; 1,497 / 18,480 ( 8 % )                         ;
+; Total registers                 ; 2081                                           ;
 ; Total pins                      ; 17 / 224 ( 8 % )                               ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 313,024 / 3,153,920 ( 10 % )                   ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/23/2024 15:35:33 ;
+; Start date & time ; 10/26/2024 14:05:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PipelineReg         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 88974377894573.172971213302660         ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 14143940027899.172996592538066         ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --         ;
 ; MISC_FILE                           ; RAMTWOPORT.bsf                         ; --            ; --          ; --         ;
@@ -105,11 +105,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4917 MB             ; 00:00:22                           ;
-; Fitter               ; 00:00:43     ; 1.4                     ; 6779 MB             ; 00:03:11                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4872 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:06     ; 2.6                     ; 5224 MB             ; 00:00:13                           ;
-; Total                ; 00:01:04     ; --                      ; --                  ; 00:03:49                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 543 MB              ; 00:00:20                           ;
+; Fitter               ; 00:00:44     ; 1.4                     ; 1981 MB             ; 00:02:48                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 527 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:07     ; 2.9                     ; 921 MB              ; 00:00:16                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:03:27                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,10 +118,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LiamTop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; LiamTop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; LiamTop          ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; LiamTop          ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Archimedes       ; Arch Linux ; Arch Linux ; x86_64         ;
+; Fitter               ; Archimedes       ; Arch Linux ; Arch Linux ; x86_64         ;
+; Assembler            ; Archimedes       ; Arch Linux ; Arch Linux ; x86_64         ;
+; Timing Analyzer      ; Archimedes       ; Arch Linux ; Arch Linux ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
