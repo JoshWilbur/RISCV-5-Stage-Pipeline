@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PipelineReg
-Sat Oct 26 14:35:22 2024
+Sun Oct 27 19:41:52 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -22,7 +22,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  14. Inverted Register Statistics
  15. Multiplexer Restructuring Statistics (Restructuring Performed)
  16. Source assignments for VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated
- 17. Source assignments for instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated
+ 17. Source assignments for instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated
  18. Source assignments for register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated
  19. Source assignments for register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated
  20. Source assignments for dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated
@@ -66,7 +66,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Oct 26 14:35:22 2024          ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 27 19:41:52 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; PipelineReg                                    ;
 ; Top-level Entity Name           ; top                                            ;
@@ -197,49 +197,52 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                               ; Library ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
-; vram.v                           ; yes             ; User Wizard-Generated File         ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vram.v                 ;         ;
-; vgaclk_0002.v                    ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vgaclk_0002.v          ;         ;
-; vgaclk.v                         ; yes             ; User Wizard-Generated File         ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vgaclk.v               ;         ;
-; vga_control.v                    ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vga_control.v          ;         ;
-; VGA_BLOCK.bdf                    ; yes             ; User Block Diagram/Schematic File  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/VGA_BLOCK.bdf          ;         ;
-; color_encoder.v                  ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/color_encoder.v        ;         ;
-; char_engine.v                    ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/char_engine.v          ;         ;
-; register.v                       ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/register.v             ;         ;
-; top.bdf                          ; yes             ; User Block Diagram/Schematic File  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/top.bdf                ;         ;
-; instrMem.v                       ; yes             ; User Wizard-Generated File         ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrMem.v             ;         ;
-; dataMem.v                        ; yes             ; User Wizard-Generated File         ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/dataMem.v              ;         ;
-; IF_ID.v                          ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v                ;         ;
-; ID_EX.v                          ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ID_EX.v                ;         ;
-; EX_MEM.v                         ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/EX_MEM.v               ;         ;
-; MEM_WB.v                         ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/MEM_WB.v               ;         ;
-; addFour.v                        ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/addFour.v              ;         ;
-; PC.v                             ; yes             ; User Verilog HDL File              ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/PC.v                   ;         ;
-; altera_pll.v                     ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altera_pll.v                           ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf                         ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/stratix_ram_block.inc                  ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_mux.inc                            ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_decode.inc                         ;         ;
-; aglobal231.inc                   ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/aglobal231.inc                         ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/a_rdenreg.inc                          ;         ;
-; altrom.inc                       ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altrom.inc                             ;         ;
-; altram.inc                       ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altram.inc                             ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                       ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altdpram.inc                           ;         ;
-; db/altsyncram_1tn2.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_1tn2.tdf ;         ;
-; db/decode_3na.tdf                ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/decode_3na.tdf      ;         ;
-; db/decode_s2a.tdf                ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/decode_s2a.tdf      ;         ;
-; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/mux_chb.tdf         ;         ;
-; db/mux_jhb.tdf                   ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/mux_jhb.tdf         ;         ;
-; db/altsyncram_4rl2.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_4rl2.tdf ;         ;
-; db/altsyncram_svj1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_svj1.tdf ;         ;
-; db/altsyncram_c6j1.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_c6j1.tdf ;         ;
-; db/altsyncram_nhj2.tdf           ; yes             ; Auto-Generated Megafunction        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_nhj2.tdf ;         ;
-; ALU.v                            ; yes             ; Auto-Found Verilog HDL File        ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ALU.v                  ;         ;
-+----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; vram.v                           ; yes             ; User Wizard-Generated File             ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vram.v                 ;         ;
+; vgaclk_0002.v                    ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vgaclk_0002.v          ;         ;
+; vgaclk.v                         ; yes             ; User Wizard-Generated File             ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vgaclk.v               ;         ;
+; vga_control.v                    ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vga_control.v          ;         ;
+; VGA_BLOCK.bdf                    ; yes             ; User Block Diagram/Schematic File      ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/VGA_BLOCK.bdf          ;         ;
+; color_encoder.v                  ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/color_encoder.v        ;         ;
+; char_engine.v                    ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/char_engine.v          ;         ;
+; register.v                       ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/register.v             ;         ;
+; top.bdf                          ; yes             ; User Block Diagram/Schematic File      ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/top.bdf                ;         ;
+; instrMem.v                       ; yes             ; User Wizard-Generated File             ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrMem.v             ;         ;
+; dataMem.v                        ; yes             ; User Wizard-Generated File             ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/dataMem.v              ;         ;
+; IF_ID.v                          ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v                ;         ;
+; ID_EX.v                          ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ID_EX.v                ;         ;
+; EX_MEM.v                         ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/EX_MEM.v               ;         ;
+; MEM_WB.v                         ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/MEM_WB.v               ;         ;
+; addFour.v                        ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/addFour.v              ;         ;
+; PC.v                             ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/PC.v                   ;         ;
+; riscv_defs.v                     ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/riscv_defs.v           ;         ;
+; decoder.v                        ; yes             ; User Verilog HDL File                  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v              ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altera_pll.v                           ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf                         ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/stratix_ram_block.inc                  ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_mux.inc                            ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/lpm_decode.inc                         ;         ;
+; aglobal231.inc                   ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/aglobal231.inc                         ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/a_rdenreg.inc                          ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altrom.inc                             ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altram.inc                             ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altdpram.inc                           ;         ;
+; db/altsyncram_1tn2.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_1tn2.tdf ;         ;
+; db/decode_3na.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/decode_3na.tdf      ;         ;
+; db/decode_s2a.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/decode_s2a.tdf      ;         ;
+; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/mux_chb.tdf         ;         ;
+; db/mux_jhb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/mux_jhb.tdf         ;         ;
+; db/altsyncram_fvl2.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_fvl2.tdf ;         ;
+; ../instrmem.mif                  ; yes             ; Auto-Found Memory Initialization File  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrmem.mif           ;         ;
+; db/altsyncram_svj1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_svj1.tdf ;         ;
+; db/altsyncram_c6j1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_c6j1.tdf ;         ;
+; db/altsyncram_nhj2.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_nhj2.tdf ;         ;
+; ALU.v                            ; yes             ; Auto-Found Verilog HDL File            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ALU.v                  ;         ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------+
@@ -304,7 +307,7 @@ https://fpgasoftware.intel.com/eula.
 ;          |altsyncram_nhj2:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated                                       ; altsyncram_nhj2 ; work         ;
 ;    |instrMem:inst10|                         ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10                                                                                                     ; instrMem        ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10|altsyncram:altsyncram_component                                                                     ; altsyncram      ; work         ;
-;          |altsyncram_4rl2:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated                                      ; altsyncram_4rl2 ; work         ;
+;          |altsyncram_fvl2:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated                                      ; altsyncram_fvl2 ; work         ;
 ;    |register:inst11|                         ; 574 (574)           ; 1066 (1066)               ; 1728              ; 0          ; 0    ; 0            ; |top|register:inst11                                                                                                     ; register        ; work         ;
 ;       |altsyncram:schmegisters[0][31]__1|    ; 0 (0)               ; 0 (0)                     ; 864               ; 0          ; 0    ; 0            ; |top|register:inst11|altsyncram:schmegisters[0][31]__1                                                                   ; altsyncram      ; work         ;
 ;          |altsyncram_svj1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 864               ; 0          ; 0    ; 0            ; |top|register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated                                    ; altsyncram_svj1 ; work         ;
@@ -314,17 +317,17 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                            ;
-+-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; Name                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
-+-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port   ; 307200       ; 1            ; 38400        ; 8            ; 307200 ; None ;
-; dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated|ALTSYNCRAM              ; AUTO ; True Dual Port   ; 64           ; 32           ; 64           ; 32           ; 2048   ; None ;
-; instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated|ALTSYNCRAM             ; AUTO ; True Dual Port   ; 64           ; 32           ; 64           ; 32           ; 2048   ; None ;
-; register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 27           ; 32           ; 27           ; 864    ; None ;
-; register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 27           ; 32           ; 27           ; 864    ; None ;
-+-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                       ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+-----------------+
+; Name                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF             ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+-----------------+
+; VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port   ; 307200       ; 1            ; 38400        ; 8            ; 307200 ; None            ;
+; dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated|ALTSYNCRAM              ; AUTO ; True Dual Port   ; 64           ; 32           ; 64           ; 32           ; 2048   ; None            ;
+; instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated|ALTSYNCRAM             ; AUTO ; True Dual Port   ; 64           ; 32           ; 64           ; 32           ; 2048   ; ../instrmem.mif ;
+; register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 27           ; 32           ; 27           ; 864    ; None            ;
+; register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated|ALTSYNCRAM           ; AUTO ; Simple Dual Port ; 32           ; 27           ; 32           ; 27           ; 864    ; None            ;
++-------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+-----------------+
 
 
 +-----------------------------------------------+
@@ -835,7 +838,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +-------------------------------------------------------------------------------------------------------+
-; Source assignments for instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated ;
+; Source assignments for instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                      ;
 +---------------------------------+--------------------+------+-----------------------------------------+
@@ -1283,7 +1286,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                          ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                          ;
-; INIT_FILE                          ; instrMem.mif         ; Untyped                          ;
+; INIT_FILE                          ; ../instrmem.mif      ; Untyped                          ;
 ; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                          ;
 ; MAXIMUM_DEPTH                      ; 0                    ; Untyped                          ;
 ; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                          ;
@@ -1296,7 +1299,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                          ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                          ;
 ; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                          ;
-; CBXI_PARAMETER                     ; altsyncram_4rl2      ; Untyped                          ;
+; CBXI_PARAMETER                     ; altsyncram_fvl2      ; Untyped                          ;
 +------------------------------------+----------------------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1605,7 +1608,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Oct 26 14:35:09 2024
+    Info: Processing started: Sun Oct 27 19:41:38 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RegFileMem -c PipelineReg
 Info (20032): Parallel compilation is enabled and will use up to 8 processors
 Info (12021): Found 1 design units, including 1 entities, in source file vram.v
@@ -1645,6 +1648,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file addFour
 Info (12021): Found 1 design units, including 1 entities, in source file PC.v
     Info (12023): Found entity 1: PC File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/PC.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file riscv_defs.v
+Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
+    Info (12023): Found entity 1: decoder File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 4
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_BLOCK" for hierarchy "VGA_BLOCK:inst15"
 Info (12128): Elaborating entity "vga_control" for hierarchy "VGA_BLOCK:inst15|vga_control:inst2"
@@ -1812,7 +1817,7 @@ Info (12133): Instantiated megafunction "instrMem:inst10|altsyncram:altsyncram_c
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
     Info (12134): Parameter "indata_reg_b" = "CLOCK1"
-    Info (12134): Parameter "init_file" = "instrMem.mif"
+    Info (12134): Parameter "init_file" = "../instrmem.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone V"
     Info (12134): Parameter "lpm_type" = "altsyncram"
     Info (12134): Parameter "numwords_a" = "64"
@@ -1832,10 +1837,20 @@ Info (12133): Instantiated megafunction "instrMem:inst10|altsyncram:altsyncram_c
     Info (12134): Parameter "width_byteena_a" = "1"
     Info (12134): Parameter "width_byteena_b" = "1"
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4rl2.tdf
-    Info (12023): Found entity 1: altsyncram_4rl2 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_4rl2.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_4rl2" for hierarchy "instrMem:inst10|altsyncram:altsyncram_component|altsyncram_4rl2:auto_generated" File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Critical Warning (127003): Can't find Memory Initialization File or Hexadecimal (Intel-Format) File /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrMem.mif -- setting all initial values to 0 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrMem.v Line: 100
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fvl2.tdf
+    Info (12023): Found entity 1: altsyncram_fvl2 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_fvl2.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_fvl2" for hierarchy "instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated" File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Warning (113031): 64 out of 64 addresses are reinitialized. The latest initialized data will replace the existing data. There are 64 warnings found, and 10 warnings are reported. File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrmem.mif Line: 1
+    Warning (113030): Memory Initialization File address 0 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 10
+    Warning (113030): Memory Initialization File address 1 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 11
+    Warning (113030): Memory Initialization File address 2 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 12
+    Warning (113030): Memory Initialization File address 3 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 13
+    Warning (113030): Memory Initialization File address 4 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 14
+    Warning (113030): Memory Initialization File address 5 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 15
+    Warning (113030): Memory Initialization File address 6 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 16
+    Warning (113030): Memory Initialization File address 7 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 17
+    Warning (113030): Memory Initialization File address 8 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 18
+    Warning (113030): Memory Initialization File address 9 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 19
 Info (12128): Elaborating entity "PC" for hierarchy "PC:inst8"
 Info (12128): Elaborating entity "addFour" for hierarchy "addFour:inst9"
 Info (12128): Elaborating entity "ID_EX" for hierarchy "ID_EX:inst3"
@@ -1917,6 +1932,15 @@ Info (12128): Elaborating entity "EX_MEM" for hierarchy "EX_MEM:inst6"
 Warning (12125): Using design file ALU.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ALU File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ALU.v Line: 1
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst12"
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:inst"
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(13): inferring latch(es) for variable "opcode", which holds its previous value in one or more paths through the always construct File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 13
+Info (10041): Inferred latch for "opcode[0]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
+Info (10041): Inferred latch for "opcode[1]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
+Info (10041): Inferred latch for "opcode[2]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
+Info (10041): Inferred latch for "opcode[3]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
+Info (10041): Inferred latch for "opcode[4]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
+Info (10041): Inferred latch for "opcode[5]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
+Info (10041): Inferred latch for "opcode[6]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 78 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
@@ -1956,11 +1980,11 @@ Info (21057): Implemented 3694 device resources after synthesis - the final reso
     Info (21064): Implemented 156 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
-    Info: Peak virtual memory: 563 megabytes
-    Info: Processing ended: Sat Oct 26 14:35:22 2024
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:21
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 79 warnings
+    Info: Peak virtual memory: 562 megabytes
+    Info: Processing ended: Sun Oct 27 19:41:52 2024
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+
