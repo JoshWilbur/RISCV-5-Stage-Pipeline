@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PipelineReg
-Sun Oct 27 19:41:52 2024
+Tue Oct 29 20:58:46 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -16,30 +16,31 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis DSP Block Usage Summary
  10. Analysis & Synthesis IP Cores Summary
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated
- 17. Source assignments for instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated
- 18. Source assignments for register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated
- 19. Source assignments for register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated
- 20. Source assignments for dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated
- 21. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|vga_control:inst2
- 22. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i
- 23. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|char_engine:inst
- 24. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|color_encoder:inst1
- 25. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: instrMem:inst10|altsyncram:altsyncram_component
- 27. Parameter Settings for User Entity Instance: register:inst11|altsyncram:schmegisters[0][31]__1
- 28. Parameter Settings for User Entity Instance: register:inst11|altsyncram:schmegisters[0][31]__2
- 29. Parameter Settings for User Entity Instance: dataMem:inst13|altsyncram:altsyncram_component
- 30. altsyncram Parameter Settings by Entity Instance
- 31. Post-Synthesis Netlist Statistics for Top Partition
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
- 34. Analysis & Synthesis Suppressed Messages
+ 11. User-Specified and Inferred Latches
+ 12. Registers Removed During Synthesis
+ 13. Removed Registers Triggering Further Register Optimizations
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component|altsyncram_1tn2:auto_generated
+ 18. Source assignments for instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated
+ 19. Source assignments for register:inst11|altsyncram:schmegisters[0][31]__1|altsyncram_svj1:auto_generated
+ 20. Source assignments for register:inst11|altsyncram:schmegisters[0][31]__2|altsyncram_c6j1:auto_generated
+ 21. Source assignments for dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated
+ 22. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|vga_control:inst2
+ 23. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i
+ 24. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|char_engine:inst
+ 25. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|color_encoder:inst1
+ 26. Parameter Settings for User Entity Instance: VGA_BLOCK:inst15|vram:inst3|altsyncram:altsyncram_component
+ 27. Parameter Settings for User Entity Instance: instrMem:inst10|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: register:inst11|altsyncram:schmegisters[0][31]__1
+ 29. Parameter Settings for User Entity Instance: register:inst11|altsyncram:schmegisters[0][31]__2
+ 30. Parameter Settings for User Entity Instance: dataMem:inst13|altsyncram:altsyncram_component
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Analysis & Synthesis Messages
+ 35. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -66,14 +67,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Oct 27 19:41:52 2024          ;
+; Analysis & Synthesis Status     ; Successful - Tue Oct 29 20:58:46 2024          ;
 ; Quartus Prime Version           ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                   ; PipelineReg                                    ;
 ; Top-level Entity Name           ; top                                            ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 1955                                           ;
-; Total pins                      ; 17                                             ;
+; Total registers                 ; 1994                                           ;
+; Total pins                      ; 97                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 313,024                                        ;
 ; Total DSP Blocks                ; 1                                              ;
@@ -237,7 +238,7 @@ https://fpgasoftware.intel.com/eula.
 ; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/mux_chb.tdf         ;         ;
 ; db/mux_jhb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/mux_jhb.tdf         ;         ;
 ; db/altsyncram_fvl2.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_fvl2.tdf ;         ;
-; ../instrmem.mif                  ; yes             ; Auto-Found Memory Initialization File  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrmem.mif           ;         ;
+; instrmem.mif                     ; yes             ; Auto-Found Memory Initialization File  ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrmem.mif           ;         ;
 ; db/altsyncram_svj1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_svj1.tdf ;         ;
 ; db/altsyncram_c6j1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_c6j1.tdf ;         ;
 ; db/altsyncram_nhj2.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_nhj2.tdf ;         ;
@@ -250,18 +251,18 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1659         ;
+; Estimate of Logic utilization (ALMs needed) ; 1946         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 2119         ;
-;     -- 7 input functions                    ; 14           ;
-;     -- 6 input functions                    ; 1000         ;
-;     -- 5 input functions                    ; 213          ;
-;     -- 4 input functions                    ; 200          ;
-;     -- <=3 input functions                  ; 692          ;
+; Combinational ALUT usage for logic          ; 2686         ;
+;     -- 7 input functions                    ; 61           ;
+;     -- 6 input functions                    ; 1002         ;
+;     -- 5 input functions                    ; 449          ;
+;     -- 4 input functions                    ; 370          ;
+;     -- <=3 input functions                  ; 804          ;
 ;                                             ;              ;
-; Dedicated logic registers                   ; 1955         ;
+; Dedicated logic registers                   ; 1994         ;
 ;                                             ;              ;
-; I/O pins                                    ; 17           ;
+; I/O pins                                    ; 97           ;
 ; Total MLAB memory bits                      ; 0            ;
 ; Total block memory bits                     ; 313024       ;
 ;                                             ;              ;
@@ -272,8 +273,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 1536         ;
-; Total fan-out                               ; 18610        ;
-; Average fan-out                             ; 4.36         ;
+; Total fan-out                               ; 21316        ;
+; Average fan-out                             ; 4.24         ;
 +---------------------------------------------+--------------+
 
 
@@ -282,15 +283,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                         ; 2119 (1)            ; 1955 (0)                  ; 313024            ; 1          ; 17   ; 0            ; |top                                                                                                                     ; top             ; work         ;
+; |top                                         ; 2686 (1)            ; 1994 (0)                  ; 313024            ; 1          ; 97   ; 0            ; |top                                                                                                                     ; top             ; work         ;
 ;    |ALU:inst12|                              ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU:inst12                                                                                                          ; ALU             ; work         ;
 ;    |EX_MEM:inst6|                            ; 0 (0)               ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |top|EX_MEM:inst6                                                                                                        ; EX_MEM          ; work         ;
 ;    |ID_EX:inst3|                             ; 0 (0)               ; 69 (69)                   ; 0                 ; 0          ; 0    ; 0            ; |top|ID_EX:inst3                                                                                                         ; ID_EX           ; work         ;
 ;    |IF_ID:inst2|                             ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|IF_ID:inst2                                                                                                         ; IF_ID           ; work         ;
 ;    |MEM_WB:inst7|                            ; 0 (0)               ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |top|MEM_WB:inst7                                                                                                        ; MEM_WB          ; work         ;
 ;    |PC:inst8|                                ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |top|PC:inst8                                                                                                            ; PC              ; work         ;
-;    |VGA_BLOCK:inst15|                        ; 1496 (0)            ; 692 (0)                   ; 307200            ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15                                                                                                    ; VGA_BLOCK       ; work         ;
-;       |char_engine:inst|                     ; 1235 (1235)         ; 601 (601)                 ; 0                 ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|char_engine:inst                                                                                   ; char_engine     ; work         ;
+;    |VGA_BLOCK:inst15|                        ; 1878 (0)            ; 731 (0)                   ; 307200            ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15                                                                                                    ; VGA_BLOCK       ; work         ;
+;       |char_engine:inst|                     ; 1617 (1617)         ; 640 (640)                 ; 0                 ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|char_engine:inst                                                                                   ; char_engine     ; work         ;
 ;       |vga_control:inst2|                    ; 173 (173)           ; 85 (85)                   ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vga_control:inst2                                                                                  ; vga_control     ; work         ;
 ;       |vgaclk:inst4|                         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vgaclk:inst4                                                                                       ; vgaclk          ; work         ;
 ;          |vgaclk_0002:vgaclk_inst|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst                                                               ; vgaclk_0002     ; work         ;
@@ -305,6 +306,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |dataMem:inst13|                          ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|dataMem:inst13                                                                                                      ; dataMem         ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|dataMem:inst13|altsyncram:altsyncram_component                                                                      ; altsyncram      ; work         ;
 ;          |altsyncram_nhj2:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated                                       ; altsyncram_nhj2 ; work         ;
+;    |decoder:inst|                            ; 185 (185)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|decoder:inst                                                                                                        ; decoder         ; work         ;
 ;    |instrMem:inst10|                         ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10                                                                                                     ; instrMem        ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10|altsyncram:altsyncram_component                                                                     ; altsyncram      ; work         ;
 ;          |altsyncram_fvl2:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated                                      ; altsyncram_fvl2 ; work         ;
@@ -350,6 +352,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Altera ; RAM: 2-PORT  ; 23.1    ; N/A          ; N/A          ; |top|instrMem:inst10 ; instrMem.v      ;
 ; Altera ; RAM: 2-PORT  ; 23.1    ; N/A          ; N/A          ; |top|dataMem:inst13  ; dataMem.v       ;
 +--------+--------------+---------+--------------+--------------+----------------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++-----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------+------------------------+
+; decoder:inst|decode_str[54]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[52]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[50]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[48]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[46]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[43]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[42]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[41]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[38]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[35]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[33]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[32]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[30]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[27]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[26]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[25]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[24]                         ; decoder:inst|Selector15 ; yes                    ;
+; decoder:inst|decode_str[22]                         ; decoder:inst|Selector15 ; yes                    ;
+; decoder:inst|decode_str[20]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[19]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[18]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[17]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[16]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[12]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[11]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[10]                         ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[9]                          ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[8]                          ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[4]                          ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[3]                          ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[2]                          ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[1]                          ; decoder:inst|Selector37 ; yes                    ;
+; decoder:inst|decode_str[0]                          ; decoder:inst|Selector37 ; yes                    ;
+; Number of user-specified and inferred latches = 33  ;                         ;                        ;
++-----------------------------------------------------+-------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -544,39 +589,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_BLOCK:inst15|char_engine:inst|mem_buffer[63]                                   ; Merged with VGA_BLOCK:inst15|char_engine:inst|mem_buffer[55]    ;
 ; VGA_BLOCK:inst15|char_engine:inst|mem_buffer[7,8,15,16,23,24,31,32,39,40,47,48,56] ; Merged with VGA_BLOCK:inst15|char_engine:inst|mem_buffer[0]     ;
 ; VGA_BLOCK:inst15|char_engine:inst|mem_buffer[60]                                   ; Merged with VGA_BLOCK:inst15|char_engine:inst|mem_buffer[59]    ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][6]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][6] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][6]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][6] ;
 ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][6]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][6] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][5]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][3] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][2]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][4]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][5]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][4]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][5]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][1]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][3]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][5]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[10][4]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[10][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][3]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][1]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][2]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][3]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][2]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][4]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[11][2]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[11][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[11][3]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[11][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][2]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][3]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][1]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][2]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][3]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[12][2]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[12][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][2]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][1] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][1]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][6] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][1]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][6] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][6]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][6] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][4]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[0][7]                                 ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[4][7]  ;
+; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][5]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][5] ;
 ; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[0][0]                            ; Stuck at VCC due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[1][0]                            ; Stuck at VCC due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[2][0]                            ; Stuck at VCC due to stuck port data_in                          ;
@@ -611,26 +625,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[31][0]                           ; Stuck at VCC due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|num_chars[5]                                     ; Stuck at GND due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[19][0]                                ; Stuck at VCC due to stuck port data_in                          ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4]                                ; Stuck at GND due to stuck port data_in                          ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][3]                                ; Stuck at GND due to stuck port data_in                          ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[12][5]                                ; Stuck at GND due to stuck port data_in                          ;
+; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][5]                                ; Stuck at GND due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[7][7]                                 ; Stuck at GND due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[6][7]                                 ; Stuck at GND due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[5][7]                                 ; Stuck at GND due to stuck port data_in                          ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[4][7]                                 ; Stuck at GND due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[3][7]                                 ; Stuck at GND due to stuck port data_in                          ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[16][0]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][0] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][5]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][0] ;
+; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[0][7]                                 ; Stuck at GND due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|debug_count[0..31]                               ; Lost fanout                                                     ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][0]                                ; Stuck at VCC due to stuck port data_in                          ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][0]                                ; Stuck at VCC due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|column[10]                                       ; Stuck at GND due to stuck port data_in                          ;
+; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[4][7]                                 ; Stuck at GND due to stuck port data_in                          ;
 ; VGA_BLOCK:inst15|char_engine:inst|hex_digit[7]                                     ; Stuck at GND due to stuck port data_in                          ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][0]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[14][0] ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][6]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][0] ;
 ; PC:inst8|PC_out[16..31]                                                            ; Lost fanout                                                     ;
-; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][6]                                ; Merged with VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][1] ;
-; Total Number of Removed Registers = 392                                            ;                                                                 ;
+; Total Number of Removed Registers = 353                                            ;                                                                 ;
 +------------------------------------------------------------------------------------+-----------------------------------------------------------------+
 
 
@@ -649,9 +655,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                          ;                           ; VGA_BLOCK:inst15|char_engine:inst|debug_count[2],                                   ;
 ;                                                          ;                           ; VGA_BLOCK:inst15|char_engine:inst|debug_count[1],                                   ;
 ;                                                          ;                           ; VGA_BLOCK:inst15|char_engine:inst|debug_count[0]                                    ;
-; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[9][5]  ; Stuck at GND              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[12][5]                                 ;
-;                                                          ; due to stuck port data_in ;                                                                                     ;
-; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[10][3] ; Stuck at GND              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][3]                                 ;
+; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[13][5] ; Stuck at GND              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[17][5]                                 ;
 ;                                                          ; due to stuck port data_in ;                                                                                     ;
 ; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[15][5] ; Stuck at GND              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[19][5]                                 ;
 ;                                                          ; due to stuck port data_in ;                                                                                     ;
@@ -663,13 +667,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                                                          ; due to stuck port data_in ;                                                                                     ;
 ; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[15][1] ; Stuck at GND              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[19][1]                                 ;
 ;                                                          ; due to stuck port data_in ;                                                                                     ;
-; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[28][4] ; Stuck at GND              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[15][4]                                 ;
-;                                                          ; due to stuck port data_in ;                                                                                     ;
 ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[19][7]      ; Stuck at GND              ; VGA_BLOCK:inst15|char_engine:inst|hex_digit[7]                                      ;
-;                                                          ; due to stuck port data_in ;                                                                                     ;
-; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[10][0] ; Stuck at VCC              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][0]                                 ;
-;                                                          ; due to stuck port data_in ;                                                                                     ;
-; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[14][0] ; Stuck at VCC              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[18][0]                                 ;
 ;                                                          ; due to stuck port data_in ;                                                                                     ;
 ; VGA_BLOCK:inst15|char_engine:inst|debug_prebuffer[15][0] ; Stuck at VCC              ; VGA_BLOCK:inst15|char_engine:inst|hex_buffer[19][0]                                 ;
 ;                                                          ; due to stuck port data_in ;                                                                                     ;
@@ -681,12 +679,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1955  ;
+; Total registers                              ; 1994  ;
 ; Number of registers using Synchronous Clear  ; 337   ;
-; Number of registers using Synchronous Load   ; 39    ;
+; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1613  ;
+; Number of registers using Clock Enable       ; 1654  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -701,38 +699,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_BLOCK:inst15|char_engine:inst|y[2]           ; 10      ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[1]           ; 18      ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[0]           ; 22      ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[4]  ; 14      ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[1]  ; 12      ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[3]  ; 11      ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[1]  ; 8       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[0]  ; 5       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[5]  ; 12      ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[3]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[2]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[2]  ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[31] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[27] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[26] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[17] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[16] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[20] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[25] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[9]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[8]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[7]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[6]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[15] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[14] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[29] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[28] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[19] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[18] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[24] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[30] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[26] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[21] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[11] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[7]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[25] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[24] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[15] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[14] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[20] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[9]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[8]  ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[10] ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[30] ; 5       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[6]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[29] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[28] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[19] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[18] ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[23] ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[22] ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[13] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[12] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[27] ; 4       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[17] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[16] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[5]  ; 5       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[4]  ; 5       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[9]           ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[7]           ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[10]          ; 2       ;
@@ -744,22 +742,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_BLOCK:inst15|char_engine:inst|y[30]          ; 1       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[29]          ; 1       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[28]          ; 1       ;
-; register:inst11|schmegisters[16][4]              ; 3       ;
-; register:inst11|schmegisters[20][4]              ; 3       ;
-; register:inst11|schmegisters[24][4]              ; 3       ;
-; register:inst11|schmegisters[28][4]              ; 3       ;
-; register:inst11|schmegisters[17][4]              ; 3       ;
-; register:inst11|schmegisters[21][4]              ; 3       ;
-; register:inst11|schmegisters[25][4]              ; 3       ;
-; register:inst11|schmegisters[29][4]              ; 3       ;
-; register:inst11|schmegisters[18][4]              ; 3       ;
-; register:inst11|schmegisters[22][4]              ; 3       ;
-; register:inst11|schmegisters[26][4]              ; 3       ;
-; register:inst11|schmegisters[30][4]              ; 3       ;
-; register:inst11|schmegisters[19][4]              ; 3       ;
-; register:inst11|schmegisters[23][4]              ; 3       ;
-; register:inst11|schmegisters[27][4]              ; 3       ;
-; register:inst11|schmegisters[31][4]              ; 3       ;
 ; register:inst11|schmegisters[17][0]              ; 3       ;
 ; register:inst11|schmegisters[21][0]              ; 3       ;
 ; register:inst11|schmegisters[25][0]              ; 3       ;
@@ -776,6 +758,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; register:inst11|schmegisters[15][0]              ; 3       ;
 ; register:inst11|schmegisters[5][0]               ; 3       ;
 ; register:inst11|schmegisters[7][0]               ; 3       ;
+; register:inst11|schmegisters[16][4]              ; 3       ;
+; register:inst11|schmegisters[20][4]              ; 3       ;
+; register:inst11|schmegisters[24][4]              ; 3       ;
+; register:inst11|schmegisters[28][4]              ; 3       ;
+; register:inst11|schmegisters[17][4]              ; 3       ;
+; register:inst11|schmegisters[21][4]              ; 3       ;
+; register:inst11|schmegisters[25][4]              ; 3       ;
+; register:inst11|schmegisters[29][4]              ; 3       ;
+; register:inst11|schmegisters[18][4]              ; 3       ;
+; register:inst11|schmegisters[22][4]              ; 3       ;
+; register:inst11|schmegisters[26][4]              ; 3       ;
+; register:inst11|schmegisters[30][4]              ; 3       ;
+; register:inst11|schmegisters[19][4]              ; 3       ;
+; register:inst11|schmegisters[23][4]              ; 3       ;
+; register:inst11|schmegisters[27][4]              ; 3       ;
+; register:inst11|schmegisters[31][4]              ; 3       ;
 ; register:inst11|schmegisters[18][1]              ; 3       ;
 ; register:inst11|schmegisters[22][1]              ; 3       ;
 ; register:inst11|schmegisters[26][1]              ; 3       ;
@@ -801,31 +799,44 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|x[31]             ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[1]        ;
-; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_2[4]                       ;
-; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_debug[3]                   ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; Yes        ; |top|register:inst11|data_out_1[6]                       ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[4]        ;
-; 14:1               ; 12 bits   ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|row[17]           ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 26 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[12][4] ;
-; 23:1               ; 3 bits    ; 45 LEs        ; 42 LEs               ; 3 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[3][6]  ;
-; 24:1               ; 2 bits    ; 32 LEs        ; 30 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[8][2]  ;
-; 25:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[6][1]  ;
-; 25:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[7][1]  ;
-; 25:1               ; 2 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[2][5]  ;
-; 26:1               ; 16 bits   ; 272 LEs       ; 256 LEs              ; 16 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[27]          ;
-; 33:1               ; 5 bits    ; 110 LEs       ; 105 LEs              ; 5 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[1]           ;
-; 36:1               ; 11 bits   ; 264 LEs       ; 242 LEs              ; 22 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[11]          ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|y[13]             ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount           ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|x[15]            ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[5]       ;
+; 20:1               ; 5 bits    ; 65 LEs        ; 65 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_digit[0]     ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_2[1]                      ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_debug[4]                  ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; Yes        ; |top|register:inst11|data_out_1[13]                     ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[4]       ;
+; 14:1               ; 12 bits   ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|row[10]          ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 28 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[2][6] ;
+; 26:1               ; 5 bits    ; 85 LEs        ; 80 LEs               ; 5 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[28]         ;
+; 26:1               ; 11 bits   ; 187 LEs       ; 176 LEs              ; 11 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[18]         ;
+; 33:1               ; 5 bits    ; 110 LEs       ; 105 LEs              ; 5 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[1]          ;
+; 36:1               ; 6 bits    ; 144 LEs       ; 132 LEs              ; 12 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[6]          ;
+; 36:1               ; 5 bits    ; 120 LEs       ; 110 LEs              ; 10 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[12]         ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|y[15]            ;
+; 3:1                ; 28 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector37                            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector29                            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector37                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector86       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Mux6                                  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Mux22            ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount          ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector0        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|decoder:inst|Mux6                                  ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector29                            ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector37                            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top|decoder:inst|Selector21                            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector78       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector29                            ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 32 LEs               ; 138 LEs                ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector106      ;
+; 29:1               ; 2 bits    ; 38 LEs        ; 28 LEs               ; 10 LEs                 ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector75       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -1556,40 +1567,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 1955                        ;
-;     ENA               ; 1466                        ;
+; arriav_ff             ; 1994                        ;
+;     ENA               ; 1515                        ;
 ;     ENA SCLR          ; 108                         ;
-;     ENA SLD           ; 39                          ;
+;     ENA SLD           ; 31                          ;
 ;     SCLR              ; 229                         ;
-;     plain             ; 113                         ;
-; arriav_lcell_comb     ; 2119                        ;
+;     plain             ; 111                         ;
+; arriav_lcell_comb     ; 2687                        ;
 ;     arith             ; 368                         ;
 ;         1 data inputs ; 267                         ;
 ;         2 data inputs ; 48                          ;
 ;         3 data inputs ; 30                          ;
 ;         4 data inputs ; 14                          ;
 ;         5 data inputs ; 9                           ;
-;     extend            ; 14                          ;
-;         7 data inputs ; 14                          ;
-;     normal            ; 1708                        ;
-;         0 data inputs ; 1                           ;
+;     extend            ; 61                          ;
+;         7 data inputs ; 61                          ;
+;     normal            ; 2229                        ;
+;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 82                          ;
-;         2 data inputs ; 57                          ;
-;         3 data inputs ; 178                         ;
-;         4 data inputs ; 186                         ;
-;         5 data inputs ; 204                         ;
-;         6 data inputs ; 1000                        ;
+;         2 data inputs ; 104                         ;
+;         3 data inputs ; 243                         ;
+;         4 data inputs ; 356                         ;
+;         5 data inputs ; 440                         ;
+;         6 data inputs ; 1002                        ;
 ;     shared            ; 29                          ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 12                          ;
 ;         3 data inputs ; 16                          ;
 ; arriav_mac            ; 1                           ;
-; boundary_port         ; 17                          ;
+; boundary_port         ; 97                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 156                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.60                       ;
-; Average LUT depth     ; 4.64                        ;
+; Max LUT depth         ; 11.60                       ;
+; Average LUT depth     ; 4.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1598,7 +1609,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:10     ;
 +----------------+--------------+
 
 
@@ -1608,7 +1619,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Oct 27 19:41:38 2024
+    Info: Processing started: Tue Oct 29 20:58:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RegFileMem -c PipelineReg
 Info (20032): Parallel compilation is enabled and will use up to 8 processors
 Info (12021): Found 1 design units, including 1 entities, in source file vram.v
@@ -1648,6 +1659,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file addFour
 Info (12021): Found 1 design units, including 1 entities, in source file PC.v
     Info (12023): Found entity 1: PC File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/PC.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file riscv_defs.v
+Warning (10229): Verilog HDL Expression warning at decoder.v(43): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 43
+Warning (10229): Verilog HDL Expression warning at decoder.v(44): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 44
+Warning (10229): Verilog HDL Expression warning at decoder.v(45): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 45
+Warning (10229): Verilog HDL Expression warning at decoder.v(47): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 47
+Warning (10229): Verilog HDL Expression warning at decoder.v(54): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 54
+Warning (10229): Verilog HDL Expression warning at decoder.v(55): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 55
+Warning (10229): Verilog HDL Expression warning at decoder.v(63): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 63
+Warning (10229): Verilog HDL Expression warning at decoder.v(64): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 64
+Warning (10229): Verilog HDL Expression warning at decoder.v(65): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 65
+Warning (10229): Verilog HDL Expression warning at decoder.v(67): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 67
+Warning (10229): Verilog HDL Expression warning at decoder.v(68): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 68
+Warning (10229): Verilog HDL Expression warning at decoder.v(69): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 69
+Warning (10229): Verilog HDL Expression warning at decoder.v(78): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 78
+Warning (10229): Verilog HDL Expression warning at decoder.v(79): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 79
+Warning (10229): Verilog HDL Expression warning at decoder.v(80): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 80
+Warning (10229): Verilog HDL Expression warning at decoder.v(89): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 89
+Warning (10229): Verilog HDL Expression warning at decoder.v(98): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 98
+Warning (10229): Verilog HDL Expression warning at decoder.v(99): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 99
+Warning (10229): Verilog HDL Expression warning at decoder.v(100): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 100
+Warning (10229): Verilog HDL Expression warning at decoder.v(101): truncated literal to match 1 bits File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 101
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
     Info (12023): Found entity 1: decoder File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 4
 Info (12127): Elaborating entity "top" for the top level hierarchy
@@ -1840,17 +1871,6 @@ Info (12133): Instantiated megafunction "instrMem:inst10|altsyncram:altsyncram_c
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fvl2.tdf
     Info (12023): Found entity 1: altsyncram_fvl2 File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/db/altsyncram_fvl2.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_fvl2" for hierarchy "instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated" File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (113031): 64 out of 64 addresses are reinitialized. The latest initialized data will replace the existing data. There are 64 warnings found, and 10 warnings are reported. File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrmem.mif Line: 1
-    Warning (113030): Memory Initialization File address 0 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 10
-    Warning (113030): Memory Initialization File address 1 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 11
-    Warning (113030): Memory Initialization File address 2 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 12
-    Warning (113030): Memory Initialization File address 3 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 13
-    Warning (113030): Memory Initialization File address 4 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 14
-    Warning (113030): Memory Initialization File address 5 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 15
-    Warning (113030): Memory Initialization File address 6 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 16
-    Warning (113030): Memory Initialization File address 7 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 17
-    Warning (113030): Memory Initialization File address 8 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 18
-    Warning (113030): Memory Initialization File address 9 is reinitialized File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ Line: 19
 Info (12128): Elaborating entity "PC" for hierarchy "PC:inst8"
 Info (12128): Elaborating entity "addFour" for hierarchy "addFour:inst9"
 Info (12128): Elaborating entity "ID_EX" for hierarchy "ID_EX:inst3"
@@ -1933,14 +1953,234 @@ Warning (12125): Using design file ALU.v, which is not specified as a design fil
     Info (12023): Found entity 1: ALU File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ALU.v Line: 1
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst12"
 Info (12128): Elaborating entity "decoder" for hierarchy "decoder:inst"
-Warning (10240): Verilog HDL Always Construct warning at decoder.v(13): inferring latch(es) for variable "opcode", which holds its previous value in one or more paths through the always construct File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 13
-Info (10041): Inferred latch for "opcode[0]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
-Info (10041): Inferred latch for "opcode[1]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
-Info (10041): Inferred latch for "opcode[2]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
-Info (10041): Inferred latch for "opcode[3]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
-Info (10041): Inferred latch for "opcode[4]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
-Info (10041): Inferred latch for "opcode[5]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
-Info (10041): Inferred latch for "opcode[6]" at decoder.v(16) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 16
+Warning (10036): Verilog HDL or VHDL warning at decoder.v(12): object "rd" assigned a value but never read File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 12
+Warning (10036): Verilog HDL or VHDL warning at decoder.v(13): object "rs1" assigned a value but never read File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 13
+Warning (10036): Verilog HDL or VHDL warning at decoder.v(14): object "rs2" assigned a value but never read File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 14
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(43): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 43
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(44): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 44
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(46): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 46
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(47): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 47
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(54): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 54
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(55): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 55
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(35): incomplete case statement has no default case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 35
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(63): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 63
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(64): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 64
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(66): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 66
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(67): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 67
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(68): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 68
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(69): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 69
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(61): incomplete case statement has no default case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 61
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(78): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 78
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(79): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 79
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(80): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 80
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(75): incomplete case statement has no default case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 75
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(89): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 89
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(86): incomplete case statement has no default case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 86
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(98): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 98
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(99): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 99
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(100): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 100
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(101): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 101
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(95): incomplete case statement has no default case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 95
+Warning (10272): Verilog HDL Case Statement warning at decoder.v(121): case item expression covers a value already covered by a previous case item File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 121
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(19): inferring latch(es) for variable "decode_str", which holds its previous value in one or more paths through the always construct File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(19): inferring latch(es) for variable "opcode", which holds its previous value in one or more paths through the always construct File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[0]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[1]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[2]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[3]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[4]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[5]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[6]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[7]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[8]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[9]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[10]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[11]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[12]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[13]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[14]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[15]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[16]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[17]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[18]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[19]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[20]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[21]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[22]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[23]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[24]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[25]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[26]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[27]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[28]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[29]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[30]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[31]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[32]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[33]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[34]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[35]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[36]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[37]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[38]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[39]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[40]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[41]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[42]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[43]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[44]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[45]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[46]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[47]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[48]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[49]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[50]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[51]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[52]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[53]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[54]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[55]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[56]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[57]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[58]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[59]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[60]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[61]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[62]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[63]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[64]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[65]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[66]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[67]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[68]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[69]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[70]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[71]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[72]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[73]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[74]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[75]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[76]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[77]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[78]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "decode_str[79]" at decoder.v(19) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Info (10041): Inferred latch for "opcode[0]" at decoder.v(22) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Info (10041): Inferred latch for "opcode[1]" at decoder.v(22) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Info (10041): Inferred latch for "opcode[2]" at decoder.v(22) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Info (10041): Inferred latch for "opcode[3]" at decoder.v(22) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Info (10041): Inferred latch for "opcode[4]" at decoder.v(22) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Info (10041): Inferred latch for "opcode[5]" at decoder.v(22) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Info (10041): Inferred latch for "opcode[6]" at decoder.v(22) File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Warning (14026): LATCH primitive "decoder:inst|opcode[0]" is permanently enabled File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Warning (14026): LATCH primitive "decoder:inst|opcode[1]" is permanently enabled File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Warning (14026): LATCH primitive "decoder:inst|opcode[2]" is permanently enabled File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Warning (14026): LATCH primitive "decoder:inst|opcode[3]" is permanently enabled File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Warning (14026): LATCH primitive "decoder:inst|opcode[4]" is permanently enabled File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Warning (14026): LATCH primitive "decoder:inst|opcode[5]" is permanently enabled File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Warning (14026): LATCH primitive "decoder:inst|opcode[6]" is permanently enabled File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[52]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[50]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[48]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[46]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[43]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[42]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[41]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[35]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[32]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[33]" merged with LATCH primitive "decoder:inst|decode_str[38]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[26]" merged with LATCH primitive "decoder:inst|decode_str[38]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[25]" merged with LATCH primitive "decoder:inst|decode_str[27]" File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+Warning (13012): Latch decoder:inst|decode_str[54] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[1] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[38] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[30] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[27] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[1] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[24] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[22] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[1] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[20] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[19] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[18] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[17] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[16] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[12] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[11] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[10] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[9] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[8] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[4] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[6] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[3] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[2] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[1] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[0] has unsafe behavior File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[6] File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "decoded_str[79]" is stuck at GND
+    Warning (13410): Pin "decoded_str[78]" is stuck at GND
+    Warning (13410): Pin "decoded_str[77]" is stuck at GND
+    Warning (13410): Pin "decoded_str[76]" is stuck at GND
+    Warning (13410): Pin "decoded_str[75]" is stuck at GND
+    Warning (13410): Pin "decoded_str[74]" is stuck at GND
+    Warning (13410): Pin "decoded_str[73]" is stuck at GND
+    Warning (13410): Pin "decoded_str[72]" is stuck at GND
+    Warning (13410): Pin "decoded_str[71]" is stuck at GND
+    Warning (13410): Pin "decoded_str[70]" is stuck at GND
+    Warning (13410): Pin "decoded_str[69]" is stuck at GND
+    Warning (13410): Pin "decoded_str[68]" is stuck at GND
+    Warning (13410): Pin "decoded_str[67]" is stuck at GND
+    Warning (13410): Pin "decoded_str[66]" is stuck at GND
+    Warning (13410): Pin "decoded_str[65]" is stuck at GND
+    Warning (13410): Pin "decoded_str[64]" is stuck at GND
+    Warning (13410): Pin "decoded_str[63]" is stuck at GND
+    Warning (13410): Pin "decoded_str[62]" is stuck at GND
+    Warning (13410): Pin "decoded_str[61]" is stuck at GND
+    Warning (13410): Pin "decoded_str[60]" is stuck at GND
+    Warning (13410): Pin "decoded_str[59]" is stuck at GND
+    Warning (13410): Pin "decoded_str[58]" is stuck at GND
+    Warning (13410): Pin "decoded_str[57]" is stuck at GND
+    Warning (13410): Pin "decoded_str[56]" is stuck at GND
+    Warning (13410): Pin "decoded_str[55]" is stuck at GND
+    Warning (13410): Pin "decoded_str[53]" is stuck at GND
+    Warning (13410): Pin "decoded_str[51]" is stuck at GND
+    Warning (13410): Pin "decoded_str[49]" is stuck at GND
+    Warning (13410): Pin "decoded_str[47]" is stuck at GND
+    Warning (13410): Pin "decoded_str[45]" is stuck at GND
+    Warning (13410): Pin "decoded_str[44]" is stuck at GND
+    Warning (13410): Pin "decoded_str[40]" is stuck at GND
+    Warning (13410): Pin "decoded_str[39]" is stuck at GND
+    Warning (13410): Pin "decoded_str[37]" is stuck at GND
+    Warning (13410): Pin "decoded_str[36]" is stuck at GND
+    Warning (13410): Pin "decoded_str[34]" is stuck at GND
+    Warning (13410): Pin "decoded_str[31]" is stuck at GND
+    Warning (13410): Pin "decoded_str[29]" is stuck at GND
+    Warning (13410): Pin "decoded_str[28]" is stuck at GND
+    Warning (13410): Pin "decoded_str[23]" is stuck at GND
+    Warning (13410): Pin "decoded_str[21]" is stuck at GND
+    Warning (13410): Pin "decoded_str[15]" is stuck at GND
+    Warning (13410): Pin "decoded_str[14]" is stuck at VCC
+    Warning (13410): Pin "decoded_str[13]" is stuck at GND
+    Warning (13410): Pin "decoded_str[7]" is stuck at GND
+    Warning (13410): Pin "decoded_str[6]" is stuck at VCC
+    Warning (13410): Pin "decoded_str[5]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 78 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "DE0_CV" -- entity does not exist in design
@@ -1973,18 +2213,18 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: /opt/intelFPGA/23.1/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Info (21057): Implemented 3694 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4339 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 3519 logic cells
+    Info (21059): Implemented 94 output pins
+    Info (21061): Implemented 4084 logic cells
     Info (21064): Implemented 156 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 79 warnings
-    Info: Peak virtual memory: 562 megabytes
-    Info: Processing ended: Sun Oct 27 19:41:52 2024
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 215 warnings
+    Info: Peak virtual memory: 563 megabytes
+    Info: Processing ended: Tue Oct 29 20:58:46 2024
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
