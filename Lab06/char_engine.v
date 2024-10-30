@@ -85,7 +85,7 @@ module char_engine(
 	reg [(partname_chars*8):0] partname = "JOSH WILBUR";		//partners name in " "
 	parameter partname_chars = 11;									//# of characters, including spaces/other punct.
 	
-	reg [7:0] group_num = "1";											//Enter your group number here
+	reg [7:0] group_num = "3";											//Enter your group number here
 	
 	//keep these numbers at one character, use hex digit for >9
 	//Change for each milestone/test stuff

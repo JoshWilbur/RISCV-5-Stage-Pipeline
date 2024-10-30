@@ -44,6 +44,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "decoded_str[36]",
+					"strict" : false
+				},
+				{
 					"name" : "decoded_str[35]",
 					"strict" : false
 				},

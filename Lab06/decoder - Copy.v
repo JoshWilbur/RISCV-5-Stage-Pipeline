@@ -4,7 +4,7 @@
 `define BIMM {{19{instr[31]}}, instr[31], instr[7], instr[30:25], instr[11:8], 1'b0}
 `define JIMM20 {{12{instr[31]}}, instr[19:12], instr[20], instr[30:25], instr[24:21], 1'b0}
 `define STIMM {{20{instr[31]}}, instr[31:25], instr[11:7]}
-// `define SHAMT instr[24:20] unused
+// `define SHAMT instr[24:20] // UNUSED
 
 // Decoder module for 5 stage pipeline
 module decoder(

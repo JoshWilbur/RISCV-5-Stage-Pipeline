@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PipelineReg
-Tue Oct 29 22:45:36 2024
+Wed Oct 30 14:30:10 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Oct 29 22:45:35 2024          ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 30 14:30:10 2024          ;
 ; Quartus Prime Version           ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                   ; PipelineReg                                    ;
 ; Top-level Entity Name           ; top                                            ;
@@ -188,7 +188,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 ;     Processor 5            ;   0.0%      ;
@@ -251,14 +251,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1991         ;
+; Estimate of Logic utilization (ALMs needed) ; 2006         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 2727         ;
-;     -- 7 input functions                    ; 70           ;
-;     -- 6 input functions                    ; 1042         ;
-;     -- 5 input functions                    ; 471          ;
-;     -- 4 input functions                    ; 343          ;
-;     -- <=3 input functions                  ; 801          ;
+; Combinational ALUT usage for logic          ; 2744         ;
+;     -- 7 input functions                    ; 63           ;
+;     -- 6 input functions                    ; 1063         ;
+;     -- 5 input functions                    ; 433          ;
+;     -- 4 input functions                    ; 369          ;
+;     -- <=3 input functions                  ; 816          ;
 ;                                             ;              ;
 ; Dedicated logic registers                   ; 1994         ;
 ;                                             ;              ;
@@ -273,8 +273,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 1536         ;
-; Total fan-out                               ; 21599        ;
-; Average fan-out                             ; 4.26         ;
+; Total fan-out                               ; 21656        ;
+; Average fan-out                             ; 4.25         ;
 +---------------------------------------------+--------------+
 
 
@@ -283,16 +283,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |top                                         ; 2727 (1)            ; 1994 (0)                  ; 313024            ; 1          ; 97   ; 0            ; |top                                                                                                                     ; top             ; work         ;
+; |top                                         ; 2744 (1)            ; 1994 (0)                  ; 313024            ; 1          ; 97   ; 0            ; |top                                                                                                                     ; top             ; work         ;
 ;    |ALU:inst12|                              ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|ALU:inst12                                                                                                          ; ALU             ; work         ;
 ;    |EX_MEM:inst6|                            ; 0 (0)               ; 43 (43)                   ; 0                 ; 0          ; 0    ; 0            ; |top|EX_MEM:inst6                                                                                                        ; EX_MEM          ; work         ;
 ;    |ID_EX:inst3|                             ; 0 (0)               ; 69 (69)                   ; 0                 ; 0          ; 0    ; 0            ; |top|ID_EX:inst3                                                                                                         ; ID_EX           ; work         ;
 ;    |IF_ID:inst2|                             ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |top|IF_ID:inst2                                                                                                         ; IF_ID           ; work         ;
 ;    |MEM_WB:inst7|                            ; 0 (0)               ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |top|MEM_WB:inst7                                                                                                        ; MEM_WB          ; work         ;
 ;    |PC:inst8|                                ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |top|PC:inst8                                                                                                            ; PC              ; work         ;
-;    |VGA_BLOCK:inst15|                        ; 1893 (0)            ; 731 (0)                   ; 307200            ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15                                                                                                    ; VGA_BLOCK       ; work         ;
-;       |char_engine:inst|                     ; 1632 (1632)         ; 640 (640)                 ; 0                 ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|char_engine:inst                                                                                   ; char_engine     ; work         ;
-;       |vga_control:inst2|                    ; 173 (173)           ; 85 (85)                   ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vga_control:inst2                                                                                  ; vga_control     ; work         ;
+;    |VGA_BLOCK:inst15|                        ; 1865 (0)            ; 731 (0)                   ; 307200            ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15                                                                                                    ; VGA_BLOCK       ; work         ;
+;       |char_engine:inst|                     ; 1603 (1603)         ; 640 (640)                 ; 0                 ; 1          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|char_engine:inst                                                                                   ; char_engine     ; work         ;
+;       |vga_control:inst2|                    ; 174 (174)           ; 85 (85)                   ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vga_control:inst2                                                                                  ; vga_control     ; work         ;
 ;       |vgaclk:inst4|                         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vgaclk:inst4                                                                                       ; vgaclk          ; work         ;
 ;          |vgaclk_0002:vgaclk_inst|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst                                                               ; vgaclk_0002     ; work         ;
 ;             |altera_pll:altera_pll_i|        ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i                                       ; altera_pll      ; work         ;
@@ -306,7 +306,7 @@ https://fpgasoftware.intel.com/eula.
 ;    |dataMem:inst13|                          ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|dataMem:inst13                                                                                                      ; dataMem         ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|dataMem:inst13|altsyncram:altsyncram_component                                                                      ; altsyncram      ; work         ;
 ;          |altsyncram_nhj2:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|dataMem:inst13|altsyncram:altsyncram_component|altsyncram_nhj2:auto_generated                                       ; altsyncram_nhj2 ; work         ;
-;    |decoder:inst|                            ; 211 (211)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|decoder:inst                                                                                                        ; decoder         ; work         ;
+;    |decoder:inst|                            ; 256 (256)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top|decoder:inst                                                                                                        ; decoder         ; work         ;
 ;    |instrMem:inst10|                         ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10                                                                                                     ; instrMem        ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10|altsyncram:altsyncram_component                                                                     ; altsyncram      ; work         ;
 ;          |altsyncram_fvl2:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 2048              ; 0          ; 0    ; 0            ; |top|instrMem:inst10|altsyncram:altsyncram_component|altsyncram_fvl2:auto_generated                                      ; altsyncram_fvl2 ; work         ;
@@ -354,47 +354,48 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------+-----------------+
 
 
-+-------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                   ;
-+-----------------------------------------------------+------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal    ; Free of Timing Hazards ;
-+-----------------------------------------------------+------------------------+------------------------+
-; decoder:inst|decode_str[54]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[52]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[50]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[48]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[46]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[43]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[42]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[41]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[38]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[35]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[33]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[32]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[30]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[28]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[27]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[26]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[25]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[24]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[22]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[20]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[19]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[18]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[17]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[16]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[12]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[11]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[10]                         ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[9]                          ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[8]                          ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[4]                          ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[3]                          ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[2]                          ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[1]                          ; decoder:inst|Selector0 ; yes                    ;
-; decoder:inst|decode_str[0]                          ; decoder:inst|Selector0 ; yes                    ;
-; Number of user-specified and inferred latches = 34  ;                        ;                        ;
-+-----------------------------------------------------+------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++-----------------------------------------------------+-------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal     ; Free of Timing Hazards ;
++-----------------------------------------------------+-------------------------+------------------------+
+; decoder:inst|decode_str[54]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[52]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[50]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[48]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[46]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[43]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[42]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[41]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[38]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[36]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[35]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[33]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[32]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[30]                         ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[28]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[27]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[26]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[25]                         ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[24]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[22]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[20]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[19]                         ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[18]                         ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[17]                         ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[16]                         ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[12]                         ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[11]                         ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[10]                         ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[9]                          ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[8]                          ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[4]                          ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[3]                          ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[2]                          ; decoder:inst|Selector70 ; yes                    ;
+; decoder:inst|decode_str[1]                          ; decoder:inst|Selector78 ; yes                    ;
+; decoder:inst|decode_str[0]                          ; decoder:inst|Selector70 ; yes                    ;
+; Number of user-specified and inferred latches = 35  ;                         ;                        ;
++-----------------------------------------------------+-------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -700,13 +701,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; VGA_BLOCK:inst15|char_engine:inst|y[2]           ; 10      ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[1]           ; 18      ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[0]           ; 22      ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[3]  ; 14      ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[1]  ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[0]  ; 5       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[5]  ; 19      ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[4]  ; 7       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[1]  ; 6       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[3]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[2]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[2]  ; 5       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[4]  ; 5       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[31] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[30] ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[23] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[22] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[13] ; 3       ;
@@ -714,12 +715,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[21] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[11] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[6]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[30] ; 5       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[20] ; 4       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[9]  ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[8]  ; 3       ;
-; VGA_BLOCK:inst15|char_engine:inst|data_index[10] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[7]  ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[10] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[9]  ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[29] ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[28] ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[19] ; 4       ;
@@ -732,6 +732,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[26] ; 4       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[17] ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|data_index[16] ; 3       ;
+; VGA_BLOCK:inst15|char_engine:inst|data_index[5]  ; 5       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[9]           ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[7]           ; 3       ;
 ; VGA_BLOCK:inst15|char_engine:inst|y[10]          ; 2       ;
@@ -800,42 +801,43 @@ Note: All latches listed above may not be present at the end of synthesis due to
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|x[3]             ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[1]       ;
-; 20:1               ; 5 bits    ; 65 LEs        ; 65 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_digit[0]     ;
-; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_2[2]                      ;
-; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_debug[0]                  ;
-; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; Yes        ; |top|register:inst11|data_out_1[25]                     ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[4]       ;
-; 14:1               ; 12 bits   ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|row[14]          ;
-; 23:1               ; 2 bits    ; 30 LEs        ; 28 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[3][6] ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 64 LEs               ; 4 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[23]         ;
-; 26:1               ; 12 bits   ; 204 LEs       ; 192 LEs              ; 12 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[22]         ;
-; 33:1               ; 5 bits    ; 110 LEs       ; 105 LEs              ; 5 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[3]          ;
-; 36:1               ; 6 bits    ; 144 LEs       ; 132 LEs              ; 12 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[7]          ;
-; 36:1               ; 5 bits    ; 120 LEs       ; 110 LEs              ; 10 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[11]         ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|y[18]            ;
-; 3:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector9                             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector0                             ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector0                             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector22                            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector21                            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Mux0                                  ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Mux0                                  ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector0                             ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount          ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|decoder:inst|Mux0                                  ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector0                             ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector78       ;
-; 128:1              ; 2 bits    ; 170 LEs       ; 32 LEs               ; 138 LEs                ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector110      ;
-; 29:1               ; 2 bits    ; 38 LEs        ; 28 LEs               ; 10 LEs                 ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector75       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|x[26]             ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[1]        ;
+; 20:1               ; 5 bits    ; 65 LEs        ; 65 LEs               ; 0 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_digit[4]      ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_2[2]                       ;
+; 32:1               ; 5 bits    ; 105 LEs       ; 105 LEs              ; 0 LEs                  ; Yes        ; |top|register:inst11|data_out_debug[0]                   ;
+; 33:1               ; 32 bits   ; 704 LEs       ; 672 LEs              ; 32 LEs                 ; Yes        ; |top|register:inst11|data_out_1[22]                      ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|mem_out[4]        ;
+; 14:1               ; 12 bits   ; 108 LEs       ; 0 LEs                ; 108 LEs                ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|row[12]           ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 28 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[2][6]  ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 64 LEs               ; 4 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[29]          ;
+; 26:1               ; 12 bits   ; 204 LEs       ; 192 LEs              ; 12 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[20]          ;
+; 33:1               ; 5 bits    ; 110 LEs       ; 105 LEs              ; 5 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[0]           ;
+; 31:1               ; 2 bits    ; 40 LEs        ; 38 LEs               ; 2 LEs                  ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|hex_buffer[13][2] ;
+; 36:1               ; 6 bits    ; 144 LEs       ; 132 LEs              ; 12 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[15]          ;
+; 36:1               ; 5 bits    ; 120 LEs       ; 110 LEs              ; 10 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|data[8]           ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |top|VGA_BLOCK:inst15|char_engine:inst|y[28]             ;
+; 3:1                ; 39 bits   ; 78 LEs        ; 78 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector78                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector11        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Mux0                                   ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Mux0                                   ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 50 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount           ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|vga_control:inst2|hcount           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |top|decoder:inst|Mux0                                   ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector42                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector42                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |top|decoder:inst|Selector78                             ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |top|decoder:inst|Selector42                             ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector94        ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 10 LEs               ; 2 LEs                  ; No         ; |top|decoder:inst|Selector70                             ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 48 LEs               ; 122 LEs                ; No         ; |top|decoder:inst|Selector71                             ;
+; 30:1               ; 2 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |top|VGA_BLOCK:inst15|char_engine:inst|Selector74        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -1572,23 +1574,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 31                          ;
 ;     SCLR              ; 229                         ;
 ;     plain             ; 111                         ;
-; arriav_lcell_comb     ; 2728                        ;
+; arriav_lcell_comb     ; 2745                        ;
 ;     arith             ; 368                         ;
 ;         1 data inputs ; 267                         ;
 ;         2 data inputs ; 48                          ;
 ;         3 data inputs ; 30                          ;
 ;         4 data inputs ; 14                          ;
 ;         5 data inputs ; 9                           ;
-;     extend            ; 70                          ;
-;         7 data inputs ; 70                          ;
-;     normal            ; 2261                        ;
+;     extend            ; 63                          ;
+;         7 data inputs ; 63                          ;
+;     normal            ; 2285                        ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 82                          ;
-;         2 data inputs ; 118                         ;
-;         3 data inputs ; 226                         ;
-;         4 data inputs ; 329                         ;
-;         5 data inputs ; 462                         ;
-;         6 data inputs ; 1042                        ;
+;         2 data inputs ; 98                          ;
+;         3 data inputs ; 261                         ;
+;         4 data inputs ; 355                         ;
+;         5 data inputs ; 424                         ;
+;         6 data inputs ; 1063                        ;
 ;     shared            ; 29                          ;
 ;         0 data inputs ; 1                           ;
 ;         2 data inputs ; 12                          ;
@@ -1598,8 +1600,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 156                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.10                       ;
-; Average LUT depth     ; 4.80                        ;
+; Max LUT depth         ; 11.70                       ;
+; Average LUT depth     ; 4.69                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1608,7 +1610,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:10     ;
+; Top            ; 00:00:14     ;
 +----------------+--------------+
 
 
@@ -1618,7 +1620,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Tue Oct 29 22:45:18 2024
+    Info: Processing started: Wed Oct 30 14:29:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RegFileMem -c PipelineReg
 Info (20032): Parallel compilation is enabled and will use up to 8 processors
 Info (12021): Found 1 design units, including 1 entities, in source file vram.v
@@ -1658,20 +1660,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file addfour
 Info (12021): Found 1 design units, including 1 entities, in source file pc.v
     Info (12023): Found entity 1: PC File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/PC.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file riscv_defs.v
-Warning (10229): Verilog HDL Expression warning at decoder.v(80): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 80
-Warning (10229): Verilog HDL Expression warning at decoder.v(81): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 81
-Warning (10229): Verilog HDL Expression warning at decoder.v(82): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 82
-Warning (10229): Verilog HDL Expression warning at decoder.v(84): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 84
-Warning (10229): Verilog HDL Expression warning at decoder.v(85): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 85
-Warning (10229): Verilog HDL Expression warning at decoder.v(86): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 86
-Warning (10229): Verilog HDL Expression warning at decoder.v(99): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 99
-Warning (10229): Verilog HDL Expression warning at decoder.v(100): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 100
-Warning (10229): Verilog HDL Expression warning at decoder.v(101): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 101
-Warning (10229): Verilog HDL Expression warning at decoder.v(114): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 114
-Warning (10229): Verilog HDL Expression warning at decoder.v(127): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 127
-Warning (10229): Verilog HDL Expression warning at decoder.v(128): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 128
-Warning (10229): Verilog HDL Expression warning at decoder.v(129): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 129
-Warning (10229): Verilog HDL Expression warning at decoder.v(130): truncated literal to match 1 bits File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 130
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
     Info (12023): Found entity 1: decoder File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 10
 Info (12127): Elaborating entity "top" for the top level hierarchy
@@ -1946,184 +1934,230 @@ Warning (12125): Using design file alu.v, which is not specified as a design fil
     Info (12023): Found entity 1: ALU File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/alu.v Line: 1
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:inst12"
 Info (12128): Elaborating entity "decoder" for hierarchy "decoder:inst"
-Warning (10036): Verilog HDL or VHDL warning at decoder.v(18): object "func7" assigned a value but never read File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 18
-Warning (10036): Verilog HDL or VHDL warning at decoder.v(19): object "rd" assigned a value but never read File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 19
-Warning (10036): Verilog HDL or VHDL warning at decoder.v(20): object "rs1" assigned a value but never read File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 20
-Warning (10036): Verilog HDL or VHDL warning at decoder.v(21): object "rs2" assigned a value but never read File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 21
-Warning (10036): Verilog HDL or VHDL warning at decoder.v(22): object "imm" assigned a value but never read File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 22
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(80): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 80
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(81): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 81
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(83): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 83
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(84): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 84
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(85): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 85
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(86): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 86
-Warning (10270): Verilog HDL Case Statement warning at decoder.v(78): incomplete case statement has no default case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 78
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(99): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 99
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(100): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 100
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(101): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 101
-Warning (10270): Verilog HDL Case Statement warning at decoder.v(96): incomplete case statement has no default case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 96
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(114): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 114
-Warning (10270): Verilog HDL Case Statement warning at decoder.v(111): incomplete case statement has no default case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 111
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(127): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 127
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(128): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 128
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(129): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 129
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(130): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 130
-Warning (10270): Verilog HDL Case Statement warning at decoder.v(124): incomplete case statement has no default case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 124
-Warning (10272): Verilog HDL Case Statement warning at decoder.v(158): case item expression covers a value already covered by a previous case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 158
-Warning (10240): Verilog HDL Always Construct warning at decoder.v(27): inferring latch(es) for variable "decode_str", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Warning (10240): Verilog HDL Always Construct warning at decoder.v(27): inferring latch(es) for variable "opcode", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[0]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[1]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[2]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[3]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[4]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[5]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[6]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[7]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[8]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[9]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[10]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[11]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[12]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[13]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[14]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[15]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[16]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[17]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[18]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[19]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[20]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[21]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[22]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[23]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[24]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[25]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[26]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[27]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[28]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[29]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[30]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[31]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[32]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[33]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[34]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[35]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[36]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[37]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[38]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[39]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[40]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[41]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[42]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[43]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[44]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[45]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[46]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[47]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[48]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[49]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[50]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[51]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[52]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[53]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[54]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[55]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[56]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[57]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[58]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[59]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[60]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[61]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[62]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[63]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[64]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[65]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[66]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[67]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[68]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[69]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[70]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[71]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[72]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[73]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[74]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[75]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[76]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[77]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[78]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "decode_str[79]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Info (10041): Inferred latch for "opcode[0]" at decoder.v(30) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Info (10041): Inferred latch for "opcode[1]" at decoder.v(30) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Info (10041): Inferred latch for "opcode[2]" at decoder.v(30) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Info (10041): Inferred latch for "opcode[3]" at decoder.v(30) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Info (10041): Inferred latch for "opcode[4]" at decoder.v(30) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Info (10041): Inferred latch for "opcode[5]" at decoder.v(30) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Info (10041): Inferred latch for "opcode[6]" at decoder.v(30) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Warning (14026): LATCH primitive "decoder:inst|opcode[0]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Warning (14026): LATCH primitive "decoder:inst|opcode[1]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Warning (14026): LATCH primitive "decoder:inst|opcode[2]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Warning (14026): LATCH primitive "decoder:inst|opcode[3]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Warning (14026): LATCH primitive "decoder:inst|opcode[4]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Warning (14026): LATCH primitive "decoder:inst|opcode[5]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
-Warning (14026): LATCH primitive "decoder:inst|opcode[6]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 30
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(87): incomplete case statement has no default case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 87
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(106): incomplete case statement has no default case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 106
+Warning (10270): Verilog HDL Case Statement warning at decoder.v(119): incomplete case statement has no default case item File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 119
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(24): inferring latch(es) for variable "decode_str", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(24): inferring latch(es) for variable "opcode", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(24): inferring latch(es) for variable "func3", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(24): inferring latch(es) for variable "rd", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(24): inferring latch(es) for variable "rs1", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(24): inferring latch(es) for variable "imm", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(24): inferring latch(es) for variable "rs2", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Warning (10240): Verilog HDL Always Construct warning at decoder.v(24): inferring latch(es) for variable "func7", which holds its previous value in one or more paths through the always construct File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func7[0]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func7[1]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func7[2]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func7[3]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func7[4]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func7[5]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func7[6]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs2[0]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs2[1]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs2[2]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs2[3]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs2[4]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[0]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[1]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[2]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[3]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[4]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[5]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[6]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[7]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[8]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[9]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[10]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[11]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[12]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[13]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[14]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[15]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[16]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[17]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[18]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[19]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[20]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[21]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[22]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[23]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[24]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[25]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[26]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[27]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[28]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[29]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[30]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "imm[31]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs1[0]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs1[1]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs1[2]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs1[3]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rs1[4]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rd[0]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rd[1]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rd[2]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rd[3]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "rd[4]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func3[0]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func3[1]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "func3[2]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[0]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[1]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[2]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[3]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[4]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[5]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[6]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[7]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[8]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[9]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[10]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[11]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[12]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[13]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[14]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[15]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[16]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[17]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[18]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[19]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[20]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[21]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[22]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[23]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[24]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[25]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[26]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[27]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[28]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[29]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[30]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[31]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[32]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[33]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[34]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[35]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[36]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[37]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[38]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[39]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[40]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[41]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[42]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[43]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[44]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[45]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[46]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[47]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[48]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[49]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[50]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[51]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[52]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[53]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[54]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[55]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[56]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[57]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[58]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[59]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[60]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[61]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[62]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[63]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[64]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[65]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[66]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[67]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[68]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[69]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[70]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[71]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[72]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[73]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[74]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[75]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[76]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[77]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[78]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "decode_str[79]" at decoder.v(24) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Info (10041): Inferred latch for "opcode[0]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Info (10041): Inferred latch for "opcode[1]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Info (10041): Inferred latch for "opcode[2]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Info (10041): Inferred latch for "opcode[3]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Info (10041): Inferred latch for "opcode[4]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Info (10041): Inferred latch for "opcode[5]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Info (10041): Inferred latch for "opcode[6]" at decoder.v(27) File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (14026): LATCH primitive "decoder:inst|opcode[0]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (14026): LATCH primitive "decoder:inst|opcode[1]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (14026): LATCH primitive "decoder:inst|opcode[2]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (14026): LATCH primitive "decoder:inst|opcode[3]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (14026): LATCH primitive "decoder:inst|opcode[4]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (14026): LATCH primitive "decoder:inst|opcode[5]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (14026): LATCH primitive "decoder:inst|opcode[6]" is permanently enabled File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[52]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[50]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[48]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[46]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[43]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[42]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[41]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[35]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[32]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[33]" merged with LATCH primitive "decoder:inst|decode_str[38]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[26]" merged with LATCH primitive "decoder:inst|decode_str[38]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-Warning (13012): Latch decoder:inst|decode_str[54] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[52]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[50]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[48]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[46]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[43]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[42]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[41]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[35]" merged with LATCH primitive "decoder:inst|decode_str[54]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Info (13026): Duplicate LATCH primitive "decoder:inst|decode_str[26]" merged with LATCH primitive "decoder:inst|decode_str[38]" File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+Warning (13012): Latch decoder:inst|decode_str[54] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
     Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[0] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[38] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[30] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[28] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (13012): Latch decoder:inst|decode_str[38] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[36] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[33] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[32] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[13] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[30] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[28] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
     Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[0] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[27] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
+Warning (13012): Latch decoder:inst|decode_str[27] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[14] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[25] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[24] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[22] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[20] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[19] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[18] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[17] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[16] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[12] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[11] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
     Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[0] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[25] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[24] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[3] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[22] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[6] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[20] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[3] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[19] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[18] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[17] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[16] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[12] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[11] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[5] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[10] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[6] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[9] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[6] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[8] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[4] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[3] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[3] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[2] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[1] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
-Warning (13012): Latch decoder:inst|decode_str[0] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 27
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[4] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[10] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[9] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[8] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[4] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[3] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[2] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[1] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[2] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
+Warning (13012): Latch decoder:inst|decode_str[0] has unsafe behavior File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/decoder.v Line: 24
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal IF_ID:inst2|instr_out[0] File: C:/ECE473(2)/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v Line: 8
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "decoded_str[79]" is stuck at GND
     Warning (13410): Pin "decoded_str[78]" is stuck at GND
@@ -2159,7 +2193,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "decoded_str[40]" is stuck at GND
     Warning (13410): Pin "decoded_str[39]" is stuck at GND
     Warning (13410): Pin "decoded_str[37]" is stuck at GND
-    Warning (13410): Pin "decoded_str[36]" is stuck at GND
     Warning (13410): Pin "decoded_str[34]" is stuck at GND
     Warning (13410): Pin "decoded_str[31]" is stuck at GND
     Warning (13410): Pin "decoded_str[29]" is stuck at GND
@@ -2203,18 +2236,18 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance VGA_BLOCK:inst15|vgaclk:inst4|vgaclk_0002:vgaclk_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/23.1std/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Info (21057): Implemented 4380 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4397 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 94 output pins
-    Info (21061): Implemented 4125 logic cells
+    Info (21061): Implemented 4142 logic cells
     Info (21064): Implemented 156 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 1 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 207 warnings
-    Info: Peak virtual memory: 4933 megabytes
-    Info: Processing ended: Tue Oct 29 22:45:36 2024
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 183 warnings
+    Info: Peak virtual memory: 4955 megabytes
+    Info: Processing ended: Wed Oct 30 14:30:10 2024
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:44
 
 
 +------------------------------------------+
