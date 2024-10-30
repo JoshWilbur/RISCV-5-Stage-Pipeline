@@ -15,7 +15,6 @@ module decoder(
 	
 	reg [6:0] opcode;
 	reg [2:0] func3;
-	reg [6:0] func7;
 	reg [4:0] rd;
 	reg [4:0] rs1;
 	reg [4:0] rs2;
@@ -44,7 +43,6 @@ module decoder(
 				rd = instr[11:7];
 				rs1 = instr[19:15];
 				rs2 = instr[24:20];
-				func7 = instr[31:25];
 				case(func3)
 					3'h0: begin
 						if (instr[31:25] == 2'h00) begin
