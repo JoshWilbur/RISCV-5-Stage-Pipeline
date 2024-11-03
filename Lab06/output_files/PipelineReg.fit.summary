@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Oct 30 14:31:53 2024
-Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Fitter Status : Successful - Sun Nov  3 13:35:12 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : PipelineReg
 Top-level Entity Name : top
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 1,908 / 18,480 ( 10 % )
-Total registers : 2101
+Logic utilization (in ALMs) : 1,978 / 18,480 ( 11 % )
+Total registers : 2103
 Total pins : 97 / 224 ( 43 % )
 Total virtual pins : 0
 Total block memory bits : 313,024 / 3,153,920 ( 10 % )

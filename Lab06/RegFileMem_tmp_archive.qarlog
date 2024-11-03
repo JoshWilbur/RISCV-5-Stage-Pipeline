@@ -1,0 +1,51 @@
+Quartus Prime Archive log --	/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RegFileMem_tmp_archive.qarlog
+
+Archive:	/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RegFileMem_tmp_archive.qar
+Date:		Sun Nov  3 13:43:09 2024
+Quartus Prime		23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+	=========== Files Selected: ===========
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ALU.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/EX_MEM.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/ID_EX.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/IF_ID.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/MEM_WB.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/PC.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/PipelineReg.qsf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/PipelineReg_assignment_defaults.qdf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RAMTWOPORT.bsf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RAMTWOPORT.qip
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RAMTWOPORT.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RegFileMem.qpf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RegFileMem.qsf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RegFileMem_assignment_defaults.qdf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/VGA_BLOCK.bdf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/addFour.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/char_engine.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/color_encoder.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/dataMem.bsf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/dataMem.qip
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/dataMem.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/decoder_test.vwf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrMem.bsf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrMem.qip
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrMem.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/instrmem.mif
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/register.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/riscv_defs.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/top.bdf
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vga_control.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vgaclk.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vgaclk_0002.v
+/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/vram.v
+	======= Total: 34 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
+
+
+******* Archived project restoration attempt on Sun Nov  3 13:43:10 2024
+Source archive file:	/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/RegFileMem_tmp_archive.qar
+Archive was extracted into	/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/
+		 - successfully.

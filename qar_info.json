@@ -1,0 +1,7 @@
+{
+	"common_dir" : "/home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/Lab06/",
+	"acds_version" : "Version 23.1std.0",
+	"platform" : "linux",
+	"os" : "Arch Linux",
+	"qpf" : "RegFileMem.qpf"
+}
