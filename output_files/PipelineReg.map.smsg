@@ -1,4 +1,0 @@
-Warning (10268): Verilog HDL information at vga_control.v(44): always construct contains both blocking and non-blocking assignments File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/vga_control.v Line: 44
-Warning (10268): Verilog HDL information at char_engine.v(171): always construct contains both blocking and non-blocking assignments File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/char_engine.v Line: 171
-Warning (10268): Verilog HDL information at char_engine.v(205): always construct contains both blocking and non-blocking assignments File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/char_engine.v Line: 205
-Warning (10268): Verilog HDL information at register.v(27): always construct contains both blocking and non-blocking assignments File: /home/jlw/ECE_stuff/Coursework/ECE_473/RISCV-5-Stage-Pipeline/register.v Line: 27
