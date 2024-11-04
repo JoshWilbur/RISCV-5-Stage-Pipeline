@@ -4,6 +4,7 @@ module ALU (
 	input wire [3:0] ctrl,
 	output reg [31:0] ALU_out);
 	
+	
 	always @* begin
 		case (ctrl)
 			4'h0: ALU_out = in1 + in2; // ADD

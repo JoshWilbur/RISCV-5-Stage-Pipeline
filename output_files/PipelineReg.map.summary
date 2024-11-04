@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Sun Nov  3 17:14:02 2024
+Analysis & Synthesis Status : Successful - Sun Nov  3 21:08:25 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : PipelineReg
 Top-level Entity Name : top
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2018
+Total registers : 2082
 Total pins : 97
 Total virtual pins : 0
 Total block memory bits : 312,320
