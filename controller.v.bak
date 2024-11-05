@@ -26,13 +26,14 @@ module controller(
 			opcode = instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
 		
+		// Note: all strings must be uppercase for VGA
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
 			7'b0110011: begin
 			
 				func3 = instr[14:12];
 				ALU_src = 0;
-				/* Not needed, but keeping these here to reference
+				/*
 				rd = instr[11:7];
 				rs1 = instr[19:15];
 				rs2 = instr[24:20];

@@ -1,6 +1,6 @@
 # RISCV-5-Stage-Pipeline
 
-Updates: the ALU block is now working. I added a 4 bit number to the decoder output to control the ALU operation. The pipeline needs modification to support swapping the ALU input between immediates and registers (for addi and whatnot). Right now I have the immidiate value tied to one of the ALU inputs, but it isn't fully working correctly. \
+Updates: I made some major changes to our decoder (now control) module. Since the VGA block is magic, we don't have a need to fully decode the instruction in one block. I made our decoder module into a control unit similar to the one found in the lecture 6 notes. I also have fleshed out the ALU more, I'm thinking a 4 bit number should suffice for function selecting. The program for Milestone 1a is now working. I haven't tested 1b, but I imagine it won't be hard to get that working. \
 
 Milestone 1: \
 Josh - Program 1a \

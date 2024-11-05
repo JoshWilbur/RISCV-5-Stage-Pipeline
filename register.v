@@ -15,9 +15,14 @@ module register(
 	reg [31:0] regs[0:31];
 	
 	always @(posedge clock) begin
-		if (write == 1'b1) begin
+		if (reset == 1'b1) begin
+			integer i;
+			for (i = 0; i < 32; i = i + 1) begin
+				 regs[i] <= 32'b0;
+			end
+		end else if (write == 1'b1) begin
 			regs[write_address] <= write_data_in;
-		end
+		end 
 	end
 	
 	always @(negedge clock) begin
