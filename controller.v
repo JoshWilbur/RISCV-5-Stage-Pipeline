@@ -6,20 +6,18 @@
 `define STIMM {{20{instr[31]}}, instr[31:25], instr[11:7]}
 // `define SHAMT instr[24:20] // UNUSED
 
-// Decoder module for 5 stage pipeline
-module decoder(
+// Control module for 5 stage pipeline
+module controller(
 	input wire reset,
 	input wire [31:0] instr,
-	output reg [79:0] decode_str, // 80 bit ASCII string, 8 bits per char
-	output reg [4:0] rd,
-	output reg [4:0] rs1,
-	output reg [4:0] rs2,
-	output reg [31:0] imm,
-	output reg [6:0] opcode,
-	output reg [2:0] func3,
-	output reg [6:0] func7,
-	output reg [3:0] ALU_ctrl
+	output reg [31:0] imm_src,
+	output reg [3:0] ALU_ctrl, // Control ALU operation
+	output reg ALU_src, // Control whether ALU gets reg value or immediate
+	output reg [79:0] decode_str // 80 bit ASCII string, 8 bits per char
 	);
+	
+	reg [6:0] opcode;
+	reg [2:0] func3;
 	
 	always @* begin
 		if (reset == 1'b1) begin
@@ -34,10 +32,13 @@ module decoder(
 			7'b0110011: begin
 			
 				func3 = instr[14:12];
+				ALU_src = 0;
+				/*
 				rd = instr[11:7];
 				rs1 = instr[19:15];
 				rs2 = instr[24:20];
 				func7 = instr[31:25];
+				*/
 				
 				case(func3)
 					3'h0: begin
@@ -69,9 +70,12 @@ module decoder(
 			7'b00?0011: begin 
 			
 				func3 = instr[14:12];
+				/*
 				rd = instr[11:7];
 				rs1 = instr[19:15];
-				imm = `IIMM12; 
+				*/
+				ALU_src = 1;
+				imm_src = `IIMM12; 
 				
 				case(opcode[4])
 					1: begin //Immediate
@@ -102,9 +106,12 @@ module decoder(
 			7'b0100011: begin 
 			
 				func3 = instr[14:12];
+				/*
 				rs1 = instr[19:15];
 				rs2 = instr[24:20];
-				imm = `STIMM; 
+				*/
+				ALU_src = 1;
+				imm_src = `STIMM; 
 				
 				case(func3)
 					3'h0: decode_str = "SB";
@@ -116,9 +123,12 @@ module decoder(
 //------------------------------------------------------- B type path ---------------------------------------------------------------------
 			7'b1100011: begin 
 				func3 = instr[14:12];
+				/*
 				rs1 = instr[19:15];
 				rs2 = instr[24:20];
-				imm = `BIMM;
+				*/
+				ALU_src = 1;
+				imm_src = `BIMM;
 				case(func3)
 					3'h0: decode_str = "BEQ";
 					3'h1: decode_str = "BNE";
@@ -132,9 +142,12 @@ module decoder(
 //------------------------------------------------------- J type path ---------------------------------------------------------------------
 			7'b110?111: begin
 				func3 = instr[14:12];
+				/*
 				rd = instr[11:7];
 				rs1 = instr[19:15];
-				imm = `IIMM12; 
+				*/
+				ALU_src = 1;
+				imm_src = `IIMM12; 
 				case(opcode[3])
 					1: begin
 						decode_str = "JAL";
@@ -148,8 +161,9 @@ module decoder(
 			
 //------------------------------------------------------- U type path ---------------------------------------------------------------------
 			7'b0?10111: begin
-				rd = instr[11:7];
-				imm = `UIMM20; 
+				//rd = instr[11:7];
+				ALU_src = 1;
+				imm_src = `UIMM20; 
 				case(opcode[5])
 					1: begin
 						decode_str = "LUI";
