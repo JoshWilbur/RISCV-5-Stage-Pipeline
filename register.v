@@ -13,8 +13,8 @@ module register(
 	output reg [31:0] data_out_debug);
 	
 	reg [31:0] regs[0:31];
-	
-	always @(posedge clock) begin
+	// WRITE
+	always @(posedge clock) begin // this one should be posedge according to lab handout
 		if (reset == 1'b1) begin
 			integer i;
 			for (i = 0; i < 32; i = i + 1) begin
@@ -24,8 +24,8 @@ module register(
 			regs[write_address] <= write_data_in;
 		end 
 	end
-	
-	always @(negedge clock) begin
+	// READ
+	always @(negedge clock) begin // this one should be negedge according to lab handout
 		if(reset == 1'b1) begin 
 			data_out_1 <= 0;
 			data_out_2 <= 0;
