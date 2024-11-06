@@ -24,27 +24,27 @@ module EX_MEM (
 	
 	always @(posedge clk) begin
 		if (reset == 1'b1) begin
-			data_1_out = 0;
-			data_2_out = 0;
-			Rd_out = 0;
-			out1 = 0;
-			out2 = 0;
-			out3 = 0;
-			out4 = 0;
-			out5 = 0;
-			out6 = 0;
-			out7 = 0;
+			data_1_out <= 0;
+			data_2_out <= 0;
+			Rd_out <= 0;
+			out1 <= 0;
+			out2 <= 0;
+			out3 <= 0;
+			out4 <= 0;
+			out5 <= 0;
+			out6 <= 0;
+			out7 <= 0;
 		end else begin
-			data_1_out = data_1_in;
-			data_2_out = data_2_in;
-			Rd_out = Rd_in;
-			out1 = in1;
-			out2 = in2;
-			out3 = in3;
-			out4 = in4;
-			out5 = in5;
-			out6 = in6;
-			out7 = in7;
+			data_1_out <= data_1_in;
+			data_2_out <= data_2_in;
+			Rd_out <= Rd_in;
+			out1 <= in1;
+			out2 <= in2;
+			out3 <= in3;
+			out4 <= in4;
+			out5 <= in5;
+			out6 <= in6;
+			out7 <= in7;
 		end
 	end
 endmodule 

@@ -8,12 +8,12 @@ module IF_ID (
 
 	always @(posedge clk) begin
 		if (reset == 1'b1) begin
-			instr_out = 0;
-			out1 = 0;
+			instr_out <= 0;
+			out1 <= 0;
 		end else begin
-			instr_out = instr_in;
-			if (instr_in == 32'b0) instr_out = 32'h00000013; // Set empty instruction to nop
-			out1 = in1;
+			instr_out <= instr_in;
+			if (instr_in == 32'b0) instr_out <= 32'h00000013; // Set empty instruction to nop
+			out1 <= in1;
 		end
 	end
 	

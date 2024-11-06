@@ -18,7 +18,7 @@ module register(
 		if (reset == 1'b1) begin
 			integer i;
 			for (i = 0; i < 32; i = i + 1) begin
-				 regs[i] <= 32'b0;
+				 regs[i] = 32'b0;
 			end
 		end else if (write == 1'b1) begin
 			regs[write_address] <= write_data_in;
@@ -27,11 +27,11 @@ module register(
 	// READ
 	always @(negedge clock) begin // this one should be negedge according to lab handout
 		if(reset == 1'b1) begin 
-			data_out_1 <= 0;
-			data_out_2 <= 0;
+			data_out_1 = 0;
+			data_out_2 = 0;
 		end else begin
-			data_out_1 = regs[read_address_1];
-			data_out_2 = regs[read_address_2];
+			data_out_1 <= regs[read_address_1];
+			data_out_2 <= regs[read_address_2];
 		end
 	end
 	

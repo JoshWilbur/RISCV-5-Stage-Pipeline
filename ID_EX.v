@@ -16,19 +16,19 @@ module ID_EX (
 	
 	always @(posedge clk) begin
 		if (reset == 1'b1) begin
-			data_1_out = 0;
-			data_2_out = 0;
-			Rd_out = 0;
-			ALU_ctrl_out = 0;
-			ALU_src_out = 0;
-			imm_out = 0;
+			data_1_out <= 0;
+			data_2_out <= 0;
+			Rd_out <= 0;
+			ALU_ctrl_out <= 0;
+			ALU_src_out <= 0;
+			imm_out <= 0;
 		end else begin
-			data_1_out = data_1_in;
-			data_2_out = data_2_in;
-			Rd_out = Rd_in;
-			ALU_ctrl_out = ALU_ctrl_in;
-			ALU_src_out = ALU_src_in;
-			imm_out = imm_in;
+			data_1_out <= data_1_in;
+			data_2_out <= data_2_in;
+			Rd_out <= Rd_in;
+			ALU_ctrl_out <= ALU_ctrl_in;
+			ALU_src_out <= ALU_src_in;
+			imm_out <= imm_in;
 		end
 	end
 endmodule 
