@@ -6,50 +6,44 @@
 `define STIMM {{20{instr[31]}}, instr[31:25], instr[11:7]}
 // `define SHAMT instr[24:20] // UNUSED
 
-// Control module for 5 stage pipeline
-module controller(
+// Decoder module for 5 stage pipeline
+module decoder(
 	input wire reset,
 	input wire [31:0] instr,
-	output reg [31:0] imm_src,
-	output reg [3:0] ALU_ctrl, // Control ALU operation
-	output reg ALU_src, // Control whether ALU gets reg value or immediate
-	output reg MEM_wen,
-	output reg [79:0] decode_str // 80 bit ASCII string, 8 bits per char
+	output reg [79:0] decode_str, // 80 bit ASCII string, 8 bits per char
+	output reg [4:0] rd,
+	output reg [4:0] rs1,
+	output reg [4:0] rs2,
+	output reg [31:0] imm,
+	output reg [6:0] opcode,
+	output reg [2:0] func3,
+	output reg [6:0] func7
 	);
-	
-	reg [6:0] opcode;
-	reg [2:0] func3;
 	
 	always @* begin
 		if (reset == 1'b1) begin
 			decode_str = "RESET";
-			MEM_wen = 0;
 		end else begin
 			opcode = instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
-		MEM_wen = 0;
+		
+		// Note: all strings must be uppercase for VGA
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
 			7'b0110011: begin
 			
 				func3 = instr[14:12];
-				MEM_wen = 1;
-				ALU_src = 0;
-				/* Not needed, but keeping these here to reference
 				rd = instr[11:7];
 				rs1 = instr[19:15];
 				rs2 = instr[24:20];
 				func7 = instr[31:25];
-				*/
 				
 				case(func3)
 					3'h0: begin
 						if (instr[31:25] == 6'h00) begin
 							decode_str = "ADD";
-							ALU_ctrl = 4'h0;
 						end else begin
 							decode_str = "SUB";
-							ALU_ctrl = 4'h1;
 						end
 					end				
 					3'h4: decode_str = "XOR";
@@ -72,18 +66,14 @@ module controller(
 			7'b00?0011: begin 
 			
 				func3 = instr[14:12];
-				/*
 				rd = instr[11:7];
 				rs1 = instr[19:15];
-				*/
-				MEM_wen = 1;
-				ALU_src = 1;
-				imm_src = `IIMM12; 
+				imm = `IIMM12; 
 				
 				case(opcode[4])
 					1: begin //Immediate
 						case(func3)
-							3'h0: ALU_ctrl = 4'h0; // Set ALU to ADD	
+							3'h0: decode_str = "ADDI";	
 							3'h4: decode_str = "XORI";
 							3'h6: decode_str = "ORI";
 							3'h7: decode_str = "ANDI";
@@ -97,7 +87,7 @@ module controller(
 						case(func3)
 							3'h0: decode_str = "LB";
 							3'h1: decode_str = "LH";
-							3'h2: ALU_ctrl = 4'h0; // LW
+							3'h2: decode_str = "LW";
 							3'h4: decode_str = "LBU";
 							3'h5: decode_str = "LHU";
 						endcase
@@ -109,12 +99,9 @@ module controller(
 			7'b0100011: begin 
 			
 				func3 = instr[14:12];
-				/*
 				rs1 = instr[19:15];
 				rs2 = instr[24:20];
-				*/
-				ALU_src = 1;
-				imm_src = `STIMM; 
+				imm = `STIMM; 
 				
 				case(func3)
 					3'h0: decode_str = "SB";
@@ -126,12 +113,9 @@ module controller(
 //------------------------------------------------------- B type path ---------------------------------------------------------------------
 			7'b1100011: begin 
 				func3 = instr[14:12];
-				/*
 				rs1 = instr[19:15];
 				rs2 = instr[24:20];
-				*/
-				ALU_src = 1;
-				imm_src = `BIMM;
+				imm = `BIMM;
 				case(func3)
 					3'h0: decode_str = "BEQ";
 					3'h1: decode_str = "BNE";
@@ -145,12 +129,9 @@ module controller(
 //------------------------------------------------------- J type path ---------------------------------------------------------------------
 			7'b110?111: begin
 				func3 = instr[14:12];
-				/*
 				rd = instr[11:7];
 				rs1 = instr[19:15];
-				*/
-				ALU_src = 1;
-				imm_src = `IIMM12; 
+				imm = `IIMM12; 
 				case(opcode[3])
 					1: begin
 						decode_str = "JAL";
@@ -164,9 +145,8 @@ module controller(
 			
 //------------------------------------------------------- U type path ---------------------------------------------------------------------
 			7'b0?10111: begin
-				//rd = instr[11:7];
-				ALU_src = 1;
-				imm_src = `UIMM20; 
+				rd = instr[11:7];
+				imm = `UIMM20; 
 				case(opcode[5])
 					1: begin
 						decode_str = "LUI";

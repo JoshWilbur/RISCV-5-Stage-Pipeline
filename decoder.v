@@ -22,9 +22,13 @@ module decoder(
 	
 	always @* begin
 		if (reset == 1'b1) begin
-			decode_str = "RESET";
+			decode_str <= "RESET";
+			rd <= 0;
+			rs1 <= 0;
+			rs2 <= 0;
+			imm <= 0;
 		end else begin
-			opcode = instr[6:0]; // Set opcode to lower 7 bits of instruction
+			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
 		
 		// Note: all strings must be uppercase for VGA
@@ -32,64 +36,64 @@ module decoder(
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
 			7'b0110011: begin
 			
-				func3 = instr[14:12];
-				rd = instr[11:7];
-				rs1 = instr[19:15];
-				rs2 = instr[24:20];
-				func7 = instr[31:25];
+				func3 <= instr[14:12];
+				rd <= instr[11:7];
+				rs1 <= instr[19:15];
+				rs2 <= instr[24:20];
+				func7 <= instr[31:25];
 				
 				case(func3)
 					3'h0: begin
 						if (instr[31:25] == 6'h00) begin
-							decode_str = "ADD";
+							decode_str <= "ADD";
 						end else begin
-							decode_str = "SUB";
+							decode_str <= "SUB";
 						end
 					end				
-					3'h4: decode_str = "XOR";
-					3'h6: decode_str = "OR";
-					3'h7: decode_str = "AND";
-					3'h1: decode_str = "SLL";
+					3'h4: decode_str <= "XOR";
+					3'h6: decode_str <= "OR";
+					3'h7: decode_str <= "AND";
+					3'h1: decode_str <= "SLL";
 					3'h5: begin 
 						if (instr[31:25] == 6'h00) begin
-							decode_str = "SRL";
+							decode_str <= "SRL";
 						end else begin
-							decode_str = "SRA";
+							decode_str <= "SRA";
 						end
 					end
-					3'h2: decode_str = "SLT";
-					3'h3: decode_str = "SLTU";
+					3'h2: decode_str <= "SLT";
+					3'h3: decode_str <= "SLTU";
 				endcase
 			end
 			
 //------------------------------------------------------- I type path ---------------------------------------------------------------------
 			7'b00?0011: begin 
 			
-				func3 = instr[14:12];
-				rd = instr[11:7];
-				rs1 = instr[19:15];
-				imm = `IIMM12; 
+				func3 <= instr[14:12];
+				rd <= instr[11:7];
+				rs1 <= instr[19:15];
+				imm <= `IIMM12; 
 				
 				case(opcode[4])
 					1: begin //Immediate
 						case(func3)
-							3'h0: decode_str = "ADDI";	
-							3'h4: decode_str = "XORI";
-							3'h6: decode_str = "ORI";
-							3'h7: decode_str = "ANDI";
-							3'h1: decode_str = "SLLI";
-							3'h5: decode_str = "SRLI"; // Could also be SRAI?
-							3'h2: decode_str = "SLTI";
-							3'h3: decode_str = "SLTIU";
+							3'h0: decode_str <= "ADDI";	
+							3'h4: decode_str <= "XORI";
+							3'h6: decode_str <= "ORI";
+							3'h7: decode_str <= "ANDI";
+							3'h1: decode_str <= "SLLI";
+							3'h5: decode_str <= "SRLI"; // Could also be SRAI?
+							3'h2: decode_str <= "SLTI";
+							3'h3: decode_str <= "SLTIU";
 						endcase
 					end
 					0: begin // Loading 
 						case(func3)
-							3'h0: decode_str = "LB";
-							3'h1: decode_str = "LH";
-							3'h2: decode_str = "LW";
-							3'h4: decode_str = "LBU";
-							3'h5: decode_str = "LHU";
+							3'h0: decode_str <= "LB";
+							3'h1: decode_str <= "LH";
+							3'h2: decode_str <= "LW";
+							3'h4: decode_str <= "LBU";
+							3'h5: decode_str <= "LHU";
 						endcase
 					end
 				endcase
@@ -98,107 +102,66 @@ module decoder(
 //------------------------------------------------------- S type path ---------------------------------------------------------------------
 			7'b0100011: begin 
 			
-				func3 = instr[14:12];
-				rs1 = instr[19:15];
-				rs2 = instr[24:20];
-				imm = `STIMM; 
+				func3 <= instr[14:12];
+				rs1 <= instr[19:15];
+				rs2 <= instr[24:20];
+				imm <= `STIMM; 
 				
 				case(func3)
-					3'h0: decode_str = "SB";
-					3'h1: decode_str = "SH";
-					3'h2: decode_str = "SW";
+					3'h0: decode_str <= "SB";
+					3'h1: decode_str <= "SH";
+					3'h2: decode_str <= "SW";
 				endcase
 			end
 			
 //------------------------------------------------------- B type path ---------------------------------------------------------------------
 			7'b1100011: begin 
-				func3 = instr[14:12];
-				rs1 = instr[19:15];
-				rs2 = instr[24:20];
-				imm = `BIMM;
+				func3 <= instr[14:12];
+				rs1 <= instr[19:15];
+				rs2 <= instr[24:20];
+				imm <= `BIMM;
 				case(func3)
-					3'h0: decode_str = "BEQ";
-					3'h1: decode_str = "BNE";
-					3'h4: decode_str = "BLT";
-					3'h5: decode_str = "BGE";
-					3'h6: decode_str = "BLTU";
-					3'h7: decode_str = "BGEU";
+					3'h0: decode_str <= "BEQ";
+					3'h1: decode_str <= "BNE";
+					3'h4: decode_str <= "BLT";
+					3'h5: decode_str <= "BGE";
+					3'h6: decode_str <= "BLTU";
+					3'h7: decode_str <= "BGEU";
 				endcase
 			end
 			
 //------------------------------------------------------- J type path ---------------------------------------------------------------------
 			7'b110?111: begin
-				func3 = instr[14:12];
-				rd = instr[11:7];
-				rs1 = instr[19:15];
-				imm = `IIMM12; 
+				func3 <= instr[14:12];
+				rd <= instr[11:7];
+				rs1 <= instr[19:15];
+				imm <= `IIMM12; 
 				case(opcode[3])
 					1: begin
-						decode_str = "JAL";
+						decode_str <= "JAL";
 					end
 					
 					0: begin
-						decode_str = "JALR";
+						decode_str <= "JALR";
 					end
 				endcase
 			end
 			
 //------------------------------------------------------- U type path ---------------------------------------------------------------------
 			7'b0?10111: begin
-				rd = instr[11:7];
-				imm = `UIMM20; 
+				rd <= instr[11:7];
+				imm <= `UIMM20; 
 				case(opcode[5])
 					1: begin
-						decode_str = "LUI";
+						decode_str <= "LUI";
 					end
 					0: begin
-						decode_str = "AUIPC";
+						decode_str <= "AUIPC";
 					end
 				endcase
 			end
 //--------------------------------------------------------- DEFAULT -----------------------------------------------------------------------
-			default: decode_str = "UNKNOWN";
+			default: decode_str <= "UNKNOWN";
 		endcase
 	end
-	
-	// Function from lab notes
-	function [79:0] get_regname_str;
-		input [4:0] regnum;
-	begin
-		case (regnum)
-			5'd0: get_regname_str = "zero";
-			5'd1: get_regname_str = "ra";
-			5'd2: get_regname_str = "sp";
-			5'd3: get_regname_str = "gp";
-			5'd4: get_regname_str = "tp";
-			5'd5: get_regname_str = "t0";
-			5'd6: get_regname_str = "t1";
-			5'd7: get_regname_str = "t2";
-			5'd8: get_regname_str = "s0";
-			5'd9: get_regname_str = "s1";
-			5'd10: get_regname_str = "a0";
-			5'd11: get_regname_str = "a1";
-			5'd12: get_regname_str = "a2";
-			5'd13: get_regname_str = "a3";
-			5'd14: get_regname_str = "a4";
-			5'd15: get_regname_str = "a5";
-			5'd16: get_regname_str = "a6";
-			5'd17: get_regname_str = "a7";
-			5'd18: get_regname_str = "s2";
-			5'd19: get_regname_str = "s3";
-			5'd20: get_regname_str = "s4";
-			5'd21: get_regname_str = "s5";
-			5'd22: get_regname_str = "s6";
-			5'd23: get_regname_str = "s7";
-			5'd24: get_regname_str = "s8";
-			5'd25: get_regname_str = "s9";
-			5'd26: get_regname_str = "s10";
-			5'd27: get_regname_str = "s11";
-			5'd28: get_regname_str = "t3";
-			5'd29: get_regname_str = "t4";
-			5'd30: get_regname_str = "t5";
-			5'd31: get_regname_str = "t6";
-		endcase
-	end
-	endfunction
 endmodule

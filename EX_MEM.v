@@ -4,7 +4,7 @@ module EX_MEM (
 	input wire [31:0] data_1_in,
 	input wire [31:0] data_2_in,
 	input wire [4:0] 	Rd_in,
-	input wire [31:0] in1,
+	input wire MEM_wen_in,
 	input wire [31:0] in2,
 	input wire [31:0] in3,
 	input wire [31:0] in4,
@@ -14,7 +14,7 @@ module EX_MEM (
 	output reg [31:0] data_1_out,
 	output reg [31:0] data_2_out,
 	output reg [4:0] 	Rd_out,
-	output reg [31:0] out1,
+	output reg MEM_wen_out,
 	output reg [31:0] out2,
 	output reg [31:0] out3,
 	output reg [31:0] out4,
@@ -27,7 +27,7 @@ module EX_MEM (
 			data_1_out <= 0;
 			data_2_out <= 0;
 			Rd_out <= 0;
-			out1 <= 0;
+			MEM_wen_out <= 0;
 			out2 <= 0;
 			out3 <= 0;
 			out4 <= 0;
@@ -38,7 +38,7 @@ module EX_MEM (
 			data_1_out <= data_1_in;
 			data_2_out <= data_2_in;
 			Rd_out <= Rd_in;
-			out1 <= in1;
+			MEM_wen_out <= MEM_wen_in;
 			out2 <= in2;
 			out3 <= in3;
 			out4 <= in4;

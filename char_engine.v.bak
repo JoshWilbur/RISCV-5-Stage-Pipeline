@@ -101,28 +101,28 @@ module char_engine(
 -------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------*/
 
-	reg [(gpx00_chars*8):0] gpx00_label = "INSTRUCTION ID";				//put label in " "
+	reg [(gpx00_chars*8):0] gpx00_label = "GP REGISTER 00";				//put label in " "
 	parameter gpx00_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx01_chars*8):0] gpx01_label = "DECODED RD    ";				//put label in " "
+	reg [(gpx01_chars*8):0] gpx01_label = "GP REGISTER 01";				//put label in " "
 	parameter gpx01_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx02_chars*8):0] gpx02_label = "DECODED RS1   ";				//put label in " "
+	reg [(gpx02_chars*8):0] gpx02_label = "GP REGISTER 02";				//put label in " "
 	parameter gpx02_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx03_chars*8):0] gpx03_label = "DECODED RS2   ";				//put label in " "
+	reg [(gpx03_chars*8):0] gpx03_label = "GP REGISTER 03";				//put label in " "
 	parameter gpx03_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx04_chars*8):0] gpx04_label = "IMMEDIATE VAL ";				//put label in " "
+	reg [(gpx04_chars*8):0] gpx04_label = "GP REGISTER 04";				//put label in " "
 	parameter gpx04_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx05_chars*8):0] gpx05_label = "DECODE ALU CTL";				//put label in " "
+	reg [(gpx05_chars*8):0] gpx05_label = "GP REGISTER 05";				//put label in " "
 	parameter gpx05_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx06_chars*8):0] gpx06_label = "ALU SOURCE MUX";				//put label in " "
+	reg [(gpx06_chars*8):0] gpx06_label = "GP REGISTER 06";				//put label in " "
 	parameter gpx06_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx07_chars*8):0] gpx07_label = "ALU OUT       ";				//put label in " "
+	reg [(gpx07_chars*8):0] gpx07_label = "GP REGISTER 07";				//put label in " "
 	parameter gpx07_chars = 14;													//# of characters, including spaces/other punct.
 	
 	reg [(gpx08_chars*8):0] gpx08_label = "GP REGISTER 08";				//put label in " "
@@ -131,7 +131,7 @@ module char_engine(
 	reg [(gpx09_chars*8):0] gpx09_label = "GP REGISTER 09";				//put label in " "
 	parameter gpx09_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx0A_chars*8):0] gpx0A_label = "WRITE BACK DAT";				//put label in " "
+	reg [(gpx0A_chars*8):0] gpx0A_label = "GP REGISTER 0A";				//put label in " "
 	parameter gpx0A_chars = 14;													//# of characters, including spaces/other punct.
 	
 	reg [(gpx0B_chars*8):0] gpx0B_label = "GP REGISTER 0B";				//put label in " "
