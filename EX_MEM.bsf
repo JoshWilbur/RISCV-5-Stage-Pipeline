@@ -118,8 +118,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 232 48)
 		(output)
-		(text "data_2_out[31..0]" (rect 0 0 68 12)(font "Arial" ))
-		(text "data_2_out[31..0]" (rect 143 43 211 55)(font "Arial" ))
+		(text "data_addr[31..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "data_addr[31..0]" (rect 148 43 211 55)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(port

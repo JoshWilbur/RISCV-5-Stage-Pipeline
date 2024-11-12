@@ -12,7 +12,7 @@ module EX_MEM (
 	input wire [31:0] in6,
 	input wire [31:0] in7,
 	output reg [31:0] data_1_out,
-	output reg [31:0] data_2_out,
+	output reg [31:0] data_addr,
 	output reg [4:0] 	Rd_out,
 	output reg MEM_wen_out,
 	output reg WB_sel_out,
@@ -25,7 +25,7 @@ module EX_MEM (
 	always @(posedge clk) begin
 		if (reset == 1'b1) begin
 			data_1_out <= 0;
-			data_2_out <= 0;
+			data_addr <= 0;
 			Rd_out <= 0;
 			MEM_wen_out <= 0;
 			WB_sel_out <= 0;
@@ -36,7 +36,7 @@ module EX_MEM (
 			out7 <= 0;
 		end else begin
 			data_1_out <= data_1_in;
-			data_2_out <= data_2_in;
+			data_addr <= data_1_in >> 2; // Shift is needed since data mem is word addressable (TODO: find better fix)
 			Rd_out <= Rd_in;
 			MEM_wen_out <= MEM_wen_in;
 			WB_sel_out <= WB_sel_in;

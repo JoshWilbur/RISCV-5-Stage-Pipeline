@@ -125,7 +125,7 @@ module char_engine(
 	reg [(gpx07_chars*8):0] gpx07_label = "ALU OUT       ";				//put label in " "
 	parameter gpx07_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx08_chars*8):0] gpx08_label = "GP REGISTER 08";				//put label in " "
+	reg [(gpx08_chars*8):0] gpx08_label = "DATA MEM ADDR ";				//put label in " "
 	parameter gpx08_chars = 14;													//# of characters, including spaces/other punct.
 	
 	reg [(gpx09_chars*8):0] gpx09_label = "GP REGISTER 09";				//put label in " "

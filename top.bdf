@@ -1495,7 +1495,7 @@ https://fpgasoftware.intel.com/eula.
 (symbol
 	(rect 1632 8 1864 248)
 	(text "EX_MEM" (rect 5 0 49 11)(font "Arial" ))
-	(text "inst24" (rect 8 224 38 236)(font "Intel Clear" ))
+	(text "inst26" (rect 8 224 38 236)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1590,8 +1590,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 232 48)
 		(output)
-		(text "data_2_out[31..0]" (rect 0 0 82 11)(font "Arial" ))
-		(text "data_2_out[31..0]" (rect 142 43 224 54)(font "Arial" ))
+		(text "data_addr[31..0]" (rect 0 0 77 11)(font "Arial" ))
+		(text "data_addr[31..0]" (rect 146 43 223 54)(font "Arial" ))
 		(line (pt 232 48)(pt 216 48)(line_width 3))
 	)
 	(port
@@ -1653,16 +1653,6 @@ https://fpgasoftware.intel.com/eula.
 	(drawing
 		(rectangle (rect 16 16 216 224))
 	)
-)
-(connector
-	(text "clock" (rect 1552 32 1577 44)(font "Intel Clear" ))
-	(pt 1632 40)
-	(pt 1584 40)
-)
-(connector
-	(text "reset" (rect 1549 48 1573 60)(font "Intel Clear" ))
-	(pt 1632 56)
-	(pt 1584 56)
 )
 (connector
 	(text "vga_clk" (rect 2016 160 2052 172)(font "Intel Clear" ))
@@ -1766,18 +1756,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "RD_EX[4..0]" (rect 1216 64 1272 76)(font "Intel Clear" ))
 	(pt 1184 72)
 	(pt 1208 72)
-	(bus)
-)
-(connector
-	(text "RD_EX[4..0]" (rect 1530 96 1586 108)(font "Intel Clear" ))
-	(pt 1632 104)
-	(pt 1584 104)
-	(bus)
-)
-(connector
-	(text "ALU_out[31..0]" (rect 1522 64 1595 76)(font "Intel Clear" ))
-	(pt 1584 72)
-	(pt 1632 72)
 	(bus)
 )
 (connector
@@ -1994,18 +1972,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "RS1_EX[31..0]" (rect 1208 -88 1276 -76)(font "Intel Clear" ))
 	(pt 1272 -80)
 	(pt 1304 -80)
-	(bus)
-)
-(connector
-	(text "RS2_EX[31..0]" (rect 1534 80 1602 92)(font "Intel Clear" ))
-	(pt 1584 88)
-	(pt 1632 88)
-	(bus)
-)
-(connector
-	(text "RS2_MEM[31..0]" (rect 1906 48 1985 60)(font "Intel Clear" ))
-	(pt 1864 56)
-	(pt 1928 56)
 	(bus)
 )
 (connector
@@ -2239,11 +2205,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1208 136)
 )
 (connector
-	(text "MEM_wen_EX" (rect 1544 112 1611 124)(font "Intel Clear" ))
-	(pt 1632 120)
-	(pt 1584 120)
-)
-(connector
 	(pt 1864 88)
 	(pt 2040 88)
 )
@@ -2334,11 +2295,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1208 152)
 )
 (connector
-	(text "WB_sel_EX" (rect 1570 136 1624 148)(font "Intel Clear" ))
-	(pt 1632 136)
-	(pt 1584 136)
-)
-(connector
 	(pt 2720 80)
 	(pt 2720 152)
 )
@@ -2371,7 +2327,57 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "ALU_out_MEM[5..0]" (rect 1996 48 2091 60)(font "Intel Clear" ))
+	(text "ALU_out_MEM[31..0]" (rect 666 -824 767 -812)(font "Intel Clear" ))
+	(pt 872 -816)
+	(pt 760 -816)
+	(bus)
+)
+(connector
+	(text "clock" (rect 1552 32 1577 44)(font "Intel Clear" ))
+	(pt 1584 40)
+	(pt 1632 40)
+)
+(connector
+	(text "reset" (rect 1549 48 1573 60)(font "Intel Clear" ))
+	(pt 1584 56)
+	(pt 1632 56)
+)
+(connector
+	(text "ALU_out[31..0]" (rect 1522 64 1595 76)(font "Intel Clear" ))
+	(pt 1584 72)
+	(pt 1632 72)
+	(bus)
+)
+(connector
+	(text "RS2_EX[31..0]" (rect 1534 80 1602 92)(font "Intel Clear" ))
+	(pt 1584 88)
+	(pt 1632 88)
+	(bus)
+)
+(connector
+	(text "RD_EX[4..0]" (rect 1530 96 1586 108)(font "Intel Clear" ))
+	(pt 1584 104)
+	(pt 1632 104)
+	(bus)
+)
+(connector
+	(text "MEM_wen_EX" (rect 1544 112 1611 124)(font "Intel Clear" ))
+	(pt 1584 120)
+	(pt 1632 120)
+)
+(connector
+	(text "WB_sel_EX" (rect 1570 136 1624 148)(font "Intel Clear" ))
+	(pt 1584 136)
+	(pt 1632 136)
+)
+(connector
+	(text "addr_MEM[31..0]" (rect 1906 48 1988 60)(font "Intel Clear" ))
+	(pt 1864 56)
+	(pt 1928 56)
+	(bus)
+)
+(connector
+	(text "addr_MEM[5..0]" (rect 1996 48 2072 60)(font "Intel Clear" ))
 	(pt 2088 56)
 	(pt 2008 56)
 	(bus)
