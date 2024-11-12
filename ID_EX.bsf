@@ -88,6 +88,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 160)(pt 16 160)(line_width 1))
 	)
 	(port
+		(pt 0 176)
+		(input)
+		(text "WB_sel_in" (rect 0 0 44 12)(font "Arial" ))
+		(text "WB_sel_in" (rect 21 171 65 183)(font "Arial" ))
+		(line (pt 0 176)(pt 16 176)(line_width 1))
+	)
+	(port
 		(pt 248 32)
 		(output)
 		(text "data_1_out[31..0]" (rect 0 0 67 12)(font "Arial" ))
@@ -135,6 +142,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "MEM_wen_out" (rect 0 0 62 12)(font "Arial" ))
 		(text "MEM_wen_out" (rect 165 123 227 135)(font "Arial" ))
 		(line (pt 248 128)(pt 232 128)(line_width 1))
+	)
+	(port
+		(pt 248 144)
+		(output)
+		(text "WB_sel_out" (rect 0 0 50 12)(font "Arial" ))
+		(text "WB_sel_out" (rect 177 139 227 151)(font "Arial" ))
+		(line (pt 248 144)(pt 232 144)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 232 192)(line_width 1))

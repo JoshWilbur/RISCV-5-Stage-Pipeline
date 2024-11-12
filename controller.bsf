@@ -69,9 +69,16 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 208 96)
 		(output)
+		(text "WB_sel" (rect 0 0 33 12)(font "Arial" ))
+		(text "WB_sel" (rect 154 91 187 103)(font "Arial" ))
+		(line (pt 208 96)(pt 192 96)(line_width 1))
+	)
+	(port
+		(pt 208 112)
+		(output)
 		(text "decode_str[79..0]" (rect 0 0 69 12)(font "Arial" ))
-		(text "decode_str[79..0]" (rect 118 91 187 103)(font "Arial" ))
-		(line (pt 208 96)(pt 192 96)(line_width 3))
+		(text "decode_str[79..0]" (rect 118 107 187 119)(font "Arial" ))
+		(line (pt 208 112)(pt 192 112)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 192 128)(line_width 1))

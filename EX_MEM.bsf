@@ -69,9 +69,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 128)
 		(input)
-		(text "in2[31..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "in2[31..0]" (rect 21 123 55 135)(font "Arial" ))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
+		(text "WB_sel_in" (rect 0 0 44 12)(font "Arial" ))
+		(text "WB_sel_in" (rect 21 123 65 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
 	)
 	(port
 		(pt 0 144)
@@ -139,9 +139,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 232 96)
 		(output)
-		(text "out2[31..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "out2[31..0]" (rect 171 91 211 103)(font "Arial" ))
-		(line (pt 232 96)(pt 216 96)(line_width 3))
+		(text "WB_sel_out" (rect 0 0 50 12)(font "Arial" ))
+		(text "WB_sel_out" (rect 161 91 211 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96)(line_width 1))
 	)
 	(port
 		(pt 232 112)
