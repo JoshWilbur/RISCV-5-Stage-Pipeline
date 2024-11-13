@@ -29,7 +29,7 @@ module controller(
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
-		WB_sel <= 0;
+		// WB_sel <= 0;
 		MEM_wen <= 0;
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
@@ -119,7 +119,9 @@ module controller(
 				*/
 				ALU_src <= 1;
 				imm_src <= `STIMM; 
-				
+				MEM_wen <= 1;
+				ALU_ctrl <= 4'h0;
+
 				case(func3)
 					3'h0: decode_str <= "SB";
 					3'h1: decode_str <= "SH";
