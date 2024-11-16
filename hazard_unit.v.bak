@@ -1,0 +1,19 @@
+// Hazard detection unit
+module hazard_unit(
+	input wire [4:0] rs1_ID,
+	input wire [4:0] rs2_ID,
+	input wire [4:0] rd_EX,
+	
+	output reg stall);
+	
+
+    always @(*) begin
+        // Default: no stall
+        stall = 1'b0;
+
+        // Check for load-use hazard
+        if (MemRead_EX && ((rd_EX == rs1_ID) || (rd_EX == rs2_ID))) begin
+            stall = 1'b1; // Stall if EX stage load instruction affects ID stage
+        end
+    end
+endmodule

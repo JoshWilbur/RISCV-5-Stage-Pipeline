@@ -1,6 +1,6 @@
 # RISCV-5-Stage-Pipeline
 
-Updates: Changed the shift right by 2 to an external thing to make it easier to see and change. We should keep pipeline registers only piping and put anything else external to them to keep it clean. Changed some wiring around the memory to make RS2 the data for the memory and RS1 + imm the addr.
+Updates: Started working on hazard detection and branching. I'm thinking of adding a MUX after the ALU to send values back to the PC for branching. This would need a pipelined control variable. I'll try to implement that later tonight or tomorrow...
 
 Milestone 1: \
 Josh - Program 1a \
@@ -9,4 +9,8 @@ Liam - Program 1b
 
 Milestone 2: \
 Josh - Program 2a \
-Liam - Program 2b \
+Liam - Program 2b
+
+Milestone 3: \
+Josh - Program 3a \
+Liam - Program 3b

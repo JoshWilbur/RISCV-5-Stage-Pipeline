@@ -56,7 +56,7 @@ module controller(
 						end
 					end				
 					3'h4: decode_str <= "XOR";
-					3'h6: decode_str <= "OR";
+					3'h6: ALU_ctrl <= 4'h3; // OR
 					3'h7: decode_str <= "AND";
 					3'h1: decode_str <= "SLL";
 					3'h5: begin 
@@ -88,7 +88,7 @@ module controller(
 						case(func3)
 							3'h0: ALU_ctrl <= 4'h0; // Set ALU to ADD	
 							3'h4: decode_str <= "XORI";
-							3'h6: decode_str <= "ORI";
+							3'h6: ALU_ctrl <= 4'h3; // ORI
 							3'h7: decode_str <= "ANDI";
 							3'h1: decode_str <= "SLLI";
 							3'h5: decode_str <= "SRLI"; // Could also be SRAI?
