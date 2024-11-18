@@ -55,9 +55,16 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 96)
 		(input)
-		(text "in1[31..0]" (rect 0 0 33 12)(font "Arial" ))
-		(text "in1[31..0]" (rect 21 91 54 103)(font "Arial" ))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
+		(text "flush" (rect 0 0 18 12)(font "Arial" ))
+		(text "flush" (rect 21 91 39 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "PC_in[31..0]" (rect 0 0 48 12)(font "Arial" ))
+		(text "PC_in[31..0]" (rect 21 107 69 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
 	)
 	(port
 		(pt 208 32)
@@ -69,8 +76,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 208 48)
 		(output)
-		(text "out1[31..0]" (rect 0 0 38 12)(font "Arial" ))
-		(text "out1[31..0]" (rect 149 43 187 55)(font "Arial" ))
+		(text "PC_out[31..0]" (rect 0 0 54 12)(font "Arial" ))
+		(text "PC_out[31..0]" (rect 133 43 187 55)(font "Arial" ))
 		(line (pt 208 48)(pt 192 48)(line_width 3))
 	)
 	(drawing

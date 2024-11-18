@@ -1,0 +1,11 @@
+// ALU for branch handling
+module branch_ALU(
+	input wire [31:0] PC,
+	input wire [31:0] imm,
+	input wire branch_taken,
+	output reg new_PC);
+	
+	always @* begin
+		
+	end
+endmodule

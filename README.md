@@ -1,6 +1,6 @@
 # RISCV-5-Stage-Pipeline
 
-Updates: Started working on hazard detection and branching. I'm thinking of adding a MUX after the ALU to send values back to the PC for branching. This would need a pipelined control variable. I'll try to implement that later tonight or tomorrow...
+Updates: Branching is now fully implemented. I had issues with the write-back result being too slow, so I made the write-back register (MEM_WB) unclocked to get around it. I also started on a hazard unit, more work is needed on that.
 
 Milestone 1: \
 Josh - Program 1a \
@@ -10,6 +10,7 @@ Liam - Program 1b
 Milestone 2: \
 Josh - Program 2a \
 Liam - Program 2b
+
 
 Milestone 3: \
 Josh - Program 3a \

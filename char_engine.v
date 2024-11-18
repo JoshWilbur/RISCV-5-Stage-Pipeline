@@ -89,7 +89,7 @@ module char_engine(
 	
 	//keep these numbers at one character, use hex digit for >9
 	//Change for each milestone/test stuff
-	reg [7:0] milestone_num = "1";									//Enter the Miletsone Number here, in " "
+	reg [7:0] milestone_num = "3";									//Enter the Miletsone Number here, in " "
 	reg [7:0] test_num = 	  "1";									//Enter the test number here in " "
 	
 	
@@ -134,7 +134,7 @@ module char_engine(
 	reg [(gpx0A_chars*8):0] gpx0A_label = "WRITE BACK DAT";				//put label in " "
 	parameter gpx0A_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx0B_chars*8):0] gpx0B_label = "GP REGISTER 0B";				//put label in " "
+	reg [(gpx0B_chars*8):0] gpx0B_label = "PC BRANCH ADDR";				//put label in " "
 	parameter gpx0B_chars = 14;													//# of characters, including spaces/other punct.
 	
 	reg [(gpx0C_chars*8):0] gpx0C_label = "GP REGISTER 0C";				//put label in " "

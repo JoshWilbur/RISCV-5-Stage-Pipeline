@@ -41,9 +41,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 208 32)
 		(output)
-		(text "imm_src[31..0]" (rect 0 0 60 12)(font "Arial" ))
-		(text "imm_src[31..0]" (rect 127 27 187 39)(font "Arial" ))
-		(line (pt 208 32)(pt 192 32)(line_width 3))
+		(text "branch" (rect 0 0 27 12)(font "Arial" ))
+		(text "branch" (rect 160 27 187 39)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 1))
 	)
 	(port
 		(pt 208 48)

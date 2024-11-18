@@ -10,7 +10,7 @@
 module controller(
 	input wire reset,
 	input wire [31:0] instr,
-	output reg [31:0] imm_src,
+	output reg branch,
 	output reg [3:0] ALU_ctrl, // Control ALU operation
 	output reg ALU_src, // Control whether ALU gets reg value or immediate
 	output reg MEM_wen,
@@ -29,8 +29,10 @@ module controller(
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
-		// WB_sel <= 0;
+		WB_sel <= 0;
 		MEM_wen <= 0;
+		branch <= 0;
+		
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
 			7'b0110011: begin
@@ -38,12 +40,6 @@ module controller(
 				func3 <= instr[14:12];
 				MEM_wen <= 1;
 				ALU_src <= 0;
-				/* Not needed, but keeping these here to reference
-				rd <= instr[11:7];
-				rs1 <= instr[19:15];
-				rs2 <= instr[24:20];
-				func7 <= instr[31:25];
-				*/
 				
 				case(func3)
 					3'h0: begin
@@ -75,12 +71,7 @@ module controller(
 			7'b00?0011: begin 
 			
 				func3 <= instr[14:12];
-				/*
-				rd <= instr[11:7];
-				rs1 <= instr[19:15];
-				*/
 				ALU_src <= 1;
-				imm_src <= `IIMM12; 
 				
 				case(opcode[4])
 					1: begin //Immediate
@@ -113,12 +104,7 @@ module controller(
 			7'b0100011: begin 
 			
 				func3 <= instr[14:12];
-				/*
-				rs1 <= instr[19:15];
-				rs2 <= instr[24:20];
-				*/
 				ALU_src <= 1;
-				imm_src <= `STIMM; 
 				MEM_wen <= 1;
 				ALU_ctrl <= 4'h0;
 
@@ -132,15 +118,11 @@ module controller(
 //------------------------------------------------------- B type path ---------------------------------------------------------------------
 			7'b1100011: begin 
 				func3 <= instr[14:12];
-				/*
-				rs1 <= instr[19:15];
-				rs2 <= instr[24:20];
-				*/
-				ALU_src <= 1;
-				imm_src <= `BIMM;
+				ALU_src <= 0;
+				branch <= 1;
 				case(func3)
-					3'h0: decode_str <= "BEQ";
-					3'h1: decode_str <= "BNE";
+					3'h0: ALU_ctrl <= 4'h7; // BEQ
+					3'h1: ALU_ctrl <= 4'h8; // BNE
 					3'h4: decode_str <= "BLT";
 					3'h5: decode_str <= "BGE";
 					3'h6: decode_str <= "BLTU";
@@ -151,12 +133,7 @@ module controller(
 //------------------------------------------------------- J type path ---------------------------------------------------------------------
 			7'b110?111: begin
 				func3 <= instr[14:12];
-				/*
-				rd <= instr[11:7];
-				rs1 <= instr[19:15];
-				*/
 				ALU_src <= 1;
-				imm_src <= `IIMM12; 
 				case(opcode[3])
 					1: begin
 						decode_str <= "JAL";
@@ -170,9 +147,7 @@ module controller(
 			
 //------------------------------------------------------- U type path ---------------------------------------------------------------------
 			7'b0?10111: begin
-				//rd <= instr[11:7];
 				ALU_src <= 1;
-				imm_src <= `UIMM20; 
 				case(opcode[5])
 					1: begin
 						decode_str <= "LUI";

@@ -20,7 +20,7 @@ module MEM_WB (
 	output reg [31:0] out6,
 	output reg [31:0] out7);
 	
-	always @(posedge clk) begin
+	always @(*) begin
 		if (reset == 1'b1) begin
 			data_2_out <= 0;
 			Rd_out <= 0;

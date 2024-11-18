@@ -9,6 +9,7 @@ module ID_EX (
 	input wire [31:0] imm_in,
 	input wire MEM_wen_in,
 	input wire WB_sel_in,
+	input wire [31:0] PC_in,
 	output reg [31:0] data_1_out,
 	output reg [31:0] data_2_out,
 	output reg [4:0] 	Rd_out,
@@ -16,7 +17,8 @@ module ID_EX (
 	output reg ALU_src_out,
 	output reg [31:0] imm_out,
 	output reg MEM_wen_out,
-	output reg WB_sel_out);
+	output reg WB_sel_out,
+	output reg [31:0] PC_out);
 	
 	always @(posedge clk) begin
 		if (reset == 1'b1) begin
@@ -28,6 +30,7 @@ module ID_EX (
 			imm_out <= 0;
 			MEM_wen_out <= 0;
 			WB_sel_out <= 0;
+			PC_out <= 0;
 		end else begin
 			data_1_out <= data_1_in;
 			data_2_out <= data_2_in;
@@ -37,6 +40,7 @@ module ID_EX (
 			imm_out <= imm_in;
 			MEM_wen_out <= MEM_wen_in;
 			WB_sel_out <= WB_sel_in;
+			PC_out <= PC_in;
 		end
 	end
 endmodule 
