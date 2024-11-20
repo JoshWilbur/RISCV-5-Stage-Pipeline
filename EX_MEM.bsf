@@ -76,9 +76,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 144)
 		(input)
-		(text "in3[31..0]" (rect 0 0 34 12)(font "Arial" ))
-		(text "in3[31..0]" (rect 21 139 55 151)(font "Arial" ))
-		(line (pt 0 144)(pt 16 144)(line_width 3))
+		(text "Reg_WB_in" (rect 0 0 51 12)(font "Arial" ))
+		(text "Reg_WB_in" (rect 21 139 72 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
 	)
 	(port
 		(pt 0 160)
@@ -146,9 +146,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 232 112)
 		(output)
-		(text "out3[31..0]" (rect 0 0 40 12)(font "Arial" ))
-		(text "out3[31..0]" (rect 171 107 211 119)(font "Arial" ))
-		(line (pt 232 112)(pt 216 112)(line_width 3))
+		(text "Reg_WB_out" (rect 0 0 57 12)(font "Arial" ))
+		(text "Reg_WB_out" (rect 154 107 211 119)(font "Arial" ))
+		(line (pt 232 112)(pt 216 112)(line_width 1))
 	)
 	(port
 		(pt 232 128)

@@ -15,6 +15,7 @@ module controller(
 	output reg ALU_src, // Control whether ALU gets reg value or immediate
 	output reg MEM_wen,
 	output reg WB_sel, // Should only be 1 for load?
+	output reg Reg_WB,
 	output reg [79:0] decode_str // 80 bit ASCII string, 8 bits per char
 	);
 	
@@ -32,6 +33,7 @@ module controller(
 		WB_sel <= 0;
 		MEM_wen <= 0;
 		branch <= 0;
+		Reg_WB <= 0;
 		
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
@@ -40,6 +42,7 @@ module controller(
 				func3 <= instr[14:12];
 				MEM_wen <= 1;
 				ALU_src <= 0;
+				Reg_WB <= 1;
 				
 				case(func3)
 					3'h0: begin
@@ -72,6 +75,7 @@ module controller(
 			
 				func3 <= instr[14:12];
 				ALU_src <= 1;
+				Reg_WB <= 1;
 				
 				case(opcode[4])
 					1: begin //Immediate
@@ -107,7 +111,7 @@ module controller(
 				ALU_src <= 1;
 				MEM_wen <= 1;
 				ALU_ctrl <= 4'h0;
-
+				Reg_WB <= 0;
 				case(func3)
 					3'h0: decode_str <= "SB";
 					3'h1: decode_str <= "SH";
@@ -120,6 +124,7 @@ module controller(
 				func3 <= instr[14:12];
 				ALU_src <= 0;
 				branch <= 1;
+				Reg_WB <= 0;
 				case(func3)
 					3'h0: ALU_ctrl <= 4'h7; // BEQ
 					3'h1: ALU_ctrl <= 4'h8; // BNE
@@ -134,6 +139,7 @@ module controller(
 			7'b110?111: begin
 				func3 <= instr[14:12];
 				ALU_src <= 1;
+				Reg_WB <= 1;
 				case(opcode[3])
 					1: begin
 						decode_str <= "JAL";
@@ -148,6 +154,7 @@ module controller(
 //------------------------------------------------------- U type path ---------------------------------------------------------------------
 			7'b0?10111: begin
 				ALU_src <= 1;
+				Reg_WB <= 1;
 				case(opcode[5])
 					1: begin
 						decode_str <= "LUI";

@@ -3,7 +3,7 @@ module MEM_WB (
 	input wire reset,
 	input wire [31:0] data_2_in,
 	input wire [4:0] 	Rd_in,
-	input wire [31:0] in1,
+	input wire Reg_WB_in,
 	input wire [31:0] in2,
 	input wire [31:0] in3,
 	input wire [31:0] in4,
@@ -12,7 +12,7 @@ module MEM_WB (
 	input wire [31:0] in7,
 	output reg [31:0] data_2_out,
 	output reg [4:0] 	Rd_out,
-	output reg [31:0] out1,
+	output reg Reg_WB_out,
 	output reg [31:0] out2,
 	output reg [31:0] out3,
 	output reg [31:0] out4,
@@ -20,11 +20,11 @@ module MEM_WB (
 	output reg [31:0] out6,
 	output reg [31:0] out7);
 	
-	always @(*) begin
+	always @(posedge clk) begin
 		if (reset == 1'b1) begin
 			data_2_out <= 0;
 			Rd_out <= 0;
-			out1 <= 0;
+			Reg_WB_out <= 0;
 			out2 <= 0;
 			out3 <= 0;
 			out4 <= 0;
@@ -34,7 +34,7 @@ module MEM_WB (
 		end else begin
 			data_2_out <= data_2_in;
 			Rd_out <= Rd_in;
-			out1 <= in1;
+			Reg_WB_out <= Reg_WB_in;
 			out2 <= in2;
 			out3 <= in3;
 			out4 <= in4;

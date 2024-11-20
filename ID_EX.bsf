@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2023  Intel Corporation. All rights reserved.
+Copyright (C) 2024  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -102,6 +102,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 192)(pt 16 192)(line_width 3))
 	)
 	(port
+		(pt 0 208)
+		(input)
+		(text "Reg_WB_in" (rect 0 0 51 12)(font "Arial" ))
+		(text "Reg_WB_in" (rect 21 203 72 215)(font "Arial" ))
+		(line (pt 0 208)(pt 16 208)(line_width 1))
+	)
+	(port
 		(pt 248 32)
 		(output)
 		(text "data_1_out[31..0]" (rect 0 0 67 12)(font "Arial" ))
@@ -163,6 +170,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "PC_out[31..0]" (rect 0 0 54 12)(font "Arial" ))
 		(text "PC_out[31..0]" (rect 173 155 227 167)(font "Arial" ))
 		(line (pt 248 160)(pt 232 160)(line_width 3))
+	)
+	(port
+		(pt 248 176)
+		(output)
+		(text "Reg_WB_out" (rect 0 0 57 12)(font "Arial" ))
+		(text "Reg_WB_out" (rect 170 171 227 183)(font "Arial" ))
+		(line (pt 248 176)(pt 232 176)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 232 224)(line_width 1))

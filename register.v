@@ -14,7 +14,7 @@ module register(
 	
 	reg [31:0] regs[0:31];
 	// WRITE
-	always @(posedge clock) begin // this one should be posedge according to lab handout
+	always @(posedge clock_debug) begin // this one should be posedge according to lab handout
 		if (reset == 1'b1) begin
 			integer i;
 			for (i = 0; i < 32; i = i + 1) begin
