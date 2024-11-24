@@ -40,33 +40,30 @@ module controller(
 			7'b0110011: begin
 			
 				func3 <= instr[14:12];
-				MEM_wen <= 1;
 				ALU_src <= 0;
 				Reg_WB <= 1;
 				
 				case(func3)
 					3'h0: begin
 						if (instr[31:25] == 6'h00) begin
-							decode_str <= "ADD";
-							ALU_ctrl <= 4'h0;
+							ALU_ctrl <= 4'h0; // ADD
 						end else begin
-							decode_str <= "SUB";
-							ALU_ctrl <= 4'h1;
+							ALU_ctrl <= 4'h1; // SUB
 						end
 					end				
-					3'h4: decode_str <= "XOR";
+					3'h4: ALU_ctrl <= 4'h2; // XOR
 					3'h6: ALU_ctrl <= 4'h3; // OR
-					3'h7: decode_str <= "AND";
-					3'h1: decode_str <= "SLL";
+					3'h7: ALU_ctrl <= 4'h4; // AND
+					3'h1: ALU_ctrl <= 4'h5; // SLL
 					3'h5: begin 
 						if (instr[31:25] == 6'h00) begin
-							decode_str <= "SRL";
+							ALU_ctrl <= 4'h6; // SRL
 						end else begin
-							decode_str <= "SRA";
+							ALU_ctrl <= 4'h6; //SRA
 						end
 					end
-					3'h2: decode_str <= "SLT";
-					3'h3: decode_str <= "SLTU";
+					3'h2: ALU_ctrl <= 4'h9; // SLT
+					3'h3: ALU_ctrl <= 4'h9; // SLTU
 				endcase
 			end
 			
@@ -82,13 +79,13 @@ module controller(
 						MEM_wen <= 0;
 						case(func3)
 							3'h0: ALU_ctrl <= 4'h0; // Set ALU to ADD	
-							3'h4: decode_str <= "XORI";
+							3'h4: ALU_ctrl <= 4'h2; // XORI
 							3'h6: ALU_ctrl <= 4'h3; // ORI
-							3'h7: decode_str <= "ANDI";
-							3'h1: decode_str <= "SLLI";
-							3'h5: decode_str <= "SRLI"; // Could also be SRAI?
-							3'h2: decode_str <= "SLTI";
-							3'h3: decode_str <= "SLTIU";
+							3'h7: ALU_ctrl <= 4'h4; // ANDI
+							3'h1: ALU_ctrl <= 4'h5; // SLLI
+							3'h5: ALU_ctrl <= 4'h6; // SRLI, could also be SRAI?
+							3'h2: ALU_ctrl <= 4'h9; // SLTI
+							3'h3: ALU_ctrl <= 4'h9; // SLTIU
 						endcase
 					end
 					0: begin // Loading 
@@ -153,8 +150,8 @@ module controller(
 			
 //------------------------------------------------------- U type path ---------------------------------------------------------------------
 			7'b0?10111: begin
-				ALU_src <= 1;
-				Reg_WB <= 1;
+				//ALU_src <= 1;
+				//Reg_WB <= 1;
 				case(opcode[5])
 					1: begin
 						decode_str <= "LUI";

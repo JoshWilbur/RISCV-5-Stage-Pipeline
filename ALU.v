@@ -19,6 +19,7 @@ module ALU (
 			4'h6: ALU_out = in1 >> 1; // SRL
 			4'h7: branch_taken = (in1 == in2); // BEQ
 			4'h8: branch_taken = (in1 != in2); // BNE
+			4'h9: ALU_out = (in1 < in2)?1:0; // SLT/SLTU
 			default: ALU_out = 0; // Default case
 		endcase
 

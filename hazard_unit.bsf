@@ -55,8 +55,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 96)
 		(input)
-		(text "MEM_wen" (rect 0 0 44 12)(font "Arial" ))
-		(text "MEM_wen" (rect 21 91 65 103)(font "Arial" ))
+		(text "WB_sel" (rect 0 0 33 12)(font "Arial" ))
+		(text "WB_sel" (rect 21 91 54 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port

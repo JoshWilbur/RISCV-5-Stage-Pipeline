@@ -1,17 +1,29 @@
 # RISCV-5-Stage-Pipeline
 
-Updates: Branching is now fully implemented. I had issues with the write-back result being too slow, so I made the write-back register (MEM_WB) unclocked to get around it. I also started on a hazard unit, more work is needed on that.
-
-Milestone 1: \
-Josh - Program 1a \
-Liam - Program 1b
+Updates: 
 
 
-Milestone 2: \
-Josh - Program 2a \
-Liam - Program 2b
-
+# Work
+Benchmark Tests: \
+Need 5/9 tests fully working by 12/5. \
+1: 64 bit add   - Josh \
+2: Concat ints  - Liam \
+3: Find max     - Josh \
+4: Find mode    - Liam \
+5: Find prime   - Josh \
+6: Palindrome   - Liam \
+7: Bubble sort  - Liam \
+8: Fibonacci    - Josh \
+9: Binary       - Anyone
 
 Milestone 3: \
-Josh - Program 3a \
-Liam - Program 3b
+Program 3a - Josh \
+Program 3b - Liam
+
+Milestone 2: \
+Program 2a - Josh \
+Program 2b - Liam
+
+Milestone 1: \
+Program 1a - Josh \
+Program 1b - Liam
