@@ -1,6 +1,6 @@
 # RISCV-5-Stage-Pipeline
 
-Updates: 
+Updates: More work has been done to the controller and hazard unit. Each `la` instruction translates into `auipc` and `addi` for the mif file. Been working on getting `auipc` implemented.
 
 
 # Work

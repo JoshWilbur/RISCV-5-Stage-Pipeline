@@ -7,27 +7,33 @@ module hazard_unit(
     input wire WB_sel, // only 1 for load instruction
     input wire branch_ID,
     input wire branch_taken,
-    output reg stall,
-    output reg flush);
+	 input wire auipc,
+    output reg stall_IFID,
+	 output reg stall_IDEX,
+	 output reg stall_EXMEM,
+	 output reg flush);
 
     always @(*) begin
+		  stall_IFID = 1'b0;
+		  stall_IDEX = 1'b0;
+		  stall_EXMEM = 1'b0;
+		  flush = 1'b0;
         if (reset == 1'b1) begin
-            stall = 1'b0;
+            stall_IFID = 1'b0;
+				stall_IDEX = 1'b0;
+				stall_EXMEM = 1'b0;
             flush = 1'b0;
         end else begin
             if (WB_sel && ((rs1_ID == rd_EX) || (rs2_ID == rd_EX))) begin
-                stall = 1'b1;  // Stall once for data hazard
+                stall_IFID = 1'b1;
+					 stall_IDEX = 1'b1;
                 flush = 1'b0;
             end else if (branch_ID == 1'b1) begin
-                stall = 1'b1;
+                stall_IFID = 1'b1;
                 flush = 1'b0;
             end else if (branch_taken == 1'b1) begin
-                stall = 1'b0;
                 flush = 1'b1; // Flush IF/ID reg if branch is taken
-            end else begin
-                stall = 1'b0;
-                flush = 1'b0;
-            end
+				end
         end
     end
 endmodule

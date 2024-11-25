@@ -16,6 +16,7 @@ module controller(
 	output reg MEM_wen,
 	output reg WB_sel, // Should only be 1 for load?
 	output reg Reg_WB,
+	output reg auipc,
 	output reg [79:0] decode_str // 80 bit ASCII string, 8 bits per char
 	);
 	
@@ -34,6 +35,7 @@ module controller(
 		MEM_wen <= 0;
 		branch <= 0;
 		Reg_WB <= 0;
+		auipc <= 0;
 		
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
@@ -150,14 +152,15 @@ module controller(
 			
 //------------------------------------------------------- U type path ---------------------------------------------------------------------
 			7'b0?10111: begin
-				//ALU_src <= 1;
-				//Reg_WB <= 1;
+				ALU_src <= 1;
+				Reg_WB <= 1;
 				case(opcode[5])
 					1: begin
 						decode_str <= "LUI";
 					end
 					0: begin
-						decode_str <= "AUIPC";
+						auipc <= 1; // AUIPC
+						ALU_ctrl <= 4'hA;
 					end
 				endcase
 			end

@@ -46,6 +46,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
+		(pt 0 80)
+		(input)
+		(text "PC[31..0]" (rect 0 0 36 12)(font "Arial" ))
+		(text "PC[31..0]" (rect 21 75 57 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
 		(pt 200 32)
 		(output)
 		(text "ALU_out[31..0]" (rect 0 0 62 12)(font "Arial" ))
