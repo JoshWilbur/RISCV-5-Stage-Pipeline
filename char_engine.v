@@ -89,7 +89,7 @@ module char_engine(
 	
 	//keep these numbers at one character, use hex digit for >9
 	//Change for each milestone/test stuff
-	reg [7:0] milestone_num = "3";									//Enter the Miletsone Number here, in " "
+	reg [7:0] milestone_num = "4";									//Enter the Miletsone Number here, in " "
 	reg [7:0] test_num = 	  "1";									//Enter the test number here in " "
 	
 	
@@ -119,31 +119,31 @@ module char_engine(
 	reg [(gpx05_chars*8):0] gpx05_label = "DECODE ALU CTL";				//put label in " "
 	parameter gpx05_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx06_chars*8):0] gpx06_label = "ALU SOURCE MUX";				//put label in " "
+	reg [(gpx06_chars*8):0] gpx06_label = "ALU SOURCE 1  ";				//put label in " "
 	parameter gpx06_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx07_chars*8):0] gpx07_label = "ALU OUT       ";				//put label in " "
+	reg [(gpx07_chars*8):0] gpx07_label = "ALU SOURCE 2  ";				//put label in " "
 	parameter gpx07_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx08_chars*8):0] gpx08_label = "DATA MEM ADDR ";				//put label in " "
+	reg [(gpx08_chars*8):0] gpx08_label = "ALU OUT       ";				//put label in " "
 	parameter gpx08_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx09_chars*8):0] gpx09_label = "DATA MEM OUT  ";				//put label in " "
+	reg [(gpx09_chars*8):0] gpx09_label = "DATA MEM ADDR ";				//put label in " "
 	parameter gpx09_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx0A_chars*8):0] gpx0A_label = "WRITE BACK DAT";				//put label in " "
+	reg [(gpx0A_chars*8):0] gpx0A_label = "DATA MEM OUT  ";				//put label in " "
 	parameter gpx0A_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx0B_chars*8):0] gpx0B_label = "PC BRANCH ADDR";				//put label in " "
+	reg [(gpx0B_chars*8):0] gpx0B_label = "WRITE BACK DAT";				//put label in " "
 	parameter gpx0B_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx0C_chars*8):0] gpx0C_label = "GP REGISTER 0C";				//put label in " "
+	reg [(gpx0C_chars*8):0] gpx0C_label = "PC BRANCH ADDR";				//put label in " "
 	parameter gpx0C_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx0D_chars*8):0] gpx0D_label = "GP REGISTER 0D";				//put label in " "
+	reg [(gpx0D_chars*8):0] gpx0D_label = "FORWARD SIG A ";				//put label in " "
 	parameter gpx0D_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx0E_chars*8):0] gpx0E_label = "GP REGISTER 0E";				//put label in " "
+	reg [(gpx0E_chars*8):0] gpx0E_label = "FORWARD SIG B ";				//put label in " "
 	parameter gpx0E_chars = 14;													//# of characters, including spaces/other punct.
 	
 	reg [(gpx0F_chars*8):0] gpx0F_label = "GP REGISTER 0F";				//put label in " "

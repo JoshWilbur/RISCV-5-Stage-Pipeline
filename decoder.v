@@ -20,6 +20,16 @@ module decoder(
 	output reg [6:0] func7
 	);
 	
+	initial begin
+			rd <= 0;
+			rs1 <= 0;
+			rs2 <= 0;
+			imm <= 0;
+			opcode <= 0;
+			func3 <= 0;
+			func7 <= 0;
+	end
+	
 	always @* begin
 		if (reset == 1'b1) begin
 			decode_str <= "RESET";

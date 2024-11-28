@@ -13,10 +13,10 @@ module controller(
 	output reg branch,
 	output reg [3:0] ALU_ctrl, // Control ALU operation
 	output reg ALU_src, // Control whether ALU gets reg value or immediate
-	output reg MEM_wen,
+	output reg MEM_wen, // Data mem write enable
 	output reg WB_sel, // Should only be 1 for load?
-	output reg Reg_WB,
-	output reg auipc,
+	output reg Reg_WB, // Register file write enable
+	output reg auipc, // Special signal for auipc instructions
 	output reg [79:0] decode_str // 80 bit ASCII string, 8 bits per char
 	);
 	
@@ -28,6 +28,10 @@ module controller(
 			decode_str <= "RESET";
 			MEM_wen <= 0;
 			WB_sel <= 0;
+			branch <= 0;
+			Reg_WB <= 0;
+			auipc <= 0;
+			ALU_ctrl <= 0;
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
@@ -36,6 +40,7 @@ module controller(
 		branch <= 0;
 		Reg_WB <= 0;
 		auipc <= 0;
+		ALU_ctrl <= 0;
 		
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
@@ -61,7 +66,7 @@ module controller(
 						if (instr[31:25] == 6'h00) begin
 							ALU_ctrl <= 4'h6; // SRL
 						end else begin
-							ALU_ctrl <= 4'h6; //SRA
+							ALU_ctrl <= 4'hA; //SRA
 						end
 					end
 					3'h2: ALU_ctrl <= 4'h9; // SLT
@@ -78,7 +83,6 @@ module controller(
 				
 				case(opcode[4])
 					1: begin //Immediate
-						MEM_wen <= 0;
 						case(func3)
 							3'h0: ALU_ctrl <= 4'h0; // Set ALU to ADD	
 							3'h4: ALU_ctrl <= 4'h2; // XORI
@@ -160,12 +164,15 @@ module controller(
 					end
 					0: begin
 						auipc <= 1; // AUIPC
-						ALU_ctrl <= 4'hA;
+						ALU_ctrl <= 4'hB;
 					end
 				endcase
 			end
 //--------------------------------------------------------- DEFAULT -----------------------------------------------------------------------
-			default: decode_str <= "UNKNOWN";
+			default: begin
+				decode_str <= "UNKNOWN";
+				Reg_WB <= 0;
+			end
 		endcase
 	end
 endmodule

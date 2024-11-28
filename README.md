@@ -1,7 +1,5 @@
 # RISCV-5-Stage-Pipeline
-
-Updates: More work has been done to the controller and hazard unit. Each `la` instruction translates into `auipc` and `addi` for the mif file. Been working on getting `auipc` implemented.
-
+Updates: Working on getting forwarding implemented. I am using the milestone 1c program to test my forwarding unit at the moment.
 
 # Work
 Benchmark Tests: \

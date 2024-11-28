@@ -16,12 +16,13 @@ module ALU (
 			4'h2: ALU_out = in1 ^ in2; // XOR
 			4'h3: ALU_out = in1 | in2; // OR
 			4'h4: ALU_out = in1 & in2; // AND
-			4'h5: ALU_out = in1 << 1; // SLL
-			4'h6: ALU_out = in1 >> 1; // SRL
+			4'h5: ALU_out = in1 << in2; // SLL
+			4'h6: ALU_out = in1 >> in2; // SRL
 			4'h7: branch_taken = (in1 == in2); // BEQ
 			4'h8: branch_taken = (in1 != in2); // BNE
 			4'h9: ALU_out = (in1 < in2)?1:0; // SLT/SLTU
-			4'hA: ALU_out = PC + (in2 << 12);
+			4'hA: ALU_out = $signed(in1) >>> in2; // SRA
+			4'hB: ALU_out = PC + (in2 << 12);
 			default: ALU_out = 0; // Default case
 		endcase
 
