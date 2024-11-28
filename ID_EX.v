@@ -13,6 +13,8 @@ module ID_EX (
 	input wire Reg_WB_in,
 	input wire auipc_in,
 	input wire stall,
+	input wire [4:0] rs1_in,
+	input wire [4:0] rs2_in,
 	output reg [31:0] data_1_out,
 	output reg [31:0] data_2_out,
 	output reg [4:0] 	Rd_out,
@@ -23,7 +25,9 @@ module ID_EX (
 	output reg WB_sel_out,
 	output reg [31:0] PC_out,
 	output reg Reg_WB_out,
-	output reg auipc_out);
+	output reg auipc_out,
+	output reg [4:0] rs1_out,
+	output reg [4:0] rs2_out);
 	
 	always @(posedge clk) begin
 		if (reset == 1'b1) begin
@@ -38,6 +42,8 @@ module ID_EX (
 			PC_out <= 0;
 			Reg_WB_out <= 0;
 			auipc_out <= 0;
+			rs1_out <= 0;
+			rs2_out <= 0;
 		end else if (stall == 1'b0) begin
 			data_1_out <= data_1_in;
 			data_2_out <= data_2_in;
@@ -50,6 +56,8 @@ module ID_EX (
 			PC_out <= PC_in;
 			Reg_WB_out <= Reg_WB_in;
 			auipc_out <= auipc_in;
+			rs1_out <= rs1_in;
+			rs2_out <= rs2_in;
 		end
 	end
 endmodule 

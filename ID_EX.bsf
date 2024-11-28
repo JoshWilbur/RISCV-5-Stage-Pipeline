@@ -21,9 +21,9 @@ https://fpgasoftware.intel.com/eula.
 */
 (header "symbol" (version "1.1"))
 (symbol
-	(rect 16 16 264 288)
+	(rect 16 16 264 320)
 	(text "ID_EX" (rect 5 0 33 12)(font "Arial" ))
-	(text "inst" (rect 8 256 20 268)(font "Arial" ))
+	(text "inst" (rect 8 288 20 300)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -123,6 +123,20 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 240)(pt 16 240)(line_width 1))
 	)
 	(port
+		(pt 0 256)
+		(input)
+		(text "rs1_in[4..0]" (rect 0 0 44 12)(font "Arial" ))
+		(text "rs1_in[4..0]" (rect 21 251 65 263)(font "Arial" ))
+		(line (pt 0 256)(pt 16 256)(line_width 3))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "rs2_in[4..0]" (rect 0 0 46 12)(font "Arial" ))
+		(text "rs2_in[4..0]" (rect 21 267 67 279)(font "Arial" ))
+		(line (pt 0 272)(pt 16 272)(line_width 3))
+	)
+	(port
 		(pt 248 32)
 		(output)
 		(text "data_1_out[31..0]" (rect 0 0 67 12)(font "Arial" ))
@@ -199,7 +213,21 @@ https://fpgasoftware.intel.com/eula.
 		(text "auipc_out" (rect 190 187 227 199)(font "Arial" ))
 		(line (pt 248 192)(pt 232 192)(line_width 1))
 	)
+	(port
+		(pt 248 208)
+		(output)
+		(text "rs1_out[4..0]" (rect 0 0 50 12)(font "Arial" ))
+		(text "rs1_out[4..0]" (rect 177 203 227 215)(font "Arial" ))
+		(line (pt 248 208)(pt 232 208)(line_width 3))
+	)
+	(port
+		(pt 248 224)
+		(output)
+		(text "rs2_out[4..0]" (rect 0 0 51 12)(font "Arial" ))
+		(text "rs2_out[4..0]" (rect 176 219 227 231)(font "Arial" ))
+		(line (pt 248 224)(pt 232 224)(line_width 3))
+	)
 	(drawing
-		(rectangle (rect 16 16 232 256)(line_width 1))
+		(rectangle (rect 16 16 232 288)(line_width 1))
 	)
 )

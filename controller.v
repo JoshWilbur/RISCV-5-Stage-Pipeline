@@ -32,6 +32,7 @@ module controller(
 			Reg_WB <= 0;
 			auipc <= 0;
 			ALU_ctrl <= 0;
+			ALU_src <= 0;
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
@@ -41,6 +42,7 @@ module controller(
 		Reg_WB <= 0;
 		auipc <= 0;
 		ALU_ctrl <= 0;
+		ALU_src <= 0;
 		
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------

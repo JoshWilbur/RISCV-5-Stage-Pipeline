@@ -6,6 +6,7 @@ module hazard_unit(
     input wire WB_sel, // 1 for load instruction
     input wire branch_ID,
     input wire branch_taken,
+	 input wire reg_WB_EX,
     output reg stall_IFID,
     output reg stall_IDEX,
     output reg stall_EXMEM,
@@ -24,18 +25,18 @@ module hazard_unit(
             stall_EXMEM = 1'b0;
             flush = 1'b0;
         end else begin
-            // Load-use hazard
             if ((rs1_ID == rd_EX || rs2_ID == rd_EX) && WB_sel == 1'b1) begin
+					 // Load-use hazard
                 stall_IFID = 1'b1;
                 stall_IDEX = 1'b1;
-            end 
-            // Branching
-            else if (branch_ID == 1'b1) begin
+            end else if (reg_WB_EX && ((rs1_ID == rd_EX && rd_EX != 5'b0) || (rs2_ID == rd_EX && rd_EX != 5'b0))) begin
+					 // Data hazard
                 stall_IFID = 1'b1;
                 stall_IDEX = 1'b1;
-            end 
-            // Branch taken
-            else if (branch_taken == 1'b1) begin
+				end else if (branch_ID == 1'b1) begin
+                stall_IFID = 1'b1;
+                stall_IDEX = 1'b1;
+            end else if (branch_taken == 1'b1) begin
                 flush = 1'b1;
             end
         end
