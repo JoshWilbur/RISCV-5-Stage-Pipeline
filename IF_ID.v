@@ -15,10 +15,10 @@ module IF_ID (
 		end else begin
 			if (stall == 1'b0) begin // Update unless stall occurs
 				instr_out <= instr_in;
-				if (instr_in == 32'b0) instr_out <= 32'h00000013; // Set empty instruction to nop
-				PC_out = PC_in;
+				PC_out <= PC_in;
 			end else begin
 				instr_out <= 32'h00000013; // Set stall instruction to nop
+				PC_out <= PC_in;
 			end
 		end
 	end

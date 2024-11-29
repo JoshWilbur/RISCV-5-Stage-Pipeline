@@ -36,13 +36,6 @@ module controller(
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
-		WB_sel <= 0;
-		MEM_wen <= 0;
-		branch <= 0;
-		Reg_WB <= 0;
-		auipc <= 0;
-		ALU_ctrl <= 0;
-		ALU_src <= 0;
 		
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
@@ -174,6 +167,12 @@ module controller(
 			default: begin
 				decode_str <= "UNKNOWN";
 				Reg_WB <= 0;
+				WB_sel <= 0;
+				MEM_wen <= 0;
+				branch <= 0;
+				auipc <= 0;
+				ALU_ctrl <= 0;
+				ALU_src <= 0;
 			end
 		endcase
 	end

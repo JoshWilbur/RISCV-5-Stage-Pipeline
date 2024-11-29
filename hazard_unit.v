@@ -25,12 +25,8 @@ module hazard_unit(
             stall_EXMEM = 1'b0;
             flush = 1'b0;
         end else begin
-            if ((rs1_ID == rd_EX || rs2_ID == rd_EX) && WB_sel == 1'b1) begin
+            if ((rs1_ID == rd_EX || rs2_ID == rd_EX) && (WB_sel == 1'b1) && (rd_EX != 5'b0)) begin
 					 // Load-use hazard
-                stall_IFID = 1'b1;
-                stall_IDEX = 1'b1;
-            end else if (reg_WB_EX && ((rs1_ID == rd_EX && rd_EX != 5'b0) || (rs2_ID == rd_EX && rd_EX != 5'b0))) begin
-					 // Data hazard
                 stall_IFID = 1'b1;
                 stall_IDEX = 1'b1;
 				end else if (branch_ID == 1'b1) begin

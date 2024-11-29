@@ -40,7 +40,6 @@ module decoder(
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 		end
-		
 		// Note: all strings must be uppercase for VGA
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
@@ -82,6 +81,7 @@ module decoder(
 				func3 <= instr[14:12];
 				rd <= instr[11:7];
 				rs1 <= instr[19:15];
+				rs2 <= 0;
 				imm <= `IIMM12; 
 				
 				case(opcode[4])
@@ -171,7 +171,9 @@ module decoder(
 				endcase
 			end
 //--------------------------------------------------------- DEFAULT -----------------------------------------------------------------------
-			default: decode_str <= "UNKNOWN";
+			default: begin
+				decode_str <= "UNKNOWN";
+			end
 		endcase
 	end
 endmodule

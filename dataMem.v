@@ -105,7 +105,7 @@ module dataMem (
 		altsyncram_component.clock_enable_output_a = "BYPASS",
 		altsyncram_component.clock_enable_output_b = "BYPASS",
 		altsyncram_component.indata_reg_b = "CLOCK1",
-		altsyncram_component.init_file = "../Milestone_4_Tests/01_add_64_bit_integers_data.mif",
+		altsyncram_component.init_file = "./Milestone_2/milestone_3a_load_Read_After_Load_data.mif",
 		altsyncram_component.intended_device_family = "Cyclone V",
 		altsyncram_component.lpm_type = "altsyncram",
 		altsyncram_component.numwords_a = 64,
@@ -164,7 +164,7 @@ endmodule
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
 // Retrieval info: PRIVATE: MEMSIZE NUMERIC "2048"
 // Retrieval info: PRIVATE: MEM_IN_BITS NUMERIC "0"
-// Retrieval info: PRIVATE: MIFfilename STRING "../Milestone_4_Tests/01_add_64_bit_integers_data.mif"
+// Retrieval info: PRIVATE: MIFfilename STRING "./Milestone_2/milestone_3a_load_Read_After_Load_data.mif"
 // Retrieval info: PRIVATE: OPERATION_MODE NUMERIC "3"
 // Retrieval info: PRIVATE: OUTDATA_ACLR_B NUMERIC "0"
 // Retrieval info: PRIVATE: OUTDATA_REG_B NUMERIC "0"
@@ -198,7 +198,7 @@ endmodule
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_A STRING "BYPASS"
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_B STRING "BYPASS"
 // Retrieval info: CONSTANT: INDATA_REG_B STRING "CLOCK1"
-// Retrieval info: CONSTANT: INIT_FILE STRING "../Milestone_4_Tests/01_add_64_bit_integers_data.mif"
+// Retrieval info: CONSTANT: INIT_FILE STRING "./Milestone_2/milestone_3a_load_Read_After_Load_data.mif"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 // Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "64"
