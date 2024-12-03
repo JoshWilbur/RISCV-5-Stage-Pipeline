@@ -1,5 +1,5 @@
 # RISCV-5-Stage-Pipeline
-Updates: Working on getting forwarding implemented. I am using the milestone 1c program to test my forwarding unit at the moment.
+Updates: All hazards should be accounted for now. Need to get the tests working now. I noticed that some instructions are nonsense; such as `la` translating to `auipc` and `addi` with `lw` after. I believe we only need `lw`, I'll start on that tomorrow.
 
 # Work
 Benchmark Tests: \
