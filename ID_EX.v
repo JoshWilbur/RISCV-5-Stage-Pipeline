@@ -30,7 +30,8 @@ module ID_EX (
 	output reg [4:0] rs2_out);
 	
 	always @(posedge clk) begin
-		if (reset == 1'b1) begin
+		if (reset == 1'b1 || stall == 1'b1) begin
+			// Nop if stall
 			data_1_out <= 0;
 			data_2_out <= 0;
 			Rd_out <= 0;
@@ -44,7 +45,7 @@ module ID_EX (
 			auipc_out <= 0;
 			rs1_out <= 0;
 			rs2_out <= 0;
-		end else if (stall == 1'b0) begin
+		end else begin
 			data_1_out <= data_1_in;
 			data_2_out <= data_2_in;
 			Rd_out <= Rd_in;

@@ -9,7 +9,7 @@ module IF_ID (
 	output reg [31:0] PC_out);
 
 	always @(posedge clk) begin
-		if (reset == 1'b1 || flush == 1'b1) begin
+		if (reset == 1'b1 || flush == 1'b1 || instr_in == 32'h00000000) begin
 			instr_out <= 32'h00000013;
 			PC_out <= 0;
 		end else begin
@@ -17,7 +17,6 @@ module IF_ID (
 				instr_out <= instr_in;
 				PC_out <= PC_in;
 			end else begin
-				instr_out <= 32'h00000013; // Set stall instruction to nop
 				PC_out <= PC_in;
 			end
 		end

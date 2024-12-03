@@ -78,8 +78,9 @@ module controller(
 				
 				case(opcode[4])
 					1: begin //Immediate
+						WB_sel <= 0;
 						case(func3)
-							3'h0: ALU_ctrl <= 4'h0; // Set ALU to ADD	
+							3'h0: ALU_ctrl <= 4'h0; // ADDI
 							3'h4: ALU_ctrl <= 4'h2; // XORI
 							3'h6: ALU_ctrl <= 4'h3; // ORI
 							3'h7: ALU_ctrl <= 4'h4; // ANDI

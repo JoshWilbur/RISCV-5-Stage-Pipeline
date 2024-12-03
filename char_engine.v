@@ -146,7 +146,7 @@ module char_engine(
 	reg [(gpx0E_chars*8):0] gpx0E_label = "FORWARD SIG B ";				//put label in " "
 	parameter gpx0E_chars = 14;													//# of characters, including spaces/other punct.
 	
-	reg [(gpx0F_chars*8):0] gpx0F_label = "GP REGISTER 0F";				//put label in " "
+	reg [(gpx0F_chars*8):0] gpx0F_label = "STALL SIGNAL  ";				//put label in " "
 	parameter gpx0F_chars = 14;													//# of characters, including spaces/other punct.
 	
 
