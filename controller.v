@@ -154,12 +154,13 @@ module controller(
 			7'b0?10111: begin
 				ALU_src <= 1;
 				Reg_WB <= 1;
+				ALU_src <= 1;
 				case(opcode[5])
-					1: begin
+					1: begin // LUI
 						decode_str <= "LUI";
 					end
-					0: begin
-						auipc <= 1; // AUIPC
+					0: begin // AUIPC
+						auipc <= 1; 
 						ALU_ctrl <= 4'hB;
 					end
 				endcase

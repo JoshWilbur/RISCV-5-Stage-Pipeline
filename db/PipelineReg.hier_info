@@ -7994,7 +7994,7 @@ new_PC[30] <= new_PC.DB_MAX_OUTPUT_PORT_TYPE
 new_PC[31] <= new_PC.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|ALU:inst26
+|top|ALU:inst8
 in1[0] => Add0.IN32
 in1[0] => Add1.IN64
 in1[0] => ALU_out.IN0
@@ -9150,7 +9150,6 @@ PC_in[29] => PC_out.DATAA
 PC_in[30] => PC_out.DATAA
 PC_in[31] => PC_out.DATAA
 Reg_WB_in => Reg_WB_out.DATAA
-auipc_in => always0.IN1
 auipc_in => auipc_out.DATAA
 stall => always0.IN1
 rs1_in[0] => rs1_out.DATAA
@@ -9756,32 +9755,32 @@ PC_out[30] <= PC_out[30]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 PC_out[31] <= PC_out[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|hazard_unit:inst2
+|top|hazard_unit:inst9
 rs1_ID[0] => Equal1.IN4
 rs1_ID[1] => Equal1.IN3
 rs1_ID[2] => Equal1.IN2
 rs1_ID[3] => Equal1.IN1
 rs1_ID[4] => Equal1.IN0
-rs2_ID[0] => Equal2.IN4
-rs2_ID[1] => Equal2.IN3
-rs2_ID[2] => Equal2.IN2
-rs2_ID[3] => Equal2.IN1
-rs2_ID[4] => Equal2.IN0
+rs2_ID[0] => Equal0.IN4
+rs2_ID[1] => Equal0.IN3
+rs2_ID[2] => Equal0.IN2
+rs2_ID[3] => Equal0.IN1
+rs2_ID[4] => Equal0.IN0
+rd_EX[0] => Equal0.IN9
 rd_EX[0] => Equal1.IN9
-rd_EX[0] => Equal2.IN9
-rd_EX[0] => Equal3.IN4
+rd_EX[0] => Equal2.IN4
+rd_EX[1] => Equal0.IN8
 rd_EX[1] => Equal1.IN8
-rd_EX[1] => Equal2.IN8
-rd_EX[1] => Equal3.IN3
+rd_EX[1] => Equal2.IN3
+rd_EX[2] => Equal0.IN7
 rd_EX[2] => Equal1.IN7
-rd_EX[2] => Equal2.IN7
-rd_EX[2] => Equal3.IN2
+rd_EX[2] => Equal2.IN2
+rd_EX[3] => Equal0.IN6
 rd_EX[3] => Equal1.IN6
-rd_EX[3] => Equal2.IN6
-rd_EX[3] => Equal3.IN1
+rd_EX[3] => Equal2.IN1
+rd_EX[4] => Equal0.IN5
 rd_EX[4] => Equal1.IN5
-rd_EX[4] => Equal2.IN5
-rd_EX[4] => Equal3.IN0
+rd_EX[4] => Equal2.IN0
 reset => stall_counter[0].ACLR
 reset => stall_counter[1].ACLR
 WB_sel => always1.IN1
@@ -9796,6 +9795,7 @@ branch_taken => flush.DATAIN
 branch_taken => stall_output[2].DATAIN
 clock => stall_counter[0].CLK
 clock => stall_counter[1].CLK
+auipc_EX => always1.IN1
 stall_IFID <= stall_IFID.DB_MAX_OUTPUT_PORT_TYPE
 stall_IDEX <= stall_IDEX.DB_MAX_OUTPUT_PORT_TYPE
 stall_output[0] <= stall_output.DB_MAX_OUTPUT_PORT_TYPE

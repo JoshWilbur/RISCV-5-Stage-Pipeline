@@ -1,9 +1,9 @@
 # RISCV-5-Stage-Pipeline
-Updates: All hazards should be accounted for now. Need to get the tests working now. I noticed that some instructions are nonsense; such as `la` translating to `auipc` and `addi` with `lw` after. I believe we only need `lw`, I'll start on that tomorrow.
+Updates: I got the `la` instruction working. Now need to get byte addressable instructions working.
 
 # Work
 Benchmark Tests: \
-Need 5/9 tests fully working by 12/5. \
+Need 5/9 tests fully working by 12/11. \
 1: 64 bit add   - Josh \
 2: Concat ints  - Liam \
 3: Find max     - Josh \
