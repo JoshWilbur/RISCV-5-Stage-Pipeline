@@ -127,8 +127,8 @@ module controller(
 				case(func3)
 					3'h0: ALU_ctrl <= 4'h7; // BEQ
 					3'h1: ALU_ctrl <= 4'h8; // BNE
-					3'h4: decode_str <= "BLT";
-					3'h5: decode_str <= "BGE";
+					3'h4: ALU_ctrl <= 4'hC; // BLT
+					3'h5: ALU_ctrl <= 4'hD; // BGE
 					3'h6: decode_str <= "BLTU";
 					3'h7: decode_str <= "BGEU";
 				endcase
