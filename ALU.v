@@ -22,7 +22,7 @@ module ALU (
 			4'h8: branch_taken = (in1 != in2); // BNE
 			4'h9: ALU_out = (in1 < in2)?1:0; // SLT/SLTU
 			4'hA: ALU_out = $signed(in1) >>> in2; // SRA
-			4'hB: ALU_out = PC + (in2 << 12);
+			4'hB: ALU_out = {PC[31:5]} + (PC[4:0] << 2) + (in2 << 12);
 			default: ALU_out = 0; // Default case
 		endcase
 

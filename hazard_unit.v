@@ -22,7 +22,7 @@ always @(posedge clock or posedge reset) begin
         stall_counter = 2'h0;
     end else begin
         // Increment stall counter for la-lw hazard
-        if (((rs1_ID == rd_EX || rs2_ID == rd_EX) && WB_sel == 1'b1 && rd_EX != 5'b0)) begin
+        if (((rs1_ID == rd_EX || rs2_ID == rd_EX) && WB_sel == 1'b1 && rd_EX != 5'b0) || auipc_EX) begin
             stall_counter <= 2'h2;
         end else if (stall_counter > 0) begin
             stall_counter <= stall_counter - 1;
@@ -47,7 +47,7 @@ always @(*) begin
         stall_IFID = 1'b1;
         stall_IDEX = 1'b1;
         stall_output = 32'h1;
-	 end else if ((rs1_ID == rd_EX) && (rd_EX != 5'b0) && auipc_EX) begin
+	 end else if (/*(rs1_ID == rd_EX) && (rd_EX != 5'b0) &&*/ auipc_EX) begin
 		  // Stall for la (auipc+addi)
         stall_IFID = 1'b1;
         stall_IDEX = 1'b1;

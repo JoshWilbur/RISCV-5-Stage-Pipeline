@@ -1,10 +1,10 @@
 # RISCV-5-Stage-Pipeline
-Updates: I got the `la` instruction working. Now need to get byte addressable instructions working.
+Updates: At long last, test 1 is working
 
 # Work
 Benchmark Tests: \
 Need 5/9 tests fully working by 12/11. \
-1: 64 bit add   - Josh \
+1: 64 bit add   - Josh (DONE)\
 2: Concat ints  - Liam \
 3: Find max     - Josh \
 4: Find mode    - Liam \
