@@ -35,6 +35,7 @@ module controller(
 			ALU_src <= 0;
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
+			branch <= 0;
 		end
 		
 		casez (opcode)

@@ -1,5 +1,5 @@
 # RISCV-5-Stage-Pipeline
-Updates: At long last, test 1 is working
+Updates: I got branching to work with stalls, it broke M4 test 1 a little bit. Need to fix that and get the other tests working
 
 # Work
 Benchmark Tests: \

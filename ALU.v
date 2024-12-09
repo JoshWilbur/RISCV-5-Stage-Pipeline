@@ -6,7 +6,6 @@ module ALU (
 	output reg [31:0] ALU_out,
 	output reg branch_taken);
 	
-	
 	always @* begin
 		ALU_out = 0;
 		branch_taken = 0;
@@ -23,9 +22,12 @@ module ALU (
 			4'h9: ALU_out = (in1 < in2)?1:0; // SLT/SLTU
 			4'hA: ALU_out = $signed(in1) >>> in2; // SRA
 			4'hB: ALU_out = (PC * 4) + (in2 << 12); // AUIPC
-			4'hC: branch_taken = (in1 < in2);
-			4'hD: branch_taken = (in1 >= in2);
-			default: ALU_out = 0; // Default case
+			4'hC: branch_taken = (in1 < in2); // BLT
+			4'hD: branch_taken = (in1 >= in2); // BGE
+			default begin
+				ALU_out = 0; // Default case
+				branch_taken = 0;
+			end
 		endcase
 
 	end
