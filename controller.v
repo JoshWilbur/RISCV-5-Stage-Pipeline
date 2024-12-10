@@ -18,7 +18,8 @@ module controller(
 	output reg Reg_WB, // Register file write enable
 	output reg auipc, // Special signal for auipc instructions
 	output reg [79:0] decode_str, // 80 bit ASCII string, 8 bits per char
-	output reg pc_src // 0 if pc is going to alu
+	output reg pc_src, // 0 if pc is going to alu
+	output reg jump
 	);
 	reg [6:0] opcode;
 	reg [2:0] func3;
@@ -33,6 +34,8 @@ module controller(
 			auipc <= 0;
 			ALU_ctrl <= 0;
 			ALU_src <= 0;
+			jump <= 0;
+			pc_src <= 0;
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 			branch <= 0;
@@ -41,7 +44,7 @@ module controller(
 		casez (opcode)
 //------------------------------------------------------- R type path ---------------------------------------------------------------------
 			7'b0110011: begin
-				pc_src = 1;
+				pc_src <= 1;
 				func3 <= instr[14:12];
 				ALU_src <= 0;
 				Reg_WB <= 1;
@@ -72,7 +75,7 @@ module controller(
 			
 //------------------------------------------------------- I type path ---------------------------------------------------------------------
 			7'b00?0011: begin 
-				pc_src = 1;
+				pc_src <= 1;
 				func3 <= instr[14:12];
 				ALU_src <= 1;
 				Reg_WB <= 1;
@@ -106,7 +109,7 @@ module controller(
 			
 //------------------------------------------------------- S type path ---------------------------------------------------------------------
 			7'b0100011: begin 
-				pc_src = 1;
+				pc_src <= 1;
 				func3 <= instr[14:12];
 				ALU_src <= 1;
 				MEM_wen <= 1;
@@ -121,7 +124,7 @@ module controller(
 			
 //------------------------------------------------------- B type path ---------------------------------------------------------------------
 			7'b1100011: begin 
-				pc_src = 1;
+				pc_src <= 1;
 				func3 <= instr[14:12];
 				ALU_src <= 0;
 				branch <= 1;
@@ -138,14 +141,14 @@ module controller(
 			
 //------------------------------------------------------- J type path ---------------------------------------------------------------------
 			7'b110?111: begin
-				pc_src = 0;
+				pc_src <= 0;
 				func3 <= instr[14:12];
 				ALU_src <= 1;
 				Reg_WB <= 1;
+				jump <= 1;
 				case(opcode[3])
 					1: begin
-						ALU_ctrl <= 4'hE; //Jump
-						decode_str <= "JAL";
+						ALU_ctrl <= 4'hE; // JAL
 					end
 					
 					0: begin
@@ -179,6 +182,8 @@ module controller(
 				auipc <= 0;
 				ALU_ctrl <= 0;
 				ALU_src <= 0;
+				jump <= 0;
+				pc_src <= 1;
 			end
 		endcase
 	end

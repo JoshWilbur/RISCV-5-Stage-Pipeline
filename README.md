@@ -1,5 +1,5 @@
 # RISCV-5-Stage-Pipeline
-Updates: I got branching to work with stalls, it broke M4 test 1 a little bit. Need to fix that and get the other tests working
+Updates: Jumping is implemented and seems to be fully working. Test 3 is very close to working, having issues with the wrong ALU source values occuring after a load-branch hazard. Gonna take another look at it tomorrow night.
 
 # Work
 Benchmark Tests: \

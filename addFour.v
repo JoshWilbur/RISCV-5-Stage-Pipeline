@@ -5,11 +5,11 @@ module addFour(
 	output reg [31:0] PC_out);
 
 	always @(*) begin
-		if (stall == 1'b0) begin
-			PC_out = PC_in + 1'h1;
-		end else if (stall == 1'b1 || flush == 1'b1) begin
+		if (stall == 1'b1 || flush == 1'b1) begin
 			PC_out = PC_in; // Don't increment PC if stall or flush
-		end
+		end else if (stall == 1'b0) begin
+			PC_out = PC_in + 1'h1;
+		end  
 	end
 	
 endmodule

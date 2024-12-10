@@ -6,6 +6,7 @@ module forwarding_unit(
     input wire reg_WB_MEM,
     input wire reg_WB_WB,
 	 input wire WB_sel, // Only 1 for load instructions
+	 input wire branch,
     output reg [1:0] forward_A,
     output reg [1:0] forward_B
 );

@@ -24,10 +24,7 @@ module ALU (
 			4'hB: ALU_out = (PC * 4) + (in2 << 12); // AUIPC
 			4'hC: branch_taken = (in1 < in2); // BLT
 			4'hD: branch_taken = (in1 >= in2); // BGE
-			4'hE: begin 
-						ALU_out
-						branch_taken = 1 // Jump
-					end
+			4'hE: branch_taken = 1; // JAL
 			default begin
 				ALU_out = 0; // Default case
 				branch_taken = 0;
