@@ -35,10 +35,11 @@ module controller(
 			ALU_ctrl <= 0;
 			ALU_src <= 0;
 			jump <= 0;
-			pc_src <= 0;
+			pc_src <= 1;
 		end else begin
 			opcode <= instr[6:0]; // Set opcode to lower 7 bits of instruction
 			branch <= 0;
+			jump <= 0;
 		end
 		
 		casez (opcode)
@@ -48,6 +49,7 @@ module controller(
 				func3 <= instr[14:12];
 				ALU_src <= 0;
 				Reg_WB <= 1;
+				WB_sel <= 0;
 				
 				case(func3)
 					3'h0: begin
@@ -79,6 +81,7 @@ module controller(
 				func3 <= instr[14:12];
 				ALU_src <= 1;
 				Reg_WB <= 1;
+				WB_sel <= 0;
 				
 				case(opcode[4])
 					1: begin //Immediate
@@ -115,6 +118,8 @@ module controller(
 				MEM_wen <= 1;
 				ALU_ctrl <= 4'h0;
 				Reg_WB <= 0;
+				WB_sel <= 0;
+				
 				case(func3)
 					3'h0: decode_str <= "SB";
 					3'h1: decode_str <= "SH";
@@ -129,13 +134,15 @@ module controller(
 				ALU_src <= 0;
 				branch <= 1;
 				Reg_WB <= 0;
+				WB_sel <= 0;
+				
 				case(func3)
 					3'h0: ALU_ctrl <= 4'h7; // BEQ
 					3'h1: ALU_ctrl <= 4'h8; // BNE
 					3'h4: ALU_ctrl <= 4'hC; // BLT
 					3'h5: ALU_ctrl <= 4'hD; // BGE
-					3'h6: decode_str <= "BLTU";
-					3'h7: decode_str <= "BGEU";
+					3'h6: ALU_ctrl <= 4'hC; // BLTU?
+					3'h7: ALU_ctrl <= 4'hD; // BGEU?
 				endcase
 			end
 			
@@ -146,6 +153,8 @@ module controller(
 				ALU_src <= 1;
 				Reg_WB <= 1;
 				jump <= 1;
+				WB_sel <= 0;
+				
 				case(opcode[3])
 					1: begin
 						ALU_ctrl <= 4'hE; // JAL
@@ -162,6 +171,7 @@ module controller(
 				ALU_src <= 1;
 				Reg_WB <= 1;
 				ALU_src <= 1;
+				pc_src <= 1;
 				case(opcode[5])
 					1: begin // LUI
 						decode_str <= "LUI";

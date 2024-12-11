@@ -22,8 +22,8 @@ module ALU (
 			4'h9: ALU_out = (in1 < in2)?1:0; // SLT/SLTU
 			4'hA: ALU_out = $signed(in1) >>> in2; // SRA
 			4'hB: ALU_out = (PC * 4) + (in2 << 12); // AUIPC
-			4'hC: branch_taken = (in1 < in2); // BLT
-			4'hD: branch_taken = (in1 >= in2); // BGE
+			4'hC: if (in1 < in2) branch_taken = 1; // BLT
+			4'hD: if (in1 >= in2) branch_taken = 1; // BGE
 			4'hE: branch_taken = 1; // JAL
 			default begin
 				ALU_out = 0; // Default case

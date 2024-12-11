@@ -158,6 +158,13 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 0 320)(pt 16 320)(line_width 1))
 	)
 	(port
+		(pt 0 336)
+		(input)
+		(text "flush" (rect 0 0 18 12)(font "Arial" ))
+		(text "flush" (rect 21 331 39 343)(font "Arial" ))
+		(line (pt 0 336)(pt 16 336)(line_width 1))
+	)
+	(port
 		(pt 248 32)
 		(output)
 		(text "data_1_out[31..0]" (rect 0 0 67 12)(font "Arial" ))
@@ -268,6 +275,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "jump_out" (rect 0 0 36 12)(font "Arial" ))
 		(text "jump_out" (rect 191 267 227 279)(font "Arial" ))
 		(line (pt 248 272)(pt 232 272)(line_width 1))
+	)
+	(port
+		(pt 248 288)
+		(output)
+		(text "nop" (rect 0 0 14 12)(font "Arial" ))
+		(text "nop" (rect 213 283 227 295)(font "Arial" ))
+		(line (pt 248 288)(pt 232 288)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 232 352)(line_width 1))

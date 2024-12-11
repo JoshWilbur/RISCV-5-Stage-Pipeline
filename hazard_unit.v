@@ -3,7 +3,7 @@ module hazard_unit(
     input wire [4:0] rs2_ID,
     input wire [4:0] rd_EX,
     input wire reset,
-    input wire WB_sel, // 1 for load instruction
+    input wire WB_sel, // 1 for load instruction (NOTE: use EX for test 1)
     input wire branch_ID,
     input wire branch_taken,
 	 input wire clock,
@@ -24,7 +24,7 @@ always @(posedge clock) begin
     end else if (stall_counter > 0) begin
 			stall_counter <= stall_counter - 1;
 	  end else if (stall_flag == 2'h1 || stall_flag == 2'h2) begin
-			stall_counter <= 2'h2; // 2 stalls for la or load use hazards
+			stall_counter <= 2'h2; // 2 stalls for la or load use hazard
 	  end else begin
 			stall_counter <= 2'h0;
     end
@@ -35,36 +35,37 @@ always @(*) begin
     stall_IDEX = 1'b0;
     flush = 1'b0;
     stall_output = 32'h0;
-	 stall_flag = 2'h0;
-	 
-	 if (stall_counter > 0) begin
-		 stall_IFID = 1'b1;
-	    stall_IDEX = 1'b1;
-		 stall_output = 32'h1;
-    end else if (branch_taken == 1'b1) begin
-        // Flush pipeline if branch taken
+    stall_flag = 2'h0;
+
+    if (branch_taken == 1'b1) begin
+        // Flush pipeline if branch is taken
         flush = 1'b1;
-		  stall_IFID = 1'b0;
-		  stall_IDEX = 1'b0;
+        stall_IFID = 1'b0;
+        stall_IDEX = 1'b0;
         stall_output = 32'hF; // 0xF for flush
-	 end else if (auipc_MEM == 1'b1) begin
-		  // Stall for la (auipc+addi)
-        stall_output = 32'hA; // 0xA for address
-		  stall_IFID = 1'b1;
-	     stall_IDEX = 1'b1;
-		  stall_flag = 2'h1;
-    end else if (((rs1_ID == rd_EX || rs2_ID == rd_EX) && WB_sel == 1'b1 && rd_EX != 5'b0)) begin
-        // Stall on load-use hazard
-        stall_output = 32'h1;
-		  stall_IFID = 1'b1;
-	     stall_IDEX = 1'b1;
-		  stall_flag = 2'h2;
-    end else if (branch_ID == 1'b1) begin
-        // Branch hazard
+    end else if (stall_counter > 0) begin
+        // Handle load-use or la hazards
         stall_IFID = 1'b1;
-		  stall_IDEX = 1'b1;
+        stall_IDEX = 1'b1;
+        stall_output = 32'h1; // Stall
+    end else if (auipc_MEM == 1'b1) begin
+		  // la/lw hazard
+        stall_IFID = 1'b1;
+        stall_IDEX = 1'b1;
+        stall_output = 32'hA; // 0xA for address
+        stall_flag = 2'h1;
+    end else if ((rs1_ID == rd_EX || rs2_ID == rd_EX) && WB_sel == 1'b1 && rd_EX != 5'b0) begin
+        // Stall on load-use hazard
+        stall_IFID = 1'b1;
+        stall_IDEX = 1'b1;
+        stall_output = 32'h1;
+        stall_flag = 2'h2;
+	 end else if (branch_ID == 1'b1) begin
+        stall_IFID = 1'b1;
+        //stall_IDEX = 1'b1;
         stall_output = 32'hB; // 0xB for branch
     end
 end
+
 
 endmodule

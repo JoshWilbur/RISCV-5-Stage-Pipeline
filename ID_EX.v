@@ -18,6 +18,7 @@ module ID_EX (
 	input wire pc_src_in,
 	input wire branch_in,
 	input wire jump_in,
+	input wire flush,
 	output reg [31:0] data_1_out,
 	output reg [31:0] data_2_out,
 	output reg [4:0] 	Rd_out,
@@ -33,10 +34,11 @@ module ID_EX (
 	output reg [4:0] rs2_out,
 	output reg pc_src_out,
 	output reg branch_out,
-	output reg jump_out);
+	output reg jump_out,
+	output reg nop);
 	
 	always @(posedge clk) begin
-		if (reset == 1'b1 || stall == 1'b1) begin
+		if (reset == 1'b1 || stall == 1'b1 || flush == 1'b1) begin
 			// Nop if stall
 			data_1_out <= 0;
 			data_2_out <= 0;
@@ -54,6 +56,7 @@ module ID_EX (
 			pc_src_out <= 1;	
 			branch_out <= 0;
 			jump_out <= 0;
+			nop <= 1;
 		end else begin
 			data_1_out <= data_1_in;
 			data_2_out <= data_2_in;
@@ -71,6 +74,7 @@ module ID_EX (
 			pc_src_out <= pc_src_in;
 			branch_out <= branch_in;
 			jump_out <= jump_in;
+			nop <= 0;
 		end
 	end
 endmodule 
