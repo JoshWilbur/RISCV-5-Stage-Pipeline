@@ -3450,11 +3450,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt -608 648)
 )
 (connector
-	(text "WB_sel_ID" (rect -2456 544 -2405 556)(font "Intel Clear" ))
-	(pt -2344 552)
-	(pt -2392 552)
-)
-(connector
 	(text "nop_EX" (rect -1144 368 -1107 380)(font "Intel Clear" ))
 	(pt -1184 376)
 	(pt -1160 376)
@@ -3475,16 +3470,21 @@ https://fpgasoftware.intel.com/eula.
 	(pt -1488 424)
 )
 (connector
-	(text "WB_DATA_WB[31..0]" (rect -752 264 -650 276)(font "Intel Clear" ))
+	(text "data_WB[31..0]" (rect -728 104 -654 116)(font "Intel Clear" ))
+	(pt -624 112)
+	(pt -656 112)
+	(bus)
+)
+(connector
+	(text "data_WB[31..0]" (rect -728 264 -654 276)(font "Intel Clear" ))
 	(pt -624 272)
 	(pt -656 272)
 	(bus)
 )
 (connector
-	(text "WB_DATA_WB[31..0]" (rect -752 104 -650 116)(font "Intel Clear" ))
-	(pt -624 112)
-	(pt -656 112)
-	(bus)
+	(text "WB_sel_ID" (rect -2456 544 -2405 556)(font "Intel Clear" ))
+	(pt -2344 552)
+	(pt -2392 552)
 )
 (text "MAGIC VGA BOX" (rect 280 -1096 377 -1081)(font "Intel Clear" (font_size 8)))
 (text "0 = Add" (rect -144 8 -98 23)(font "Intel Clear" (font_size 8)))
