@@ -1,12 +1,12 @@
 # RISCV-5-Stage-Pipeline
-Updates: Jumping is implemented and seems to be fully working. Test 3 is very close to working, having issues with the wrong ALU source values occuring after a load-branch hazard. Gonna take another look at it tomorrow night.
+Updates: Tests 1, 2 and 3 are working. Test 5 has some issues, unsure about the rest.
 
 # Work
 Benchmark Tests: \
 Need 5/9 tests fully working by 12/11. \
 1: 64 bit add   - Josh (DONE)\
-2: Concat ints  - Liam \
-3: Find max     - Josh \
+2: Concat ints  - Josh (DONE) \
+3: Find max     - Josh (DONE) \
 4: Find mode    - Liam \
 5: Find prime   - Josh \
 6: Palindrome   - Liam \
